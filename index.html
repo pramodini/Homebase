@@ -1,6 +1,22 @@
-﻿﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en" manifest="https://padlet-uploads.storage.googleapis.com/674624487/769567685d77d22585fbefceb1576d0e/manifest.json">
 <head>
+<!-- Hotjar Tracking Code for https://pramodini.github.io/keepinventory/keep4.htm -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1950868,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<meta name="google-site-verification" content="wtj0dI20-cfmOVtvcoMbB9eYHmSR9XXvr0fNgeUAxTc" />
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f3c5dc7c274c79b"></script>
+<link rel="manifest" href="https://pramodini.github.io/KeepInventory/manifest.json">
 <link rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -538,7 +554,39 @@ window.onclick = function(event) {
 <div id="home" class="tab-pane fade in active">
 <img class="img.lazy" src="https://img.icons8.com/plasticine/100/000000/warehouse-1.png" alt="image">
 <h3>Dashboard</h3>
+<button class="add-button">Add to home screen</button>
+<script>
+let deferredPrompt;
+const addBtn = document.querySelector('.add-button');
+addBtn.style.display = 'none';
+</script>
+<script>
+<script>
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent Chrome 67 and earlier from automatically showing the prompt
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+  // Update UI to notify the user they can add to home screen
+  addBtn.style.display = 'block';
 
+  addBtn.addEventListener('click', (e) => {
+    // hide our user interface that shows our A2HS button
+    addBtn.style.display = 'none';
+    // Show the prompt
+    deferredPrompt.prompt();
+    // Wait for the user to respond to the prompt
+    deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('User accepted the A2HS prompt');
+        } else {
+          console.log('User dismissed the A2HS prompt');
+        }
+        deferredPrompt = null;
+      });
+  });
+});
+</script>
 
 
     <div class="container" >
@@ -775,6 +823,7 @@ dialog::backdrop {
 
 
 </style>
+<meta name="google-site-verification" content="wtj0dI20-cfmOVtvcoMbB9eYHmSR9XXvr0fNgeUAxTc" />
 </head>
 <body>
 
