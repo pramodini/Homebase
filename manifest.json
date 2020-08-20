@@ -1,0 +1,15 @@
+﻿{
+  "background_color": "purple",
+  "description": "Ree",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "icon/fox-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "KeepInventory",
+  "short_name": "KeepInventory",
+  "start_url": "https://pramodini.github.io/KeepInventory/keep4.htm"
+}
