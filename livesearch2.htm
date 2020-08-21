@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
 
@@ -100,6 +101,14 @@ body, html {
 }
 
 #Home {background-color: white;}
+#Home1 {background-color: white;}
+#Home2 {background-color: white;}
+#Home3{background-color: white;}
+#Home4 {background-color: white;}
+#Home5 {background-color: white;}
+#Home6 {background-color: white;}
+#Home7 {background-color: white;}
+#Home8 {background-color: white;}
 #News {background-color: white;}
 #Contact {background-color: white;}
 #About {background-color: white;}
@@ -113,28 +122,77 @@ body, html {
   <h3>Home</h3>
   <p>Home is where the heart is..</p>
 </div>
-
+<div id="Home1" class="tabcontent">
+<h2>Todo list</h2>
+<h4>The todo list is on the front page of KeepInventory. To get started, go ahead and click <kbd>+ New item</kbd> After that, you can enter a new todo item by entering the due date, description, title, and priority. You can filter items by due date, priority, and you can remove checked items by clicking the <kbd>Settings</kbd> button, which is located right next to <kbd>+ New item</kbd></h4><br>
+<button class="btn waves-effect"  onclick="openPage('News', this, 'whitesmoke')">Back to home > </button>
+</div>
+<div id="Home2" class="tabcontent">
+<h3>Creating an account in KeepInventory</h3>
+<h4>Until KeepInventory has more contributors, we can't really make accounts in SQL and PHP... SO for now, we have this system: Fill <a href="#">This form</a></h4><br>
+<button class="btn waves-effect" onclick="openPage('News', this, 'whitesmoke')">Back to home > </button>
+</div>
+<div id="Home3" class="tabcontent">
+  <h3>Contributing to our forum</h3>
+<h4>Our team is constantly updating our forum. No signup required <br><a href="#" role="button" class="btn btn-secondary waves-effect">Link for the forum</a></h4><br>
+<button class="btn waves-effect"  onclick="openPage('News', this, 'whitesmoke')">Back to home > </button>
+</div>
+<div id="Home4" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+<button class="btn waves-effect"  onclick="openPage('News', this, 'whitesmoke')">Back to home > </button>
+</div>
+<div id="Home5" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+<button class="btn waves-effect"  onclick="openPage('News', this, 'whitesmoke')">Back to home > </button>
+</div>
+<div id="Home6" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+<button class="btn waves-effect"  onclick="openPage('News', this, 'whitesmoke')">Back to home > </button>
+</div>
+<div id="Home7" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+<button class="btn waves-effect"  onclick="openPage('News', this, 'whitesmoke')">Back to home > </button>
+</div>
+<div id="Home8" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+<button class="btn waves-effect"  onclick="openPage('News', this, 'whitesmoke')">Back to home > </button>
+</div>
+<div id="Home9" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+<button class="btn waves-effect"  onclick="openPage('News', this, 'whitesmoke')">Back to home > </button>
+</div>
+<div id="Home10" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+<button class="btn waves-effect"  onclick="openPage('News', this, 'whitesmoke')">Back to home > </button>
+</div>
 <div id="News" class="tabcontent">
 
 
   <h2>KeepInventory | Help Center</h2>
 
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="How can we help you today?" class="form-control" title="Type in a name">
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="How can we help you today?" class="form-control" title="Type in a name" autocomplete="off">
 
   <ul id="myUL" class="list-group">
     <li class="list-group-item waves-effect bg-primary"  onclick="openPage('Contact', this, 'whitesmoke')"><a style="color:black;" href="#">Getting started</a></li>
-    <li class="list-group-item waves-effect"><a href="#">Todo List</a></li>
-    <li class="list-group-item waves-effect"><a href="#">Creating an account in KeepInventory</a></li>
-    <li class="list-group-item waves-effect"><a href="#">Contributing to out forum</a></li>
-    <li class="list-group-item waves-effect"><a href="#">Installing the Phone app</a></li>
-    <li class="list-group-item waves-effect"><a href="#">Installing the desktop app</a></li>
+    <li class="list-group-item waves-effect" onclick="openPage('Home1', this, 'whitesmoke')"><a href="#">Todo List</a></li>
+    <li class="list-group-item waves-effect" onclick="openPage('Home2', this, 'whitesmoke')"><a href="#">Creating an account in KeepInventory</a></li>
+    <li class="list-group-item waves-effect" onclick="openPage('Home3', this, 'whitesmoke')"><a href="#">Contributing to out forum</a></li>
+    <li class="list-group-item waves-effect" onclick="openPage('Home4', this, 'whitesmoke')"><a href="#">Installing the Phone app</a></li>
+    <li class="list-group-item waves-effect" onclick="openPage('Home5', this, 'whitesmoke')"><a href="#">Installing the desktop app</a></li>
 
-    <li class="list-group-item waves-effect"><a href="#">Add an item to your Inventory</a></li>
-    <li class="list-group-item waves-effect"><a href="#">Delete items in your Inventory</a></li>
+    <li class="list-group-item waves-effect" onclick="openPage('Home6', this, 'whitesmoke')"><a href="#">Add an item to your Inventory</a></li>
+    <li class="list-group-item waves-effect" onclick="openPage('Home7', this, 'whitesmoke')"><a href="#">Delete items in your Inventory</a></li>
 
-    <li class="list-group-item waves-effect"><a href="#">Editing room names</a></li>
-    <li class="list-group-item waves-effect"><a href="#">Choosing your language</a></li>
-    <li class="list-group-item waves-effect bg-danger"><a style="color:black;" href="#">Deleting Your Account</a></li>
+    <li class="list-group-item waves-effect" onclick="openPage('Home8', this, 'whitesmoke')"><a href="#">Editing room names</a></li>
+    <li class="list-group-item waves-effect" onclick="openPage('Home9', this, 'whitesmoke')"><a href="#">Choosing your language</a></li>
+    <li class="list-group-item waves-effect bg-danger" onclick="openPage('Home10', this, 'whitesmoke')"><a style="color:black;" href="#">Deleting Your Account</a></li>
   </ul>
 
   <script>
