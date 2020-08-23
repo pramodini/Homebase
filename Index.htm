@@ -1,0 +1,1220 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="apple-touch-icon" type="image/png" href="https://img.icons8.com/plasticine/100/000000/warehouse-1.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/png" href="https://img.icons8.com/plasticine/100/000000/warehouse-1.png" />
+<link rel="mask-icon" type="" href="https://img.icons8.com/plasticine/100/000000/warehouse-1.png" color="#111" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+<title>KeepInventory</title>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  font-family: 'Montserrat', sans-serif;
+
+}
+</style>
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.{
+  background-color: white;
+  color: black;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 16.6666666667%;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.tablink:hover {
+  background-color: whitesmoke;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  font-family: 'Montserrat', sans-serif;
+
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: white;}
+#News {background-color: white;}
+#Contact {background-color: white;}
+#About {background-color: white;}
+#About1 {background-color: white;}
+#About2 {background-color: white;}
+</style>
+</head>
+<body onload="myFunction();m1yFunction">
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 0500);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+<div id="loader">
+<style>
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid black;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: black transparent transparent transparent;
+}
+
+
+tr,td {
+
+font-size:500px;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+</style>
+<div class="lds-ring"><div></div><div></div><div></div><div></div></div>Connecting to server...
+
+</div>
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+
+<a class="waves-effect" onclick="openPage('About', this, 'transparent');closeNav();" id="defaultOpen">Dashboard</a>
+<a class="waves-effect" onclick="openPage('About1', this, 'transparent');closeNav();">Kitchen</a>
+
+<a class="waves-effect" onclick="openPage('Home', this, 'transparent');closeNav();">Bedroom</a>
+<a class="waves-effect" onclick="openPage('News', this, 'transparent');closeNav();">Bathroom</a>
+<a class="waves-effect" onclick="openPage('Contact', this, 'transparent');closeNav();">Garage</a>
+<a class="waves-effect" onclick="openPage('About2', this, 'transparent');closeNav();">Kitchen</a>
+
+  </div>
+  <span style="font-size:30px;cursor:pointer;margin:35px;" onclick="openNav()">&#9776; KeepInventory</span>
+<h3 style="text-align:center">Dashboard</h3>
+
+<body onload="m1yFunction();">
+<p id="demo"></p>
+
+<script>
+function m1yFunction() {
+  var greeting;
+  var time = new Date().getHours();
+  if (time < 10) {
+    greeting = "Good morning";
+  } else if (time < 20) {
+    greeting = "Good Afternoon! <br>Hope your day's going well today!";
+  } else {
+    greeting = "Good Night! <br>Hope your day went well today!";
+  }
+  document.getElementById("demo").innerHTML = greeting;
+}
+</script>
+
+<iframe src="https://padlet-uploads.storage.googleapis.com/466482134/60fc4676a02ad1dcba41ec0d974328db/weather.htm" style="display:block;margins-left:auto;margin-right:auto" width="90%" height="100px;" frameborder="no" style="display:inline-block;margin-left:35px;margin-right:35px;"></iframe>
+
+  <script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+
+<div id="About1" class="tabcontent">
+  <body class="mt32">
+    <div class="container">
+        <h3>
+            <span>Search your house...</span>
+            <input type="search" autofocus="autofocus" placeholder="Search..." class="form-control search-input" data-table="customers-list"/>
+        </h3>
+        <style>
+        .table thead th{vertical-align:bottom;border-bottom:2px solid #dee2e6}.table tbody+tbody{border-top:2px solid #dee2e6}.table-sm td,.table-sm th{padding:.3rem}.table-bordered{border:1px solid #dee2e6}.table-bordered td,.table-bordered th{border:1px solid #dee2e6}.table-bordered thead td,.table-bordered thead th{border-bottom-width:2px}.table-borderless tbody+tbody,.table-borderless td,.table-borderless th,.table-borderless thead th{border:0}.table-striped tbody tr:nth-of-type(odd){background-color:rgba(0,0,0,.05)}.table-hover tbody tr:hover{color:#212529;background-color:rgba(0,0,0,.075)}.table-primary,.table-primary>td,.table-primary>th{background-color:#b8daff}.table-primary tbody+tbody,.table-primary td,.table-primary th,.table-primary thead th{border-color:#7abaff}.table-hover .table-primary:hover{background-color:#9fcdff}.table-hover .table-primary:hover>td,.table-hover .table-primary:hover>th{background-color:#9fcdff}.table-secondary,.table-secondary>td,.table-secondary>th{background-color:#d6d8db}.table-secondary tbody+tbody,.table-secondary td,.table-secondary th,.table-secondary thead th{border-color:#b3b7bb}.table-hover .table-secondary:hover{background-color:#c8cbcf}.table-hover .table-secondary:hover>td,.table-hover .table-secondary:hover>th{background-color:#c8cbcf}.table-success,.table-success>td,.table-success>th{background-color:#c3e6cb}.table-success tbody+tbody,.table-success td,.table-success th,.table-success thead th{border-color:#8fd19e}.table-hover .table-success:hover{background-color:#b1dfbb}.table-hover .table-success:hover>td,.table-hover .table-success:hover>th{background-color:#b1dfbb}.table-info,.table-info>td,.table-info>th{background-color:#bee5eb}.table-info tbody+tbody,.table-info td,.table-info th,.table-info thead th{border-color:#86cfda}.table-hover .table-info:hover{background-color:#abdde5}.table-hover .table-info:hover>td,.table-hover .table-info:hover>th{background-color:#abdde5}.table-warning,.table-warning>td,.table-warning>th{background-color:#ffeeba}.table-warning tbody+tbody,.table-warning td,.table-warning th,.table-warning thead th{border-color:#ffdf7e}.table-hover .table-warning:hover{background-color:#ffe8a1}.table-hover .table-warning:hover>td,.table-hover .table-warning:hover>th{background-color:#ffe8a1}.table-danger,.table-danger>td,.table-danger>th{background-color:#f5c6cb}.table-danger tbody+tbody,.table-danger td,.table-danger th,.table-danger thead th{border-color:#ed969e}.table-hover .table-danger:hover{background-color:#f1b0b7}.table-hover .table-danger:hover>td,.table-hover .table-danger:hover>th{background-color:#f1b0b7}.table-light,.table-light>td,.table-light>th{background-color:#fdfdfe}.table-light tbody+tbody,.table-light td,.table-light th,.table-light thead th{border-color:#fbfcfc}.table-hover .table-light:hover{background-color:#ececf6}.table-hover .table-light:hover>td,.table-hover .table-light:hover>th{background-color:#ececf6}.table-dark,.table-dark>td,.table-dark>th{background-color:#c6c8ca}.table-dark tbody+tbody,.table-dark td,.table-dark th,.table-dark thead th{border-color:#95999c}.table-hover .table-dark:hover{background-color:#b9bbbe}.table-hover .table-dark:hover>td,.table-hover .table-dark:hover>th{background-color:#b9bbbe}.table-active,.table-active>td,.table-active>th{background-color:rgba(0,0,0,.075)}.table-hover .table-active:hover{background-color:rgba(0,0,0,.075)}.table-hover .table-active:hover>td,.table-hover .table-active:hover>th{background-color:rgba(0,0,0,.075)}.table .thead-dark th{color:#fff;background-color:#343a40;border-color:#454d55}.table .thead-light th{color:#495057;background-color:#e9ecef;border-color:#dee2e6}.table-dark{color:#fff;background-color:#343a40}.table-dark td,.table-dark th,.table-dark thead th{border-color:#454d55}.table-dark.table-bordered{border:0}.table-dark.table-striped tbody tr:nth-of-type(odd){background-color:rgba(255,255,255,.05)}.table-dark.table-hover tbody tr:hover{color:#fff;background-color:rgba(255,255,255,.075)}@media (max-width:575.98px){.table-responsive-sm{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.table-responsive-sm>.table-bordered{border:0}}@media (max-width:767.98px){.table-responsive-md{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.table-responsive-md>.table-bordered{border:0}}@media (max-width:991.98px){.table-responsive-lg{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.table-responsive-lg>.table-bordered{border:0}}@media (max-width:1199.98px){.table-responsive-xl{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.table-responsive-xl>.table-bordered{border:0}}.table-responsive{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.table-responsive>.table-bordered{border:0}.form-control{display:block;width:100%;height:calc(1.5em + .75rem + 2px);padding:.375rem .75rem;font-size:1rem;font-weight:400;line-height:1.5;color:#495057;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da;border-radius:.25rem;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}@media (prefers-reduced-motion:reduce){.form-control{transition:none}}
+        </style>
+        <table class="table table-striped mt32 customers-list">
+            <thead>
+                <tr style="font-size:100px;">
+                    <th>Item</th>
+                    <th>Quantity</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Milk</td>
+                    <td style="font-size:30px;">
+<input type="text" id="txt_1" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                </tr>
+                <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Eggs</td>
+                    <td style="font-size:30px;">
+        <input type="text" id="txt_2" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                </tr>
+                <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Yogurt</td>
+                    <td style="font-size:30px;">
+        <input type="text" id="txt_3" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+                </tr>
+                <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Dal</td>
+                    <td style="font-size:30px;">
+             <input type="text" id="txt_4" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+                </tr>
+                <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Oranges</td>
+                    <td style="font-size:30px;">
+             <input type="text" id="txt_5" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+                </tr>
+                <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Apples</td>
+                    <td style="font-size:30px;">
+             <input type="text" id="txt_6" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+                </tr>
+                <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Bananas</td>
+                    <td style="font-size:30px;">
+             <input type="text" id="txt_7" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+                </tr>
+                <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Blueberries</td>
+                    <td style="font-size:30px;">
+             <input type="text" id="txt_8" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+                </tr>
+
+                <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Strawberries</td>
+                    <td style="font-size:30px;">
+       <input type="text" id="txt_9" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                </tr>
+                <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Mangoes</td>
+                    <td style="font-size:30px;">
+       <input type="text" id="txt_10" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                </tr>
+                <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Pineapples</td>
+                    <td style="font-size:30px;">
+        <input type="text" id="txt_11" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                </tr>
+                <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Watermelons</td>
+                    <td style="font-size:30px;">
+        <input type="text" id="txt_12" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                </tr>
+                <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Tomatoes</td>
+                    <td style="font-size:30px;">
+       <input type="text" id="txt_13" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                </tr>
+                <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Potatoes</td>
+                    <td style="font-size:30px;">
+<input type="text" id="txt_14" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                </tr>
+
+
+
+                <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Pasta</td>
+                    <td style="font-size:30px;">
+<input type="text" id="txt_15" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                </tr>
+
+
+                <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Cucumbers</td>
+                    <td style="font-size:30px;">
+<input type="text" id="txt_16" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                </tr>
+
+
+                <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Coriander stalks</td>
+                    <td style="font-size:30px;">
+<input type="text" id="txt_17" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                </tr>
+
+
+                <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Mint leaf stalks</td>
+                    <td style="font-size:30px;">
+<input type="text" id="txt_18" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                </tr>
+
+
+
+                <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Honey</td>
+                    <td style="font-size:30px;">
+<input type="text" id="txt_19" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                </tr>
+
+
+                                <tr style="font-size:100px;">
+                                    <td style="font-size:30px;">Sugar</td>
+                                    <td style="font-size:30px;">
+                <input type="text" id="txt_20" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                                </tr>
+
+                                                <tr style="font-size:100px;">
+                                                    <td style="font-size:30px;">Apricots</td>
+                                                    <td style="font-size:30px;">
+                                <input type="text" id="txt_21" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                                                </tr>
+
+
+
+
+
+                                                                <tr style="font-size:100px;">
+                                                                    <td style="font-size:30px;">Peaches</td>
+                                                                    <td style="font-size:30px;">
+                                                <input type="text" id="txt_22" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                                                                </tr>
+
+
+
+                                                                                <tr style="font-size:100px;">
+                                                                                    <td style="font-size:30px;">Baking soda</td>
+                                                                                    <td style="font-size:30px;">
+                                                                <input type="text" id="txt_23" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                                                                                </tr>
+
+
+                                                                                                <tr style="font-size:100px;">
+                                                                                                    <td style="font-size:30px;">Milk Powder</td>
+                                                                                                    <td style="font-size:30px;">
+                                                                                <input type="text" id="txt_24" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                                                                                                </tr>
+
+                                                                                                                <tr style="font-size:100px;">
+                                                                                                                    <td style="font-size:30px;">Salt</td>
+                                                                                                                    <td style="font-size:30px;">
+                                                                                                <input type="text" id="txt_25" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                                                                                                                </tr>
+
+
+
+                                                                                                                                <tr style="font-size:100px;">
+                                                                                                                                    <td style="font-size:30px;">Nutmeg</td>
+                                                                                                                                    <td style="font-size:30px;">
+                                                                                                                <input type="text" id="txt_26" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                                                                                                                                </tr>
+                                                                                                                                <tr style="font-size:100px;">
+                                                                                                                                    <td style="font-size:30px;">Garlic</td>
+                                                                                                                                    <td style="font-size:30px;">
+                                                                                                                              <input type="text" id="txt_27" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                                                                                                                                </tr>
+                                                                                                                                <tr style="font-size:100px;">
+                                                                                                                                    <td style="font-size:30px;">Onions</td>
+                                                                                                                                    <td style="font-size:30px;">
+                                                                                                                                <input type="text" id="txt_28" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                                                                                                                                </tr>
+                                                                                                                                <tr style="font-size:100px;">
+                                                                                                                                    <td style="font-size:30px;">Asofoteida</td>
+                                                                                                                                    <td style="font-size:30px;">
+                                                                                                                                <input type="text" id="txt_29" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                                                                                                                                </tr>
+                                                                                                                                <tr style="font-size:100px;">
+                                                                                                                                    <td style="font-size:30px;">Baking soda</td>
+                                                                                                                                    <td style="font-size:30px;">
+                                                                                                                                <input type="text" id="txt_30" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                                                                                                                                </tr>
+                                                                                                                                <tr style="font-size:100px;">
+                                                                                                                                                    <td style="font-size:30px;">Basil</td>
+                                                                                                                                                    <td style="font-size:30px;">
+                                                                                                                                <input type="text" id="txt_31" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                                                                                                                                                </tr>
+                                                                                                                                                <tr style="font-size:100px;">
+                                                                                                                                                                    <td style="font-size:30px;">Italian Seasoning</td>
+                                                                                                                                                                    <td style="font-size:30px;">
+                                                                                                                                                <input type="text" id="txt_32" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                                                                                                                                                                </tr><tr style="font-size:100px;">
+                    <td style="font-size:30px;">Peanuts</td>
+                    <td style="font-size:30px;">
+<input type="text" id="txt_33" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+                </tr>
+</td>
+
+
+                <td style="font-size:30px;">Cashews</td>
+                <td style="font-size:30px;">
+      <input type="text" id="txt_34" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+            </tr>
+            <td style="font-size:30px;">Idli rava</td>
+            <td style="font-size:30px;">
+        <input type="text" id="txt_35" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+        </tr>
+        <td style="font-size:30px;">Bread</td>
+        <td style="font-size:30px;">
+    <input type="text" id="txt_36" min="0" max="15"  onkeyup='saveValue(this);' class="form-control"/>
+
+    </tr>
+
+
+ <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Cardamom</td>
+                    <td style="font-size:30px;">
+<input type="text" id="txt_37" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                </tr>
+
+ <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Whipped Cream</td>
+                    <td style="font-size:30px;">
+<input type="text" id="txt_38" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                </tr>
+ <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Cheese</td>
+                    <td style="font-size:30px;">
+<input type="text" id="txt_39" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                </tr>
+
+ <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Ghee</td>
+                    <td style="font-size:30px;">
+<input type="text" id="txt_40" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                </tr>
+
+ <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Saaru powder</td>
+                    <td style="font-size:30px;">
+<input type="text" id="txt_41" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                </tr>
+
+
+
+
+ <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Corn starch</td>
+                    <td style="font-size:30px;">
+<input type="text" id="txt_42" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                </tr>
+
+
+ <tr style="font-size:100px;">
+                    <td style="font-size:30px;">Baking powder</td>
+                    <td style="font-size:30px;">
+<input type="text" id="txt_43" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                </tr>
+
+
+                 <tr style="font-size:100px;">
+                                    <td style="font-size:30px;">Sour cream</td>
+                                    <td style="font-size:30px;">
+                <input type="text" id="txt_44" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                                </tr>
+
+                                 <tr style="font-size:100px;">
+                                                    <td style="font-size:30px;">Basil</td>
+                                                    <td style="font-size:30px;">
+                                <input type="text" id="txt_45" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                                                </tr>
+
+                                                 <tr style="font-size:100px;">
+                                                                    <td style="font-size:30px;">Rice</td>
+                                                                    <td style="font-size:30px;">
+                                                <input type="text" id="txt_46" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                                                                </tr>
+
+                                                                <tr style="font-size:100px;">
+                                                                                   <td style="font-size:30px;">Green Gram</td>
+                                                                                   <td style="font-size:30px;">
+                                                               <input type="text" id="txt_47" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                                                                               </tr>
+                                                                               <tr style="font-size:100px;">
+                                                                                                  <td style="font-size:30px;">Avalkki</td>
+                                                                                                  <td style="font-size:30px;">
+                                                                              <input type="text" id="txt_48" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                                                                                              </tr>
+                                                                                              <tr style="font-size:100px;">
+                                                                                                                 <td style="font-size:30px;">Cream of rice</td>
+                                                                                                                 <td style="font-size:30px;">
+                                                                                             <input type="text" id="txt_49" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                                                                                                             </tr>
+                                                                                                             <tr style="font-size:100px;">
+                                                                                                                                <td style="font-size:30px;">Ragi flour</td>
+                                                                                                                                <td style="font-size:30px;">
+                                                                                                            <input type="text" id="txt_50" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                                                                                                                            </tr>
+                                                                                                                            <tr style="font-size:100px;">
+                                                                                                                                               <td style="font-size:30px;">Bajra</td>
+                                                                                                                                               <td style="font-size:30px;">
+                                                                                                                           <input type="text" id="txt_51" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                                                                                                                                           </tr>
+                                                                                                                                           <tr style="font-size:100px;">
+                                                                                                                                                              <td style="font-size:30px;">Jowar</td>
+                                                                                                                                                              <td style="font-size:30px;">
+                                                                                                                                          <input type="text" id="txt_52" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                                                                                                                                                          </tr>
+                                                                                                                                                          <tr style="font-size:100px;">
+                                                                                                                                                                             <td style="font-size:30px;">Horse gram</td>
+                                                                                                                                                                             <td style="font-size:30px;">
+                                                                                                                                                         <input type="text" id="txt_53" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+</tr>
+<tr style="font-size:100px;">
+                   <td style="font-size:30px;">Besan flour</td>
+                   <td style="font-size:30px;">
+<input type="text" id="txt_54" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+               </tr>
+               <tr style="font-size:100px;">
+                                  <td style="font-size:30px;">Banana chips/td>
+                                  <td style="font-size:30px;">
+              <input type="text" id="txt_55" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                              </tr>
+                              <tr style="font-size:100px;">
+                                                 <td style="font-size:30px;">Sasve</td>
+                                                 <td style="font-size:30px;">
+                             <input type="text" id="txt_56" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                                             </tr>
+                                             <tr style="font-size:100px;">
+                                                                <td style="font-size:30px;">Garbanzo beans</td>
+                                                                <td style="font-size:30px;">
+                                            <input type="text" id="txt_57" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+                   <td style="font-size:30px;">Pinto beans</td>
+                   <td style="font-size:30px;">
+<input type="text" id="txt_58" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+               </tr>
+               <tr style="font-size:100px;">
+                                  <td style="font-size:30px;">Tamarind</td>
+                                  <td style="font-size:30px;">
+              <input type="text" id="txt_59" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                              </tr>
+                              <tr style="font-size:100px;">
+                                                 <td style="font-size:30px;">Figs</td>
+                                                 <td style="font-size:30px;">
+                             <input type="text" id="txt_60" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                                             </tr>
+                                             <tr style="font-size:100px;">
+                                                                <td style="font-size:30px;">Vermicelli</td>
+                                                                <td style="font-size:30px;">
+                                            <input type="text" id="txt_61" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+</tr>
+<tr style="font-size:100px;">
+                   <td style="font-size:30px;">Tea powder</td>
+                   <td style="font-size:30px;">
+<input type="text" id="txt_62" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+               </tr>
+               <tr style="font-size:100px;">
+                                  <td style="font-size:30px;">Coffee powder</td>
+                                  <td style="font-size:30px;">
+              <input type="text" id="txt_63" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                              </tr>
+                              <tr style="font-size:100px;">
+                                                 <td style="font-size:30px;">Coriander seeds</td>
+                                                 <td style="font-size:30px;">
+                             <input type="text" id="txt_64" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                                             </tr>
+                                             <tr style="font-size:100px;">
+                                                                <td style="font-size:30px;">Buckwheat flour</td>
+                                                                <td style="font-size:30px;">
+                                            <input type="text" id="txt_65" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                                                            </tr>
+                                                            <tr style="font-size:100px;">
+                                                                               <td style="font-size:30px;">Oatmeal</td>
+                                                                               <td style="font-size:30px;">
+                                                           <input type="text" id="txt_66" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+                   <td style="font-size:30px;">Boba</td>
+                   <td style="font-size:30px;">
+<input type="text" id="txt_67" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+               </tr>
+               <tr style="font-size:100px;">
+                                  <td style="font-size:30px;">Cumin seeds</td>
+                                  <td style="font-size:30px;">
+              <input type="text" id="txt_68" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                              </tr>
+                              <tr style="font-size:100px;">
+                                                 <td style="font-size:30px;">Red chilli Powder</td>
+                                                 <td style="font-size:30px;">
+                             <input type="text" id="txt_69" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                                             </tr>
+                                             <tr style="font-size:100px;">
+                                                                <td style="font-size:30px;">Pepper</td>
+                                                                <td style="font-size:30px;">
+                                            <input type="text" id="txt_70" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                                                            </tr>
+                                                            <tr style="font-size:100px;">
+                                                                               <td style="font-size:30px;">Payasaam</td>
+                                                                               <td style="font-size:30px;">
+                                                           <input type="text" id="txt_71" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+
+                                                                           </tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">Rava idli mix</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_72" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">Dosa mix</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_73" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">Puliyogare powder</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_74" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">Bourbons</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_75" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">chips</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_76" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">Taco shells</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_77" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">Hot cocoa Powder</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_78" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">Paleo bars</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_79" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">Belvitas</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_80" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">Liquid smoke</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_81" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">Vanilla extract</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_82" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">Black-eyed beans</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_83" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">Puffed rice</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_84" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">Avacados</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_85" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">Kadle bele</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_86" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">Masoor dal</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_87" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">Seaweed</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_88" min="0" max="15" onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">Marie Biscuits</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_89" min="0" max="100"onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">Pretzels</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_90" min="0" max="100"onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">Sooji fine</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_91" min="0" max="100"onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">sooji coarse</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_92" min="0" max="100"onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">Cinnamon</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_93" min="0" max="100"onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">Salsa</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_94" min="0" max="100"onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+<tr style="font-size:100px;">
+<td style="font-size:30px;">Red wine vinegar</td>
+<td style="font-size:30px;">
+<input type="text" id="txt_95" min="0" max="100"onkeyup='saveValue(this);' class="form-control"/>
+</tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        (function(document) {
+            'use strict';
+
+            var TableFilter = (function(myArray) {
+                var search_input;
+
+                function _onInputSearch(e) {
+                    search_input = e.target;
+                    var tables = document.getElementsByClassName(search_input.getAttribute('data-table'));
+                    myArray.forEach.call(tables, function(table) {
+                        myArray.forEach.call(table.tBodies, function(tbody) {
+                            myArray.forEach.call(tbody.rows, function(row) {
+                                var text_content = row.textContent.toLowerCase();
+                                var search_val = search_input.value.toLowerCase();
+                                row.style.display = text_content.indexOf(search_val) > -1 ? '' : 'none';
+                            });
+                        });
+                    });
+                }
+
+                return {
+                    init: function() {
+                        var inputs = document.getElementsByClassName('search-input');
+                        myArray.forEach.call(inputs, function(input) {
+                            input.oninput = _onInputSearch;
+                        });
+                    }
+                };
+            })(Array.prototype);
+
+            document.addEventListener('readystatechange', function() {
+                if (document.readyState === 'complete') {
+                    TableFilter.init();
+                }
+            });
+
+        })(document);
+    </script>
+<script type="text/javascript">
+        document.getElementById("txt_1").value = getSavedValue("txt_1");    // set the value to this input
+        document.getElementById("txt_2").value = getSavedValue("txt_2");   // set the value to this input
+   document.getElementById("txt_3").value = getSavedValue("txt_3");   // set the value to this input
+document.getElementById("txt_4").value = getSavedValue("txt_4");   // set the value to this input
+document.getElementById("txt_5").value = getSavedValue("txt_5");   // set the value to this input
+document.getElementById("txt_6").value = getSavedValue("txt_6");   // set the value to this input
+document.getElementById("txt_7").value = getSavedValue("txt_7");   // set the value to this input
+document.getElementById("txt_8").value = getSavedValue("txt_8");   // set the value to this input
+document.getElementById("txt_9").value = getSavedValue("txt_9");   // set the value to this input
+document.getElementById("txt_10").value = getSavedValue("txt_10");   // set the value to this input
+document.getElementById("txt_11").value = getSavedValue("txt_11");   // set the value to this input
+document.getElementById("txt_12").value = getSavedValue("txt_12");   // set the value to this input
+document.getElementById("txt_13").value = getSavedValue("txt_13");   // set the value to this input
+document.getElementById("txt_14").value = getSavedValue("txt_14");   // set the value to this input
+document.getElementById("txt_15").value = getSavedValue("txt_15");   // set the value to this input the following and this isvacant
+document.getElementById("txt_16").value = getSavedValue("txt_16");   // set the value to this input
+document.getElementById("txt_17").value = getSavedValue("txt_17");   // set the value to this input
+document.getElementById("txt_18").value = getSavedValue("txt_18");   // set the value to this input
+document.getElementById("txt_19").value = getSavedValue("txt_19");   // set the value to this input
+document.getElementById("txt_20").value = getSavedValue("txt_20");   // set the value to this input
+document.getElementById("txt_21").value = getSavedValue("txt_21");   // set the value to this input
+document.getElementById("txt_22").value = getSavedValue("txt_22");   // set the value to this input
+document.getElementById("txt_23").value = getSavedValue("txt_23");   // set the value to this input
+document.getElementById("txt_24").value = getSavedValue("txt_24");   // set the value to this input
+document.getElementById("txt_25").value = getSavedValue("txt_25");   // set the value to this input
+document.getElementById("txt_26").value = getSavedValue("txt_26");   // set the value to this input
+document.getElementById("txt_27").value = getSavedValue("txt_27");   // set the value to this input
+document.getElementById("txt_28").value = getSavedValue("txt_28");   // set the value to this input
+document.getElementById("txt_29").value = getSavedValue("txt_29");   // set the value to this input
+document.getElementById("txt_30").value = getSavedValue("txt_30");   // set the value to this input
+document.getElementById("txt_31").value = getSavedValue("txt_31");   // set the value to this input
+document.getElementById("txt_32").value = getSavedValue("txt_32");   // set the value to this input
+document.getElementById("txt_33").value = getSavedValue("txt_33");   // set the value to this input
+document.getElementById("txt_34").value = getSavedValue("txt_34");   // set the value to this input
+document.getElementById("txt_35").value = getSavedValue("txt_35");   // set the value to this input
+document.getElementById("txt_36").value = getSavedValue("txt_36");   // set the value to this input
+document.getElementById("txt_37").value = getSavedValue("txt_37");   // set the value to this input
+document.getElementById("txt_38").value = getSavedValue("txt_38");   // set the value to this input
+document.getElementById("txt_39").value = getSavedValue("txt_39");   // set the value to this input
+document.getElementById("txt_40").value = getSavedValue("txt_40");   // set the value to this input
+document.getElementById("txt_41").value = getSavedValue("txt_41");   // set the value to this input
+document.getElementById("txt_42").value = getSavedValue("txt_42");   // set the value to this input
+document.getElementById("txt_43").value = getSavedValue("txt_43");   // set the value to this input
+document.getElementById("txt_44").value = getSavedValue("txt_44");   // set the value to this input
+document.getElementById("txt_45").value = getSavedValue("txt_45");   // set the value to this input
+document.getElementById("txt_46").value = getSavedValue("txt_46");   // set the value to this input
+document.getElementById("txt_47").value = getSavedValue("txt_47");   // set the value to this input
+document.getElementById("txt_48").value = getSavedValue("txt_48");   // set the value to this input
+document.getElementById("txt_49").value = getSavedValue("txt_49");   // set the value to this input
+document.getElementById("txt_50").value = getSavedValue("txt_50");   // set the value to this input
+document.getElementById("txt_51").value = getSavedValue("txt_51");   // set the value to this input
+document.getElementById("txt_52").value = getSavedValue("txt_52");   // set the value to this input
+document.getElementById("txt_53").value = getSavedValue("txt_53");   // set the value to this input
+document.getElementById("txt_54").value = getSavedValue("txt_54");   // set the value to this input
+document.getElementById("txt_55").value = getSavedValue("txt_55");   // set the value to this input
+document.getElementById("txt_56").value = getSavedValue("txt_56");   // set the value to this input
+document.getElementById("txt_57").value = getSavedValue("txt_57");   // set the value to this input
+document.getElementById("txt_58").value = getSavedValue("txt_58");   // set the value to this input
+document.getElementById("txt_59").value = getSavedValue("txt_59");   // set the value to this input
+document.getElementById("txt_60").value = getSavedValue("txt_60");   // set the value to this input
+document.getElementById("txt_61").value = getSavedValue("txt_61");   // set the value to this input
+document.getElementById("txt_62").value = getSavedValue("txt_62");   // set the value to this input
+document.getElementById("txt_63").value = getSavedValue("txt_63");   // set the value to this input
+document.getElementById("txt_64").value = getSavedValue("txt_64");   // set the value to this input
+document.getElementById("txt_65").value = getSavedValue("txt_65");   // set the value to this input
+document.getElementById("txt_66").value = getSavedValue("txt_66");   // set the value to this input
+document.getElementById("txt_67").value = getSavedValue("txt_67");   // set the value to this input
+document.getElementById("txt_68").value = getSavedValue("txt_68");   // set the value to this input
+document.getElementById("txt_69").value = getSavedValue("txt_69");   // set the value to this input
+document.getElementById("txt_70").value = getSavedValue("txt_70");   // set the value to this input
+document.getElementById("txt_71").value = getSavedValue("txt_71");   // set the value to this input
+document.getElementById("txt_72").value = getSavedValue("txt_72");   // set the value to this input
+document.getElementById("txt_73").value = getSavedValue("txt_73");   // set the value to this input
+document.getElementById("txt_74").value = getSavedValue("txt_74");   // set the value to this input
+document.getElementById("txt_75").value = getSavedValue("txt_75");   // set the value to this input
+document.getElementById("txt_76").value = getSavedValue("txt_76");   // set the value to this input
+document.getElementById("txt_77").value = getSavedValue("txt_77");   // set the value to this input
+document.getElementById("txt_78").value = getSavedValue("txt_78");   // set the value to this input
+document.getElementById("txt_79").value = getSavedValue("txt_79");   // set the value to this input
+document.getElementById("txt_80").value = getSavedValue("txt_80");   // set the value to this input
+document.getElementById("txt_81").value = getSavedValue("txt_81");   // set the value to this input
+document.getElementById("txt_82").value = getSavedValue("txt_82");   // set the value to this input
+document.getElementById("txt_83").value = getSavedValue("txt_83");   // set the value to this input
+document.getElementById("txt_84").value = getSavedValue("txt_84");   // set the value to this input
+document.getElementById("txt_85").value = getSavedValue("txt_85");   // set the value to this input
+document.getElementById("txt_86").value = getSavedValue("txt_86");   // set the value to this input
+document.getElementById("txt_87").value = getSavedValue("txt_87");   // set the value to this input
+document.getElementById("txt_88").value = getSavedValue("txt_88");   // set the value to this input
+document.getElementById("txt_89").value = getSavedValue("txt_89");   // set the value to this input
+document.getElementById("txt_90").value = getSavedValue("txt_90");   // set the value to this input
+document.getElementById("txt_91").value = getSavedValue("txt_91");   // set the value to this input
+document.getElementById("txt_92").value = getSavedValue("txt_92");   // set the value to this input
+document.getElementById("txt_93").value = getSavedValue("txt_93");   // set the value to this input
+document.getElementById("txt_94").value = getSavedValue("txt_94");   // set the value to this input
+document.getElementById("txt_95").value = getSavedValue("txt_95");   // set the value to this input
+document.getElementById("txt_96").value = getSavedValue("txt_96");   // set the value to this input
+document.getElementById("txt_97").value = getSavedValue("txt_97");   // set the value to this input
+document.getElementById("txt_98").value = getSavedValue("txt_98");   // set the value to this input
+document.getElementById("txt_99").value = getSavedValue("txt_99");   // set the value to this input
+
+        /* Here you can add more inputs to set value. if it's saved */
+
+        //Save the value function - save it to localStorage as (ID, VALUE)
+        function saveValue(e){
+            var id = e.id;  // get the sender's id to save it .
+            var val = e.value; // get the value.
+            localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override .
+        }
+
+        //get the saved value function - return the value of "v" from localStorage.
+        function getSavedValue  (v){
+            if (!localStorage.getItem(v)) {
+                return "";// You can change this to your defualt value.
+            }
+            return localStorage.getItem(v);
+        }
+</script>
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+
+<div class="container" >
+        <div class="row">
+            <div class="col-xs-12">
+<div style="display:none;">
+                <h1 class="text-success">To Do List (with local storage)</h1>
+                <p class="lead">This To Do list app saves your list items locally, on your computer. You don't need to be online to use it, and none of your data is sent out to the Internet. <span id="showMore"><a href="#">[more]</a></span></p>
+
+                <p class="lead" id="moreText">Because of the way localStorage works, you will not be able to see this To Do list on another device, or even in another browser on the same device. If that suits your needs, you can rely on this small app to manage your personal To Do items. To learn more about localStorage, see <a href="https://www.w3.org/TR/webstorage/#the-localstorage-attribute" target="_blank">this</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage/LocalStorage" target="_blank">this</a>. <span id="showLess"><a href="#">[less]</a></span></p>
+</div>
+            </div> <!-- close col -->
+        </div> <!-- close row -->
+
+        <form id="newItemForm" class="form-horizontal">
+            <p id="paraToHideForm"><a href="#" id="hideForm">View your To Do list</a></p>
+
+        <fieldset class="well">
+        <legend>Add a New To Do Item</legend>
+
+            <div class="form-group">
+                <label for="itemname" class="col-sm-2 control-label">Item Name</label>
+                <div class="col-sm-10">
+                <input type="text" class="form-control" style="text-align:center;"  class="form-control"  name="itemname" id="itemname" class="form-control" maxlength="80" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="duedate" class="col-sm-2 control-label">Due Date</label>
+                <div class="col-sm-10">
+                <input type="date" name="duedate" id="duedate" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="descrip" class="col-sm-2 control-label">Details</label>
+                <div class="col-sm-10">
+                <textarea name="descrip" id="descrip" rows="4" maxlength="300" placeholder="No more than 300 characters long" class="form-control"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+            <label for="priority" class="col-sm-2 control-label">Priority</label>
+                <div class="col-sm-10">
+                <select class="form-control" name="priority" id="priority">
+                <option value=1>Highest</option>
+                <option value=2>High</option>
+                <option value=3 selected>Middle</option>
+                <option value=4>Low</option>
+                <option value=5>Lowest</option>
+                </select>
+            </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-4 col-sm-offset-2 col-xs-12">
+                    <input type="submit" class="btn btn-success form-control" value="Add Item">
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <input type="reset" class="btn btn-default form-control" value="Cancel">
+                </div>
+            </div>
+
+        </fieldset>
+        </form>
+        <!-- this will be hidden at times -->
+        <div class="row" id="toDoDataRow">
+            <div class="col-xs-12">
+                <h2>My To Do Items</h2>
+
+
+
+<style>
+/**
+ * Native modal dialog (limited support)
+ */
+dialog {
+
+	border:1 px solid black;
+	border-radius: 10px;
+
+}
+dialog::backdrop {
+	background: rgba(0,0,0,.8)
+	backdrop-filter:blur(10px);
+		filter: blur(10px);
+}
+</style>
+                <a href="#" id="showForm"class="btn btn-info" role="button">+ New item</a>
+<button onclick="document.querySelector('#modal').showModal()" class="btn waves-effect btn-secondary" style="outline:none">Settings</button>
+<dialog id="modal" onclick="this.parentNode.close()">
+
+
+                <!-- buttons above list -->
+                <div class='floater' style="display:inline-block;">
+                    <button style="display:inline-block;outline:none;" class='btn btn-success removeAll waves-effect '>Remove Checked Items</button>
+                </div>
+                <div class='floater' style="display:inline-block;">
+                    <button style="display:inline-block;outline:none;" class='btn btn-primary waves-effect ' id='sortPri'>Filter by Priority</button>
+                </div>
+                <div class='floater' style="display:inline-block;">
+                    <button style="display:inline-block;outline:none;" class='btn btn-info waves-effect' id='sortDate'>Filter by Due Date</button><br>
+                </div><br><button onclick="this.parentNode.close()" class="btn waves-effect btn-secondary" style="outline:none">Close</button></dialog><br><br>
+
+                <!-- To Do items go here -->
+                <div id="toDoData" class="clearfix"></div>
+                <!-- final button -->
+                <div class='floater'>
+                    <button style="outline:none;" class='btn  waves-effect removeAll'>Remove Checked Items</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+
+
+
+            </div>
+        </div>
+    </div> <!-- close container -->
+
+    <script src="https://macloo.github.io/to-do-list-localstorage/js/jquery.min.js"></script>
+    <script src="https://macloo.github.io/to-do-list-localstorage/js/bootstrap.min.js"></script>
+    <script src="https://macloo.github.io/to-do-list-localstorage/js/main.js"></script>
+<div class="container">
+	<a role="button" class="btn btn-secondary waves-effect" href="http://pramodini.github.io/KeepInventory/livesearch2.htm">Help Center</a>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<style>
+.form-control {display:block;width:100%;height:calc(1.5em + .75rem + 2px);padding:.375rem .75rem;font-size:1rem;font-weight:400;line-height:1.5;color:#495057;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da;border-radius:.25rem;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}@media (prefers-reduced-motion:reduce){.form-control{transition:none}}.form-control::-ms-expand{background-color:transparent;border:0}.form-control:-moz-fo  cusring{color:transparent;text-shadow:0 0 0 #495057}.form-control:focus{color:#495057;background-color:#fff;border-color:#80bdff;outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)}.form-control::-webkit-input-placeholder{color:#6c757d;opacity:1}.form-control::-moz-placeholder{color:#6c757d;opacity:1}.form-control:-ms-input-placeholder{color:#6c757d;opacity:1}.form-control::-ms-input-placeholder{color:#6c757d;opacity:1}.form-control::placeholder{color:#6c757d;opacity:1}.form-control:disabled,.form-control[readonly]{background-color:#e9ecef;opacity:1}input[type=date].form-control,input[type=datetime-local].form-control,input[type=month].form-control,input[type=time].form-control{-webkit-appearance:none;-moz-appearance:none;appearance:none}select.form-control:focus::-ms-value{color:#495057;background-color:#fff}.form-control-file,.form-control-range{display:block;width:100%}.col-form-label{padding-top:calc(.375rem + 1px);padding-bottom:calc(.375rem + 1px);margin-bottom:0;font-size:inherit;line-height:1.5}.col-form-label-lg{padding-top:calc(.5rem + 1px);padding-bottom:calc(.5rem + 1px);font-size:1.25rem;line-height:1.5}.col-form-label-sm{padding-top:calc(.25rem + 1px);padding-bottom:calc(.25rem + 1px);font-size:.875rem;line-height:1.5}.form-control-plaintext{display:block;width:100%;padding:.375rem 0;margin-bottom:0;font-size:1rem;line-height:1.5;color:#212529;background-color:transparent;border:solid transparent;border-width:1px 0}.form-control-plaintext.form-control-lg,.form-control-plaintext.form-control-sm{padding-right:0;padding-left:0}.form-control-sm{height:calc(1.5em + .5rem + 2px);padding:.25rem .5rem;font-size:.875rem;line-height:1.5;border-radius:.2rem}.form-control-lg{height:calc(1.5em + 1rem + 2px);padding:.5rem 1rem;font-size:1.25rem;line-height:1.5;border-radius:.3rem}select.form-control[multiple],select.form-control[size]{height:auto}textarea.form-control{height:auto}.form-group{margin-bottom:1rem}.form-text{display:block;margin-top:.25rem}.form-row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-5px;margin-left:-5px}.form-row>.col,.form-row>[class*=col-]{padding-right:5px;padding-left:5px}.form-check{position:relative;display:block;padding-left:1.25rem}.form-check-input{position:absolute;margin-top:.3rem;margin-left:-1.25rem}.form-check-input:disabled~.form-check-label,.form-check-input[disabled]~.form-check-label{color:#6c757d}.form-check-label{margin-bottom:0}.form-check-inline{display:-ms-inline-flexbox;display:inline-flex;-ms-flex-align:center;align-items:center;padding-left:0;margin-right:.75rem}.form-check-inline .form-check-input{position:static;margin-top:0;margin-right:.3125rem;margin-left:0}.valid-feedback{display:none;width:100%;margin-top:.25rem;font-size:80%;color:#28a745}.valid-tooltip{position:absolute;top:100%;z-index:5;display:none;max-width:100%;padding:.25rem .5rem;margin-top:.1rem;font-size:.875rem;line-height:1.5;color:#fff;background-color:rgba(40,167,69,.9);border-radius:.25rem}.is-valid~.valid-feedback,.is-valid~.valid-tooltip,.was-validated :valid~.valid-feedback,.was-validated :valid~.valid-tooltip{display:block}.form-control.is-valid,.was-validated .form-control:valid{border-color:#28a745;padding-right:calc(1.5em + .75rem);background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");background-repeat:no-repeat;background-position:right calc(.375em + .1875rem) center;background-size:calc(.75em + .375rem) calc(.75em + .375rem)}.form-control.is-valid:focus,.was-validated .form-control:valid:focus{border-color:#28a745;box-shadow:0 0 0 .2rem rgba(40,167,69,.25)}.was-validated textarea.form-control:valid,textarea.form-control.is-valid{padding-right:calc(1.5em + .75rem);background-position:top calc(.375em + .1875rem) right calc(.375em + .1875rem)}
+
+</style>
+
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<br>
+<br>
+<br>
+
+</div>
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
