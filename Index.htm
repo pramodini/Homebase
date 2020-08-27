@@ -1,4 +1,10 @@
 ﻿<!DOCTYPE html>
+<div id="myDIV">
+
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
+</div>
 <html>
 <head>
 <style>
@@ -12,7 +18,9 @@ content: '';
 display: block;
 padding-top: 100%;
 }
+#myDIV {
 
+}
 .circular {
 -webkit-animation: rotate 2s linear infinite;
 animation: rotate 2s linear infinite;
@@ -242,7 +250,7 @@ body, html {
 
 </style>
 </head>
-<body onload="myFunction();myfunction">
+<body onload="myFunction();move();myfunction();">
 <script>
 var myVar;
 
@@ -315,14 +323,14 @@ font-size:500px;
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
 
-<a class="waves-effect" onclick="openPage('About', this, 'transparent');closeNav();" id="defaultOpen">Dashboard</a>
-<a class="waves-effect" onclick="openPage('About1', this, 'transparent');closeNav();">Kitchen</a>
+<a class="waves-effect" onclick="openPage('About', this, 'transparent');closeNav();move();" id="defaultOpen">Dashboard</a>
+<a class="waves-effect" onclick="openPage('About1', this, 'transparent');closeNav();move();">Kitchen</a>
 
-<a class="waves-effect" onclick="openPage('Home', this, 'transparent');closeNav();">Bedroom</a>
-<a class="waves-effect" onclick="openPage('News', this, 'transparent');closeNav();">Bathroom</a>
-<a class="waves-effect" onclick="openPage('Contact', this, 'transparent');closeNav();">Garage</a>
-<a class="waves-effect" onclick="openPage('About2', this, 'transparent');closeNav();">Living Room</a>
-<a class="waves-effect" onclick="openPage('settings', this, 'transparent');closeNav();">Settings</a>
+<a class="waves-effect" onclick="openPage('Home', this, 'transparent');closeNav();move();">Bedroom</a>
+<a class="waves-effect" onclick="openPage('News', this, 'transparent');closeNav();move();">Bathroom</a>
+<a class="waves-effect" onclick="openPage('Contact', this, 'transparent');closeNav();move();">Garage</a>
+<a class="waves-effect" onclick="openPage('About2', this, 'transparent');closeNav();move();">Living Room</a>
+<a class="waves-effect" onclick="openPage('settings', this, 'transparent');closeNav();move();">Settings</a>
 
   </div>
   <span style="font-size:30px;cursor:pointer;margin:35px;" onclick="openNav()">&#9776; KeepInventory</span>
@@ -1843,5 +1851,60 @@ function openPage(pageName,elmnt,color) {
 document.getElementById("defaultOpen").click();
 </script>
 
+
+<style>
+#myProgress {
+  width: 100%;
+  background-color: #dd;
+position:fixed;
+top:0;
+left:0;
+z-index:1000000000000000000;
+border-radius:1000px;
+}
+
+#myBar {
+  width: 0%;
+  height: 3px;
+  background-color: #0057e7;
+  border-radius: 0px 190px 190px 0px;
+  border-radius:100px;
+
+}
+</style>
+
+<script>
+var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 1;
+    var id = setInterval(frame, 3);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+a();
+i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+}
+</script>
+
+<script>
+function a() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>
