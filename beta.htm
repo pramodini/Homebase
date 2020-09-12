@@ -2,6 +2,8 @@
 
 
 
+
+
 <!DOCTYPE html>
 
 <html>
@@ -31,16 +33,17 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Homebase is a home inventory app. " itemprop="description">
     <style>
       .loader {
         position: relative;
         margin: 0 auto;
-        width: 100px;
+        width: 50px;
       }
       .loader:before {
         content: '';
         display: block;
-        padding-top: 100%;
+        padding-top: 450%;
       }
       #myDIV {
 
@@ -86,6 +89,9 @@
           display:none !important;
         }
         .hero-image h1{font-size:30px;}
+#News {
+  margin-left:80 !important;
+}
 
         #sidenavbutton {
           display:block !important;
@@ -95,6 +101,9 @@
         #sidenavbutton {
           display:none !important;
         }
+       .tabcontent  {
+  margin-left:80px !important;
+}
         .hero-image h1{font-size:50px;}
 
       }
@@ -260,7 +269,7 @@
 
       #Home {margin-left:80;background-color: white;}
       #launch{background-color: white}
-      #News {margin-left:80;background-color: white;}
+      #News {margin-left:-80 !important;background-color: white;}
       #Contact {margin-left:80;background-color: white;}
       #About {margin-left:80;background-color: white;}
       #About1 {margin-left:80;background-color: white;}
@@ -271,10 +280,10 @@
   </head>
 
   <body onload="side();myFunction();move();myfunction();side1();">
-    		<div id="Before" href="#">
-    <div id="overlay" style="text-align:left;">
-      <div id="text" style="color:black;padding:40px;border-radius:10px;">Update 2.0 is finally here! <br>New Features:<br><li>Sidebar</li><li>Settings page</li><li><a href="http://homebase-dev-app.slack.com/" style="color:blue">Slack workspace</a></li><li>Entire page remake</li><li>Performance updates &amp; bug fixes</li><br><div style="text-align:center;"><button onclick="off();" class="btn btn-danger"  id="Button1" style="text-align:center;">Close</button></div></div>
-    </div></div>
+    <div id="Before" href="#">
+      <div id="overlay" style="text-align:left;">
+        <div id="text" style="color:black;padding:40px;border-radius:10px;">Update 2.0 is finally here! <br>New Features:<br><li>Sidebar</li><li>Settings page</li><li><a href="http://homebase-dev-app.slack.com/" style="color:blue">Slack workspace</a></li><li>Entire page remake</li><li>Performance updates &amp; bug fixes</li><br><div style="text-align:center;"><button onclick="off();" class="btn btn-danger"  id="Button1" style="text-align:center;">Close</button></div></div>
+      </div></div>
     <style>
       body,button {
         font-family: 'Quicksand', sans-serif;
@@ -324,6 +333,7 @@
       }
     </script>
     <div id="loader">
+      <img src="https://img.icons8.com/plasticine/100/000000/warehouse-1.png" height="100" width="100">
       <style>
         .lds-ring {
           display: inline-block;
@@ -380,8 +390,7 @@
             <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
           </svg>
         </div>
-      </div><br><br><br><br><br><br><h4><b><i style="font-weight:100;font-size: 30px;">&#x2302;</i>
-      Homebase</b> <br></h4>
+      </div>
 
     </div>
     <script>
@@ -526,15 +535,15 @@
       <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-        <a class="waves-effect" onclick="openPage('launch', this, 'transparent');closeNav();move();" id="defaultOpen">Dashboard</a>
+        <a class="waves-effect" onclick="openPage('launch', this, 'transparent');closeNav();move();" style="display:none;" id="defaultOpen">Dashboard</a>
 
         <a class="waves-effect" onclick="openPage('About', this, 'transparent');closeNav();move();">Dashboard</a>
-        <a class="waves-effect" onclick="openPage('About1', this, 'transparent');closeNav();move();">Kitchen</a>
+        <a class="waves-effect" onclick="openPage('About1', this, 'transparent');closeNav();move();">Kitchen <p class="badge badge-success" type="button" href="#">Beta</p><p class="badge badge-success" type="button" href="#" style="margin-right:10px;">Under testing</p></a>
 
-        <a class="waves-effect" onclick="openPage('Home', this, 'transparent');closeNav();move();">Bedroom</a>
-        <a class="waves-effect" onclick="openPage('News', this, 'transparent');closeNav();move();">Bathroom</a>
-        <a class="waves-effect" onclick="openPage('Contact', this, 'transparent');closeNav();move();">Garage</a>
-        <a class="waves-effect" onclick="openPage('About2', this, 'transparent');closeNav();move();">Living Room</a>
+        <a class="waves-effect" onclick="openPage('Home', this, 'transparent');closeNav();move();">Bedroom <p class="badge badge-danger" type="button" href="#">Coming Soon</p></a>
+        <a class="waves-effect" onclick="openPage('News', this, 'transparent');closeNav();move();">Bathroom <p class="badge badge-danger" type="button" href="#">Coming Soon</p></a>
+        <a class="waves-effect" onclick="openPage('Contact', this, 'transparent');closeNav();move();">Garage <p class="badge badge-danger" type="button" href="#">Coming Soon</p></a>
+        <a class="waves-effect" onclick="openPage('About2', this, 'transparent');closeNav();move();">Living Room <p class="badge badge-danger" type="button" href="#">Coming Soon</p></a>
         <a class="waves-effect" onclick="openPage('settings', this, 'transparent');closeNav();move();">Settings</a>
 
       </div>
@@ -546,7 +555,7 @@
 
           <img data-toggle="tooltip" data-placement="right"
                title="Tooltip on right" onclick="openPage('About', this, 'transparent');closeNav();move();Main();" class="waves-effect" style="  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
-                                                                                                                                        filter: grayscale(0%);" src="https://img.icons8.com/plasticine/100/000000/warehouse-1.png" width="40" height="40">
+                                                                                                                                               filter: grayscale(0%);" src="https://img.icons8.com/plasticine/100/000000/warehouse-1.png" width="40" height="40">
           <p style="font-size:10px;">Homebase</p>
           <style>
             #snackbar {
@@ -704,7 +713,7 @@
           }
       </style>
       <div id="todo" class="tabcontent">
-        <iframe src="https://padlet-uploads.storage.googleapis.com/466482134/07d7cdf417641a5aff20b92aaf724305/backdrop.htm" width="100%" height="800"></iframe>
+        <iframe src="https://padlet-uploads.storage.googleapis.com/466482134/d376eb539802eade3696e48be4df6562/index.html" width="100%" height="800"></iframe>
       </div>
       <style>
         .sidebar img {
@@ -780,7 +789,15 @@
           <button class="btn btn-secondary waves-effect">Show Weather</button>
           <br><br>
           <button class="btn btn-secondary waves-effect">Show todo</button><br>
-
+          <nav>
+            <div class="theme-switch-wrapper">
+              <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+              </label>
+              <em>Enable Dark Mode!</em>
+            </div>
+          </nav>
           <div id="google_translate_element"></div>
 
           <script type="text/javascript">
@@ -944,7 +961,7 @@
 
 
       </div>
-      <div class="tabcontent" id="launch">
+      <div class="tabcontent" id="launch" style="position: absolute !important; top:0px !important;left:0px !important">
 
         <style>
           body {
@@ -953,7 +970,7 @@
           }
 
           .hero-image {
-            background-image: url("https://www.rgvnewhomesguide.com/assets/uploads/2018/12/Villa-Homes-Photos-by-Chris-web-2.jpg");
+            background-image: url("https://dhp.dreeshomes.com/cms/images/EYrud-a6KJ-Ayt63GXIVxF?scale=xxl");
             background-color: #cccccc;
             height: 500px;
             background-position: center;
@@ -996,11 +1013,12 @@
             </ul>
           </div>
         </nav>
+        <style>.ree {color:black !important;}</style>
         <div class="hero-image">
           <div class="hero-text" style="padding:10px;border-radius:10px;font-family: 'Quicksand', sans-serif;
                                         ">
-            <h1><b>Built for all families.</b></h1>
-            <h3>Homebase lets you track what you have in your home wherever you are!</h3>
+            <h1 class="ree"><b>Built for all families.</b></h1>
+            <h3 class="ree">Homebase lets you track what you have in your home wherever you are!</h3>
             <a role="button" id="quoteButton" class="btn btn-danger waves-effect" onclick="openPage('About', this, 'transparent');closeNav();move();side();on();">Launch Homebase</a>
           </div>
         </div>
@@ -1011,7 +1029,7 @@
           Want to help us make Homebase? You can ask me at <a href="mailto:coolbitmoji@gmail.com">coolbitmoji@gmail.com</a> to send a request.
           <br><br>
           Introduction<br>
-          KeepInventory is a home inventory app! You can save all of the items in your home, and then retrieve them at any time. I got this idea when I saw my mom at the grocery store wondering what she had at home.
+          Homebase is a home inventory app! You can save all of the items in your home, and then retrieve them at any time. I got this idea when I saw my mom at the grocery store wondering what she had at home.
 
 
 
@@ -1031,7 +1049,7 @@
               isCardForm: false
             });
           </script><br>
-          \
+          
 
 
         </div>
@@ -1070,7 +1088,7 @@
             <div class="container">
               <?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" x="0px" y="0px" width="300px" height="300px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"><g style="isolation:isolate"><g id="Layer_1" data-name="Layer 1"><g opacity="0.23" style="mix-blend-mode:multiply"><path d="M541.354,301.862H479.493a3,3,0,0,1,0-6h58.861V267.931a3,3,0,0,1,6,0v30.931A3,3,0,0,1,541.354,301.862Z" fill="#474747"/><path d="M603.217,301.862H541.354a3,3,0,0,1-3-3V267.931a3,3,0,0,1,6,0v27.931h58.863a3,3,0,0,1,0,6Z" fill="#474747"/><path d="M572.286,332.793H510.424a3,3,0,0,1-3-3V298.862a3,3,0,0,1,3-3h61.862a3,3,0,0,1,3,3v30.931A3,3,0,0,1,572.286,332.793Zm-58.862-6h55.862V301.862H513.424Z" fill="#474747"/><path d="M558.932,363.724H541.354a3,3,0,0,1-3-3V329.793a3,3,0,0,1,3-3h61.863a3,3,0,0,1,0,6H544.354v24.931h14.578a3,3,0,0,1,0,6Z" fill="#474747"/><path d="M541.354,363.724H491.192a3,3,0,0,1,0-6h47.162V332.793H479.493a3,3,0,0,1,0-6h61.861a3,3,0,0,1,3,3v30.931A3,3,0,0,1,541.354,363.724Z" fill="#474747"/><path d="M510.424,332.793H479.493a3,3,0,0,1,0-6h27.931V301.862H458.406a3,3,0,0,1,0-6h52.018a3,3,0,0,1,3,3v30.931A3,3,0,0,1,510.424,332.793Z" fill="#474747"/><path d="M616.928,332.793H572.286a3,3,0,0,1-3-3V298.862a3,3,0,0,1,3-3h21.443a3,3,0,0,1,0,6H575.286v24.931h41.642a3,3,0,0,1,0,6Z" fill="#474747"/></g><g opacity="0.23" style="mix-blend-mode:multiply"><path d="M117.568,555.122H55.707a3,3,0,1,1,0-6h58.861V521.19a3,3,0,0,1,6,0v30.932A3,3,0,0,1,117.568,555.122Z" fill="#474747"/><path d="M179.43,555.122H117.568a3,3,0,0,1-3-3V521.19a3,3,0,0,1,6,0v27.932H179.43a3,3,0,0,1,0,6Z" fill="#474747"/><path d="M148.5,586.053H86.637a3,3,0,0,1-3-3V552.122a3,3,0,0,1,3-3H148.5a3,3,0,0,1,3,3v30.931A3,3,0,0,1,148.5,586.053Zm-58.862-6H145.5V555.122H89.637Z" fill="#474747"/><path d="M135.146,616.983H117.568a3,3,0,0,1-3-3v-30.93a3,3,0,0,1,3-3H179.43a3,3,0,0,1,0,6H120.568v24.93h14.578a3,3,0,0,1,0,6Z" fill="#474747"/><path d="M117.568,616.983H67.406a3,3,0,1,1,0-6h47.162v-24.93H55.707a3,3,0,1,1,0-6h61.861a3,3,0,0,1,3,3v30.93A3,3,0,0,1,117.568,616.983Z" fill="#474747"/><path d="M86.637,586.053H55.707a3,3,0,1,1,0-6h27.93V555.122H34.619a3,3,0,0,1,0-6H86.637a3,3,0,0,1,3,3v30.931A3,3,0,0,1,86.637,586.053Z" fill="#474747"/><path d="M193.141,586.053H148.5a3,3,0,0,1-3-3V552.122a3,3,0,0,1,3-3h21.444a3,3,0,0,1,0,6H151.5v24.931h41.642a3,3,0,0,1,0,6Z" fill="#474747"/></g><g opacity="0.23" style="mix-blend-mode:multiply"><path d="M933.879,445.535H872.017a3,3,0,0,1-3-3V411.6a3,3,0,0,1,6,0v27.931h58.862a3,3,0,0,1,0,6Z" fill="#474747"/><path d="M872.017,445.535H810.154a3,3,0,0,1,0-6h58.863V411.6a3,3,0,0,1,6,0v30.931A3,3,0,0,1,872.017,445.535Z" fill="#474747"/><path d="M902.947,476.465H841.086a3,3,0,0,1-3-3v-30.93a3,3,0,0,1,3-3h61.861a3,3,0,0,1,3,3v30.93A3,3,0,0,1,902.947,476.465Zm-58.861-6h55.861v-24.93H844.086Z" fill="#474747"/><path d="M872.017,507.4H854.439a3,3,0,0,1,0-6h14.578V476.465H810.154a3,3,0,0,1,0-6h61.863a3,3,0,0,1,3,3V504.4A3,3,0,0,1,872.017,507.4Z" fill="#474747"/><path d="M895.205,507.4H872.017a3,3,0,0,1-3-3V473.465a3,3,0,0,1,3-3h61.862a3,3,0,0,1,0,6H875.017V501.4h20.188a3,3,0,0,1,0,6Z" fill="#474747"/><path d="M933.879,476.465H902.947a3,3,0,0,1-3-3v-30.93a3,3,0,0,1,3-3h52.019a3,3,0,0,1,0,6H905.947v24.93h27.932a3,3,0,0,1,0,6Z" fill="#474747"/><path d="M841.086,476.465H796.444a3,3,0,0,1,0-6h41.642v-24.93H819.643a3,3,0,0,1,0-6h21.443a3,3,0,0,1,3,3v30.93A3,3,0,0,1,841.086,476.465Z" fill="#474747"/></g><path d="M902.947,731H75.78a5,5,0,1,1,0-10H902.947a5,5,0,1,1,0,10Z" fill="#333"/><path d="M637.577,221.576H741.491a0,0,0,0,1,0,0v154a0,0,0,0,1,0,0H637.577a12,12,0,0,1-12-12v-130A12,12,0,0,1,637.577,221.576Z" fill="#cc6675"/><path d="M753.491,221.576H857.4a0,0,0,0,1,0,0v154a0,0,0,0,1,0,0H753.491a12,12,0,0,1-12-12v-130A12,12,0,0,1,753.491,221.576Z" transform="translate(1598.896 597.151) rotate(-180)" fill="#fee2ca"/><path d="M753.491,221.576H857.4a0,0,0,0,1,0,0v154a0,0,0,0,1,0,0H753.491a12,12,0,0,1-12-12v-130A12,12,0,0,1,753.491,221.576Z" transform="translate(1598.896 597.151) rotate(-180)" fill="#cc6675"/><path d="M845.405,380.576H637.577a17.019,17.019,0,0,1-17-17v-130a17.019,17.019,0,0,1,17-17H845.405a17.019,17.019,0,0,1,17,17v130A17.019,17.019,0,0,1,845.405,380.576Zm-207.828-154a7.008,7.008,0,0,0-7,7v130a7.008,7.008,0,0,0,7,7H845.405a7.008,7.008,0,0,0,7-7v-130a7.008,7.008,0,0,0-7-7Z" fill="#333"/><path d="M741.491,380.576H637.577a17.019,17.019,0,0,1-17-17v-130a17.019,17.019,0,0,1,17-17H741.491a5,5,0,0,1,5,5v154A5,5,0,0,1,741.491,380.576Zm-103.914-154a7.008,7.008,0,0,0-7,7v130a7.008,7.008,0,0,0,7,7h98.914v-144Z" fill="#333"/><path d="M741.491,380.576H637.577a17.019,17.019,0,0,1-17-17v-130a17.019,17.019,0,0,1,17-17H741.491a5,5,0,0,1,5,5v154A5,5,0,0,1,741.491,380.576Zm-103.914-154a7.008,7.008,0,0,0-7,7v130a7.008,7.008,0,0,0,7,7h98.914v-144Z" fill="#333"/><rect x="623.093" y="257.178" width="120.882" height="82.796" transform="translate(982.11 -384.958) rotate(90)" fill="#f26b79"/><rect x="679.256" y="313.341" width="8.556" height="82.796" transform="translate(1038.273 -328.795) rotate(90)" fill="#99675e" opacity="0.5" style="mix-blend-mode:multiply"/><rect x="678.566" y="201.705" width="9.935" height="82.796" transform="translate(926.637 -440.432) rotate(90)" fill="#99675e" opacity="0.53" style="mix-blend-mode:screen"/><path d="M724.932,363.017h-82.8a4,4,0,0,1-4-4V238.135a4,4,0,0,1,4-4h82.8a4,4,0,0,1,4,4V359.017A4,4,0,0,1,724.932,363.017Zm-78.8-8h74.8V242.135h-74.8Z" fill="#333"/><path d="M845.405,380.576H741.491a5,5,0,0,1-5-5v-154a5,5,0,0,1,5-5H845.405a17.019,17.019,0,0,1,17,17v130A17.019,17.019,0,0,1,845.405,380.576Zm-98.914-10h98.914a7.008,7.008,0,0,0,7-7v-130a7.008,7.008,0,0,0-7-7H746.491Z" fill="#333"/><rect x="739.007" y="257.178" width="120.882" height="82.796" transform="translate(1098.024 -500.872) rotate(90)" fill="#f26b79"/><rect x="795.17" y="313.341" width="8.556" height="82.796" transform="translate(1154.187 -444.709) rotate(90)" fill="#99675e" opacity="0.5" style="mix-blend-mode:multiply"/><rect x="794.48" y="201.705" width="9.935" height="82.796" transform="translate(1042.551 -556.346) rotate(90)" fill="#99675e" opacity="0.53" style="mix-blend-mode:screen"/><path d="M840.846,363.017H758.051a4,4,0,0,1-4-4V238.135a4,4,0,0,1,4-4h82.795a4,4,0,0,1,4,4V359.017A4,4,0,0,1,840.846,363.017Zm-78.795-8h74.795V242.135H762.051Z" fill="#333"/><path d="M703.926,318.755a5,5,0,0,1-5-5V278.429a5,5,0,0,1,10,0v35.326A5,5,0,0,1,703.926,318.755Z" fill="#333"/><path d="M777.338,318.755a5,5,0,0,1-5-5V278.429a5,5,0,1,1,10,0v35.326A5,5,0,0,1,777.338,318.755Z" fill="#333"/><circle cx="481.16" cy="254" r="56" fill="#ffe9bd"/><path d="M481.16,220a56.015,56.015,0,0,1,54.914,45,56,56,0,1,0-109.827,0A56.014,56.014,0,0,1,481.16,220Z" fill="#e2e2e2" style="mix-blend-mode:multiply"/><path d="M481.161,315a61,61,0,1,1,61-61A61.068,61.068,0,0,1,481.161,315Zm0-112a51,51,0,1,0,51,51A51.057,51.057,0,0,0,481.161,203Z" fill="#333"/><path d="M481.16,303a49,49,0,1,1,49-49A49.055,49.055,0,0,1,481.16,303Zm0-92a43,43,0,1,0,43,43A43.048,43.048,0,0,0,481.16,211Z" fill="#333"/><path d="M505.994,257H481.161a3,3,0,0,1-2.678-1.646l-14.667-29a3,3,0,0,1,5.355-2.708L483.005,251h22.989a3,3,0,0,1,0,6Z" fill="#333"/><circle cx="481.16" cy="254" r="7.083" fill="#333"/><circle cx="756.25" cy="468.352" r="8.25" fill="#fff3e9"/><path d="M756.25,480.6a12.25,12.25,0,1,1,12.25-12.25A12.264,12.264,0,0,1,756.25,480.6Zm0-16.5a4.25,4.25,0,1,0,4.25,4.25A4.254,4.254,0,0,0,756.25,464.1Z" fill="#333"/><rect x="779.705" y="535.667" width="67.071" height="190.333" fill="#f29f4d"/><rect x="779.705" y="715.312" width="67.071" height="10.688" fill="#db8945"/><rect x="779.705" y="535.667" width="67.071" height="12.833" fill="#db8945"/><rect x="595.705" y="495" width="251.071" height="40.667" fill="#f4b47a"/><rect x="595.705" y="527.667" width="251.071" height="8" fill="#db8945" opacity="0.63"/><rect x="595.705" y="495" width="251.071" height="8.5" fill="#f9c59b"/><rect x="595.705" y="630.833" width="92" height="95.167" fill="#f29f4d"/><rect x="595.705" y="715.312" width="92" height="10.688" fill="#db8945"/><path d="M687.705,731h-92a5,5,0,0,1-5-5V495a5,5,0,0,1,5-5h92a5,5,0,0,1,5,5V726A5,5,0,0,1,687.705,731Zm-87-10h82V500h-82Z" fill="#333"/><path d="M779.705,731h-92a5,5,0,0,1-5-5V495a5,5,0,0,1,5-5h92a5,5,0,0,1,5,5V726A5,5,0,0,1,779.705,731Zm-87-10h82V500h-82Z" fill="#333"/><path d="M846.775,731h-67.07a5,5,0,0,1-5-5V495a5,5,0,0,1,5-5h67.07a5,5,0,0,1,5,5V726A5,5,0,0,1,846.775,731Zm-62.07-10h57.07V500h-57.07Z" fill="#333"/><path d="M687.705,731h-92a5,5,0,0,1-5-5V535.667a5,5,0,0,1,5-5h92a5,5,0,0,1,5,5V726A5,5,0,0,1,687.705,731Zm-87-10h82V540.667h-82Z" fill="#333"/><path d="M687.705,731h-92a5,5,0,0,1-5-5V630.833a5,5,0,0,1,5-5h92a5,5,0,0,1,5,5V726A5,5,0,0,1,687.705,731Zm-87-10h82V635.833h-82Z" fill="#333"/><rect x="595.705" y="535.667" width="92" height="95.167" fill="#f29f4d"/><rect x="595.705" y="535.667" width="92" height="12.833" fill="#db8945"/><path d="M687.705,635.833h-92a5,5,0,0,1-5-5V535.667a5,5,0,0,1,5-5h92a5,5,0,0,1,5,5v95.166A5,5,0,0,1,687.705,635.833Zm-87-10h82V540.667h-82Z" fill="#333"/><rect x="687.705" y="535.667" width="92" height="190.333" fill="#f29f4d"/><rect x="687.705" y="715.312" width="92" height="10.688" fill="#db8945"/><rect x="687.705" y="535.667" width="92" height="12.833" fill="#db8945"/><path d="M779.705,731h-92a5,5,0,0,1-5-5V535.667a5,5,0,0,1,5-5h92a5,5,0,0,1,5,5V726A5,5,0,0,1,779.705,731Zm-87-10h82V540.667h-82Z" fill="#333"/><rect x="664.626" y="610.104" width="138.159" height="53.125" transform="translate(1370.372 -97.038) rotate(90)" fill="#f4b77f"/><polygon points="707.142 655.839 760.268 585.8 760.268 567.587 745.381 567.587 707.142 618 707.142 655.839" fill="#f9c59b" opacity="0.39" style="mix-blend-mode:screen"/><polygon points="707.142 683.511 760.268 613.473 760.268 599.517 707.142 669.556 707.142 683.511" fill="#f9c59b" opacity="0.39" style="mix-blend-mode:screen"/><polygon points="707.142 702.613 760.268 632.574 760.268 625.237 707.142 695.277 707.142 702.613" fill="#f9c59b" opacity="0.39" style="mix-blend-mode:screen"/><path d="M760.268,708.746H707.143a3,3,0,0,1-3-3V567.587a3,3,0,0,1,3-3h53.125a3,3,0,0,1,3,3V705.746A3,3,0,0,1,760.268,708.746Zm-50.125-6h47.125V570.587H710.143Z" fill="#333"/><rect x="618.665" y="564.064" width="46.08" height="53.125" transform="translate(1232.332 -51.078) rotate(90)" fill="#f4b77f"/><polygon points="639.619 567.587 615.142 599.857 615.142 613.667 620.847 613.667 655.799 567.587 639.619 567.587" fill="#f9c59b" opacity="0.43" style="mix-blend-mode:screen"/><polygon points="638.315 613.667 668.268 574.177 668.268 567.587 662.666 567.587 627.714 613.667 638.315 613.667" fill="#f9c59b" opacity="0.43" style="mix-blend-mode:screen"/><path d="M668.268,616.667H615.142a3,3,0,0,1-3-3v-46.08a3,3,0,0,1,3-3h53.126a3,3,0,0,1,3,3v46.08A3,3,0,0,1,668.268,616.667Zm-50.126-6h47.126v-40.08H618.142Z" fill="#333"/><path d="M846.775,731h-67.07a5,5,0,0,1-5-5V535.667a5,5,0,0,1,5-5h67.07a5,5,0,0,1,5,5V726A5,5,0,0,1,846.775,731Zm-62.07-10h57.07V540.667h-57.07Z" fill="#333"/><rect x="744.161" y="620.907" width="138.159" height="31.519" transform="translate(1449.907 -176.574) rotate(90)" fill="#f4b77f"/><polygon points="797.481 656.27 829 614.715 829 576.876 797.481 618.431 797.481 656.27" fill="#f9c59b" opacity="0.32" style="mix-blend-mode:screen"/><polygon points="797.481 678.417 829 636.863 829 622.907 797.481 664.461 797.481 678.417" fill="#f9c59b" opacity="0.32" style="mix-blend-mode:screen"/><polygon points="797.481 693.97 829 652.416 829 645.08 797.481 686.634 797.481 693.97" fill="#f9c59b" opacity="0.32" style="mix-blend-mode:screen"/><path d="M829,708.746H797.48a3,3,0,0,1-3-3V567.587a3,3,0,0,1,3-3H829a3,3,0,0,1,3,3V705.746A3,3,0,0,1,829,708.746Zm-28.52-6H826V570.587H800.48Z" fill="#333"/><path d="M595.705,731h-216a5,5,0,0,1-5-5V495a5,5,0,0,1,5-5h216a5,5,0,0,1,5,5V726A5,5,0,0,1,595.705,731Zm-211-10h206V500h-206Z" fill="#333"/><rect x="379.705" y="535.667" width="216" height="184.623" fill="#f29f4d"/><rect x="379.705" y="710.333" width="216" height="9.957" fill="#db8945"/><rect x="379.705" y="535.667" width="216" height="12.833" fill="#db8945"/><path d="M595.705,725.29h-216a5,5,0,0,1-5-5V535.667a5,5,0,0,1,5-5h216a5,5,0,0,1,5,5V720.29A5,5,0,0,1,595.705,725.29Zm-211-10h206V540.667h-206Z" fill="#333"/><rect x="437.205" y="563.137" width="101" height="150.725" rx="21.034" transform="translate(1126.205 150.795) rotate(90)" fill="#cfe5e8"/><path d="M458.239,577.137h58.932a7.034,7.034,0,0,1,7.034,7.034V692.829a7.033,7.033,0,0,1-7.033,7.033H458.239a7.034,7.034,0,0,1-7.034-7.034V584.171A7.034,7.034,0,0,1,458.239,577.137Z" transform="translate(1126.205 150.795) rotate(90)" fill="#a7e3e8"/><path d="M542.034,693H433.376a25.062,25.062,0,0,1-25.034-25.034V609.034A25.062,25.062,0,0,1,433.376,584H542.034a25.061,25.061,0,0,1,25.033,25.034v58.932A25.061,25.061,0,0,1,542.034,693ZM433.376,592a17.053,17.053,0,0,0-17.034,17.034v58.932A17.053,17.053,0,0,0,433.376,685H542.034a17.053,17.053,0,0,0,17.033-17.034V609.034A17.053,17.053,0,0,0,542.034,592Z" fill="#333"/><path d="M527.263,566.5H448.147a5,5,0,1,1,0-10h79.116a5,5,0,0,1,0,10Z" fill="#333"/><rect x="467.372" y="407.333" width="40.667" height="216" transform="translate(1003.038 27.628) rotate(90)" fill="#f4b47a"/><rect x="483.705" y="423.667" width="8" height="216" transform="translate(1019.372 43.962) rotate(90)" fill="#db8945" opacity="0.63"/><rect x="483.455" y="391.25" width="8.5" height="216" transform="translate(986.955 11.545) rotate(90)" fill="#f9c59b"/><path d="M595.705,540.667h-216a5,5,0,0,1-5-5V495a5,5,0,0,1,5-5h216a5,5,0,0,1,5,5v40.667A5,5,0,0,1,595.705,540.667Zm-211-10h206V500h-206Z" fill="#333"/><path d="M447.667,521.333H401a6,6,0,1,1,0-12h46.667a6,6,0,1,1,0,12Z" fill="#333"/><circle cx="527.263" cy="515.333" r="7.115" fill="#ea5050"/><path d="M527.263,524.448a9.115,9.115,0,1,1,9.115-9.115A9.126,9.126,0,0,1,527.263,524.448Zm0-14.23a5.115,5.115,0,1,0,5.115,5.115A5.122,5.122,0,0,0,527.263,510.218Z" fill="#333"/><circle cx="548.723" cy="515.333" r="7.115" fill="#7dc163"/><path d="M548.723,524.448a9.115,9.115,0,1,1,9.115-9.115A9.126,9.126,0,0,1,548.723,524.448Zm0-14.23a5.115,5.115,0,1,0,5.115,5.115A5.122,5.122,0,0,0,548.723,510.218Z" fill="#333"/><path d="M570.183,524.448a9.115,9.115,0,1,1,9.115-9.115A9.126,9.126,0,0,1,570.183,524.448Zm0-14.23a5.115,5.115,0,1,0,5.115,5.115A5.122,5.122,0,0,0,570.183,510.218Z" fill="#333"/><circle cx="570.183" cy="515.333" r="7.115" fill="#333"/><path d="M729.714,486.458c12.318,0,22.3-13.189,22.3-29.458H707.41C707.41,473.269,717.4,486.458,729.714,486.458Z" fill="#fff3e9"/><path d="M740.241,457c0,13.576-6.956,25-16.416,28.412a17.29,17.29,0,0,0,5.889,1.046c12.318,0,22.3-13.189,22.3-29.458Z" fill="#c4cecd" opacity="0.45"/><path d="M729.714,490.458c-14.505,0-26.305-15.009-26.305-33.458a4,4,0,0,1,4-4h44.609a4,4,0,0,1,4,4C756.018,475.449,744.218,490.458,729.714,490.458ZM711.635,461c1.384,12.144,8.964,21.458,18.079,21.458s16.694-9.314,18.078-21.458Z" fill="#333"/><path d="M748,495H711.428a5,5,0,1,1,0-10H748a5,5,0,0,1,0,10Z" fill="#333"/><path d="M722.393,450.417a3,3,0,0,1-2.418-4.773c1.543-2.113,3.691-5.91,3.867-8.043a14.444,14.444,0,0,0-2.96-1.085c-2.367-.691-5.945-1.734-5.945-5.183,0-3.227,3.149-8.3,4.5-10.331a3,3,0,0,1,4.994,3.328,34.111,34.111,0,0,0-3.236,6.009c.441.147.957.3,1.364.416,2.727.8,7.292,2.126,7.292,6.578,0,4.742-4.2,10.71-5.04,11.858A2.994,2.994,0,0,1,722.393,450.417Z" fill="#333"/><path d="M737.03,444.844a3,3,0,0,1-2.418-4.774c1.543-2.112,3.692-5.91,3.867-8.043a14.433,14.433,0,0,0-2.959-1.086c-2.368-.69-5.946-1.733-5.946-5.182,0-3.226,3.15-8.3,4.5-10.33a3,3,0,0,1,4.993,3.327,34.163,34.163,0,0,0-3.235,6.009c.44.147.957.3,1.363.416,2.728.8,7.292,2.126,7.292,6.578,0,4.741-4.2,10.71-5.039,11.858A3,3,0,0,1,737.03,444.844Z" fill="#333"/><path d="M726.853,412.334a3,3,0,0,1-2.8-4.084l2.454-6.334a3,3,0,1,1,5.593,2.168l-2.454,6.333A3,3,0,0,1,726.853,412.334Z" fill="#333"/><path d="M846.775,540.667H595.705a5,5,0,0,1-5-5V495a5,5,0,0,1,5-5h251.07a5,5,0,0,1,5,5v40.667A5,5,0,0,1,846.775,540.667Zm-246.07-10h241.07V500H600.705Z" fill="#333"/><path d="M652.353,555H631.058a4,4,0,0,1,0-8h21.295a4,4,0,1,1,0,8Z" fill="#333"/><rect x="618.665" y="656.144" width="46.08" height="53.125" transform="translate(1324.411 41.002) rotate(90)" fill="#f4b77f"/><polygon points="639.619 659.667 615.142 691.937 615.142 705.746 620.847 705.746 655.799 659.667 639.619 659.667" fill="#f9c59b" opacity="0.43" style="mix-blend-mode:screen"/><polygon points="638.315 705.746 668.268 666.257 668.268 659.667 662.666 659.667 627.714 705.746 638.315 705.746" fill="#f9c59b" opacity="0.43" style="mix-blend-mode:screen"/><path d="M668.268,708.746H615.142a3,3,0,0,1-3-3V659.667a3,3,0,0,1,3-3h53.126a3,3,0,0,1,3,3v46.079A3,3,0,0,1,668.268,708.746Zm-50.126-6h47.126V662.667H618.142Z" fill="#333"/><path d="M652.353,649.079H631.058a4,4,0,0,1,0-8h21.295a4,4,0,0,1,0,8Z" fill="#333"/><path d="M724.5,555H707.143a4,4,0,0,1,0-8H724.5a4,4,0,0,1,0,8Z" fill="#333"/><path d="M810.5,555H797.48a4,4,0,0,1,0-8H810.5a4,4,0,0,1,0,8Z" fill="#333"/><rect x="445.709" y="484.427" width="81.553" height="10.573" rx="5.286" fill="#333"/><polygon points="534.378 457 568 429.468 563.067 422.667 525 441.844 534.378 457" fill="#fff3e9"/><path d="M534.378,462a4.946,4.946,0,0,1-.822-.068,5,5,0,0,1-3.43-2.3l-9.378-15.156a5,5,0,0,1,2-7.1L560.817,418.2a5,5,0,0,1,6.3,1.53l4.933,6.8a5,5,0,0,1-.88,6.8l-33.622,27.532A5.007,5.007,0,0,1,534.378,462Zm-2.255-18.146,3.5,5.661,23.568-19.3Z" fill="#333"/><rect x="434.714" y="422.667" width="103.786" height="61.761" rx="18.464" fill="#dbdddd"/><path d="M448.107,465.964V441.13a18.463,18.463,0,0,1,18.464-18.463H453.178a18.463,18.463,0,0,0-18.464,18.463v24.834a18.463,18.463,0,0,0,18.464,18.463h13.393A18.463,18.463,0,0,1,448.107,465.964Z" fill="#fff" opacity="0.55"/><path d="M520.036,422.667H501.684a18.464,18.464,0,0,1,18.464,18.463v24.834a18.464,18.464,0,0,1-18.464,18.463h18.352A18.463,18.463,0,0,0,538.5,465.964V441.13A18.463,18.463,0,0,0,520.036,422.667Z" fill="#c4cecd"/><path d="M520.036,489.427H453.178a23.49,23.49,0,0,1-23.464-23.463V441.13a23.49,23.49,0,0,1,23.464-23.463h66.858A23.489,23.489,0,0,1,543.5,441.13v24.834A23.489,23.489,0,0,1,520.036,489.427Zm-66.858-61.76a13.479,13.479,0,0,0-13.464,13.463v24.834a13.478,13.478,0,0,0,13.464,13.463h66.858A13.478,13.478,0,0,0,533.5,465.964V441.13a13.479,13.479,0,0,0-13.464-13.463Z" fill="#333"/><rect x="422" y="443.946" width="12.714" height="14.054" fill="#333"/><path d="M434.714,463H422a5,5,0,0,1-5-5V443.946a5,5,0,0,1,5-5h12.714a5,5,0,0,1,5,5V458A5,5,0,0,1,434.714,463ZM427,453h2.714v-4.054H427Z" fill="#333"/><path d="M487,434.5a196.623,196.623,0,0,1-32.208-2.345c-8.467-1.48-17.123-3.874-17.123-10.4s8.656-8.925,17.123-10.4a222.364,222.364,0,0,1,64.417,0c8.467,1.48,17.123,3.874,17.123,10.4s-8.656,8.925-17.123,10.4A196.636,196.636,0,0,1,487,434.5ZM453.63,421.75c6.679,1.417,17.955,2.75,33.368,2.75s26.69-1.333,33.368-2.75C513.688,420.333,502.411,419,487,419S460.309,420.333,453.63,421.75Zm73.556,2.243h0Z" fill="#333"/><rect x="476.667" y="398" width="19.667" height="24.667" rx="5" fill="#333"/><path d="M574,417a3,3,0,0,1-2.311-4.91l4.871-5.9-4.851-5.753a3,3,0,0,1-.336-3.379l3.3-6a3,3,0,0,1,5.258,2.89l-2.306,4.195,5.137,6.092a3,3,0,0,1,.02,3.844l-6.465,7.834A2.994,2.994,0,0,1,574,417Z" fill="#333"/><polygon points="464.075 675 519.446 602 498.246 602 442.875 675 464.075 675" fill="#d7fff7"/><path d="M487.032,675l55.358-72.982c-.119-.006-.236-.018-.356-.018H531.8l-55.371,73Z" fill="#d7fff7"/><path d="M531.33,779.577H452.136a5,5,0,1,1,0-10H531.33a5,5,0,1,1,0,10Z" fill="#1d2f3d"/><path d="M430,779.577H417.345a5,5,0,0,1,0-10H430a5,5,0,1,1,0,10Z" fill="#1d2f3d"/><rect x="145" y="230" width="202" height="496" rx="12" fill="#aecbd9"/><path d="M159.463,714V242c0-6.627,5.756-12,12.857-12H157.857c-7.1,0-12.857,5.373-12.857,12V714c0,6.627,5.756,12,12.857,12H172.32C165.219,726,159.463,720.627,159.463,714Z" fill="#c4e7f4"/><path d="M335,230H312.5a12,12,0,0,1,12,12V714a12,12,0,0,1-12,12H335a12,12,0,0,0,12-12V242A12,12,0,0,0,335,230Z" fill="#8ca2ae" opacity="0.89"/><path d="M335,731H157a17.019,17.019,0,0,1-17-17V242a17.019,17.019,0,0,1,17-17H335a17.019,17.019,0,0,1,17,17V714A17.019,17.019,0,0,1,335,731ZM157,235a7.008,7.008,0,0,0-7,7V714a7.008,7.008,0,0,0,7,7H335a7.008,7.008,0,0,0,7-7V242a7.008,7.008,0,0,0-7-7Z" fill="#333"/><path d="M347,387H145a5,5,0,0,1-5-5V242a17.019,17.019,0,0,1,17-17H335a17.019,17.019,0,0,1,17,17V382A5,5,0,0,1,347,387ZM150,377H342V242a7.008,7.008,0,0,0-7-7H157a7.008,7.008,0,0,0-7,7Z" fill="#333"/><path d="M172.32,353a5,5,0,0,1-5-5V301.667a5,5,0,0,1,10,0V348A5,5,0,0,1,172.32,353Z" fill="#333"/><path d="M172.32,549a5,5,0,0,1-5-5V459.881a5,5,0,0,1,10,0V544A5,5,0,0,1,172.32,549Z" fill="#333"/><rect x="145" y="382" width="202" height="27.333" fill="#64809b"/><rect x="324" y="382" width="23" height="27.333" fill="#8ca2ae" opacity="0.71" style="mix-blend-mode:multiply"/><rect x="145" y="382" width="14.463" height="27.333" fill="#64809b" opacity="0.26" style="mix-blend-mode:color-dodge"/><path d="M347,414.333H145a5,5,0,0,1-5-5V382a5,5,0,0,1,5-5H347a5,5,0,0,1,5,5v27.333A5,5,0,0,1,347,414.333Zm-197-10H342V387H150Z" fill="#333"/><path d="M284,398.667H207a3,3,0,1,1,0-6h77a3,3,0,0,1,0,6Z" fill="#333"/></g></g></svg>
         <h3>
-              <span>Kitchen</span>
+              <span>Kitchen <p class="badge badge-success" type="button" href="#">Beta</p></span>
               <input type="search" autofocus="autofocus" placeholder="Search..." class="form-control search-input" data-table="customers-list"/>
               </h3>
               <style>
@@ -1081,7 +1099,7 @@
                   <tr style="font-size:100px;">
                     <th>Item</th>
                     <th>Quantity</th>
-
+                    <th>Options</th>
 
                   </tr>
                 </thead>
@@ -1094,277 +1112,277 @@
                     <option value="1 ziploc bag">
                   </datalist>
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Milk</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_1" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Milk</td>
+                    <td>
+                      <input type="text" id="txt_1" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
                   </tr>
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Eggs</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_2" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Eggs</td>
+                    <td>
+                      <input type="text" id="txt_2" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
                   </tr>
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Yogurt</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_3" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Yogurt</td>
+                    <td>
+                      <input type="text" id="txt_3" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
                   </tr>
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Dal</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_4" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Dal</td>
+                    <td>
+                      <input type="text" id="txt_4" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
                   </tr>
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Oranges</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_5" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Oranges</td>
+                    <td>
+                      <input type="text" id="txt_5" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
                   </tr>
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Apples</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_6" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Apples</td>
+                    <td>
+                      <input type="text" id="txt_6" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
                   </tr>
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Bananas</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_7" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Bananas</td>
+                    <td>
+                      <input type="text" id="txt_7" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
                   </tr>
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Blueberries</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_8" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Blueberries</td>
+                    <td>
+                      <input type="text" id="txt_8" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
                   </tr>
 
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Strawberries</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_9" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
-
-                  </tr>
-                  <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Mangoes</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_10" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Strawberries</td>
+                    <td>
+                      <input type="text" id="txt_9" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
                   </tr>
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Pineapples</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_11" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Mangoes</td>
+                    <td>
+                      <input type="text" id="txt_10" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
                   </tr>
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Watermelons</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_12" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Pineapples</td>
+                    <td>
+                      <input type="text" id="txt_11" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
                   </tr>
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Tomatoes</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_13" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Watermelons</td>
+                    <td>
+                      <input type="text" id="txt_12" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
                   </tr>
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Potatoes</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_14" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Tomatoes</td>
+                    <td>
+                      <input type="text" id="txt_13" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
                   </tr>
-
-
-
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Pasta</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_15" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
-
-                  </tr>
-
-
-                  <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Cucumbers</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_16" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
-
-                  </tr>
-
-
-                  <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Coriander stalks</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_17" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
-
-                  </tr>
-
-
-                  <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Mint leaf stalks</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_18" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Potatoes</td>
+                    <td>
+                      <input type="text" id="txt_14" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
                   </tr>
 
 
 
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Honey</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_19" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Pasta</td>
+                    <td>
+                      <input type="text" id="txt_15" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
                   </tr>
 
 
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Sugar</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_20" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
-
-                  </tr>
-
-                  <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Apricots</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_21" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
-
-                  </tr>
-
-
-
-
-
-                  <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Peaches</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_22" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
-
-                  </tr>
-
-
-
-                  <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Baking soda</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_23" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Cucumbers</td>
+                    <td>
+                      <input type="text" id="txt_16" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
                   </tr>
 
 
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Milk Powder</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_24" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Coriander stalks</td>
+                    <td>
+                      <input type="text" id="txt_17" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
                   </tr>
 
+
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Salt</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_25" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Mint leaf stalks</td>
+                    <td>
+                      <input type="text" id="txt_18" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
                   </tr>
 
 
 
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Nutmeg</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_26" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Honey</td>
+                    <td>
+                      <input type="text" id="txt_19" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
+
+                  </tr>
+
+
+                  <tr style="font-size:100px;">
+                    <td>Sugar</td>
+                    <td>
+                      <input type="text" id="txt_20" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
+
+                  </tr>
+
+                  <tr style="font-size:100px;">
+                    <td>Apricots</td>
+                    <td>
+                      <input type="text" id="txt_21" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
+
+                  </tr>
+
+
+
+
+
+                  <tr style="font-size:100px;">
+                    <td>Peaches</td>
+                    <td>
+                      <input type="text" id="txt_22" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
+
+                  </tr>
+
+
+
+                  <tr style="font-size:100px;">
+                    <td>Baking soda</td>
+                    <td>
+                      <input type="text" id="txt_23" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
+
+                  </tr>
+
+
+                  <tr style="font-size:100px;">
+                    <td>Milk Powder</td>
+                    <td>
+                      <input type="text" id="txt_24" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
+
+                  </tr>
+
+                  <tr style="font-size:100px;">
+                    <td>Salt</td>
+                    <td>
+                      <input type="text" id="txt_25" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
+
+                  </tr>
+
+
+
+                  <tr style="font-size:100px;">
+                    <td>Nutmeg</td>
+                    <td>
+                      <input type="text" id="txt_26" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
                   </tr>
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Garlic</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_27" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Garlic</td>
+                    <td>
+                      <input type="text" id="txt_27" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
                   </tr>
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Onions</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_28" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Onions</td>
+                    <td>
+                      <input type="text" id="txt_28" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
                   </tr>
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Asofoteida</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_29" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Asofoteida</td>
+                    <td>
+                      <input type="text" id="txt_29" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
                   </tr>
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Baking soda</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_30" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Baking soda</td>
+                    <td>
+                      <input type="text" id="txt_30" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
                   </tr>
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Basil</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_31" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Basil</td>
+                    <td>
+                      <input type="text" id="txt_31" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
                   </tr>
                   <tr style="font-size:100px;">
-                    <td style="font-size:30px;">Italian Seasoning</td>
-                    <td style="font-size:30px;">
-                      <input type="text" id="txt_32" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                    <td>Italian Seasoning</td>
+                    <td>
+                      <input type="text" id="txt_32" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
                   </tr><tr style="font-size:100px;">
-                  <td style="font-size:30px;">Peanuts</td>
-                  <td style="font-size:30px;">
-                    <input type="text" id="txt_33" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+                  <td>Peanuts</td>
+                  <td>
+                    <input type="text" id="txt_33" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
                   </tr>
                 </td>
 
 
-              <td style="font-size:30px;">Cashews</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_34" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Cashews</td>
+              <td>
+                <input type="text" id="txt_34" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
               </tr>
-              <td style="font-size:30px;">Idli rava</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_35" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Idli rava</td>
+              <td>
+                <input type="text" id="txt_35" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
               </tr>
-              <td style="font-size:30px;">Bread</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_36" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Bread</td>
+              <td>
+                <input type="text" id="txt_36" min="0" max="15"  onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
               </tr>
 
 
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Cardamom</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_37" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Cardamom</td>
+              <td>
+                <input type="text" id="txt_37" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
 
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Whipped Cream</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_38" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Whipped Cream</td>
+              <td>
+                <input type="text" id="txt_38" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Cheese</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_39" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
-
-            </tr>
-
-            <tr style="font-size:100px;">
-              <td style="font-size:30px;">Ghee</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_40" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Cheese</td>
+              <td>
+                <input type="text" id="txt_39" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
 
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Saaru powder</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_41" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Ghee</td>
+              <td>
+                <input type="text" id="txt_40" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
+
+            </tr>
+
+            <tr style="font-size:100px;">
+              <td>Saaru powder</td>
+              <td>
+                <input type="text" id="txt_41" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
 
@@ -1372,309 +1390,309 @@
 
 
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Corn starch</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_42" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
-
-            </tr>
-
-
-            <tr style="font-size:100px;">
-              <td style="font-size:30px;">Baking powder</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_43" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Corn starch</td>
+              <td>
+                <input type="text" id="txt_42" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
 
 
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Sour cream</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_44" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Baking powder</td>
+              <td>
+                <input type="text" id="txt_43" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
+
+            </tr>
+
+
+            <tr style="font-size:100px;">
+              <td>Sour cream</td>
+              <td>
+                <input type="text" id="txt_44" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
 
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Basil</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_45" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Basil</td>
+              <td>
+                <input type="text" id="txt_45" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
 
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Rice</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_46" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Rice</td>
+              <td>
+                <input type="text" id="txt_46" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
 
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Green Gram</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_47" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Green Gram</td>
+              <td>
+                <input type="text" id="txt_47" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Avalkki</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_48" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Avalkki</td>
+              <td>
+                <input type="text" id="txt_48" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Cream of rice</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_49" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Cream of rice</td>
+              <td>
+                <input type="text" id="txt_49" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Ragi flour</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_50" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Ragi flour</td>
+              <td>
+                <input type="text" id="txt_50" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Bajra</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_51" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Bajra</td>
+              <td>
+                <input type="text" id="txt_51" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Jowar</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_52" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Jowar</td>
+              <td>
+                <input type="text" id="txt_52" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Horse gram</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_53" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Horse gram</td>
+              <td>
+                <input type="text" id="txt_53" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Besan flour</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_54" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Besan flour</td>
+              <td>
+                <input type="text" id="txt_54" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Banana chips</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_55" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Banana chips</td>
+              <td>
+                <input type="text" id="txt_55" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Sasve</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_56" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Sasve</td>
+              <td>
+                <input type="text" id="txt_56" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Garbanzo beans</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_57" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Garbanzo beans</td>
+              <td>
+                <input type="text" id="txt_57" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Pinto beans</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_58" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Pinto beans</td>
+              <td>
+                <input type="text" id="txt_58" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Tamarind</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_59" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Tamarind</td>
+              <td>
+                <input type="text" id="txt_59" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Figs</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_60" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Figs</td>
+              <td>
+                <input type="text" id="txt_60" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Vermicelli</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_61" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Vermicelli</td>
+              <td>
+                <input type="text" id="txt_61" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Tea powder</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_62" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Tea powder</td>
+              <td>
+                <input type="text" id="txt_62" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Coffee powder</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_63" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Coffee powder</td>
+              <td>
+                <input type="text" id="txt_63" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Coriander seeds</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_64" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Coriander seeds</td>
+              <td>
+                <input type="text" id="txt_64" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Buckwheat flour</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_65" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Buckwheat flour</td>
+              <td>
+                <input type="text" id="txt_65" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Oatmeal</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_66" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Oatmeal</td>
+              <td>
+                <input type="text" id="txt_66" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Boba</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_67" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Boba</td>
+              <td>
+                <input type="text" id="txt_67" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Cumin seeds</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_68" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Cumin seeds</td>
+              <td>
+                <input type="text" id="txt_68" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Red chilli Powder</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_69" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Red chilli Powder</td>
+              <td>
+                <input type="text" id="txt_69" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Pepper</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_70" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Pepper</td>
+              <td>
+                <input type="text" id="txt_70" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Payasaam</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_71" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Payasaam</td>
+              <td>
+                <input type="text" id="txt_71" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
 
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Rava idli mix</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_72" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Rava idli mix</td>
+              <td>
+                <input type="text" id="txt_72" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Dosa mix</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_73" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Dosa mix</td>
+              <td>
+                <input type="text" id="txt_73" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Puliyogare powder</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_74" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Puliyogare powder</td>
+              <td>
+                <input type="text" id="txt_74" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Bourbons</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_75" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Bourbons</td>
+              <td>
+                <input type="text" id="txt_75" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">chips</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_76" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>chips</td>
+              <td>
+                <input type="text" id="txt_76" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Taco shells</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_77" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Taco shells</td>
+              <td>
+                <input type="text" id="txt_77" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Hot cocoa Powder</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_78" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Hot cocoa Powder</td>
+              <td>
+                <input type="text" id="txt_78" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Paleo bars</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_79" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Paleo bars</td>
+              <td>
+                <input type="text" id="txt_79" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Belvitas</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_80" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Belvitas</td>
+              <td>
+                <input type="text" id="txt_80" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Liquid smoke</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_81" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Liquid smoke</td>
+              <td>
+                <input type="text" id="txt_81" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Vanilla extract</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_82" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Vanilla extract</td>
+              <td>
+                <input type="text" id="txt_82" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Black-eyed beans</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_83" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Black-eyed beans</td>
+              <td>
+                <input type="text" id="txt_83" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Puffed rice</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_84" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Puffed rice</td>
+              <td>
+                <input type="text" id="txt_84" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Avacados</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_85" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Avacados</td>
+              <td>
+                <input type="text" id="txt_85" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Kadle bele</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_86" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Kadle bele</td>
+              <td>
+                <input type="text" id="txt_86" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Masoor dal</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_87" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Masoor dal</td>
+              <td>
+                <input type="text" id="txt_87" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Seaweed</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_88" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Seaweed</td>
+              <td>
+                <input type="text" id="txt_88" min="0" max="15" onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Marie Biscuits</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_89" min="0" max="100"onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Marie Biscuits</td>
+              <td>
+                <input type="text" id="txt_89" min="0" max="100"onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Pretzels</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_90" min="0" max="100"onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Pretzels</td>
+              <td>
+                <input type="text" id="txt_90" min="0" max="100"onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Sooji fine</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_91" min="0" max="100"onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Sooji fine</td>
+              <td>
+                <input type="text" id="txt_91" min="0" max="100"onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">sooji coarse</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_92" min="0" max="100"onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>sooji coarse</td>
+              <td>
+                <input type="text" id="txt_92" min="0" max="100"onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Cinnamon</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_93" min="0" max="100"onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Cinnamon</td>
+              <td>
+                <input type="text" id="txt_93" min="0" max="100"onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Salsa</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_94" min="0" max="100"onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Salsa</td>
+              <td>
+                <input type="text" id="txt_94" min="0" max="100"onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             <tr style="font-size:100px;">
-              <td style="font-size:30px;">Red wine vinegar</td>
-              <td style="font-size:30px;">
-                <input type="text" id="txt_95" min="0" max="100"onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/>
+              <td>Red wine vinegar</td>
+              <td>
+                <input type="text" id="txt_95" min="0" max="100"onkeyup='saveValue(this);' class="form-control" placeholder="Empty..." list="browsers"/></td><td> <a role="button" class="badge badge-success" type="button" href="mailto:somebody@example.com?subject=My%20Inventory%20Status&body=Hello%2C%20%5B%5D%0D%0AI%20currently%20have%20%5B%23%5D%20of%20%5Bitem%5D%20in%20my%20inventory.%0D%0AWe're%20running%20low%20on%20%5B%5D.%0D%0A%0D%0ACould%20you%20please%20buy%20it%3F%0D%0A%0D%0AThanks%2C%0D%0ASincerely%2C%0D%0A%5B%5D">Share</a>  <a role="button" class="badge badge-primary" type="button" href="https://calendar.google.com/calendar/u/0/r/day">Add to Calendar</a>
             </tr>
             </tbody>
           </table>
@@ -1849,7 +1867,7 @@
               <div class="col-md-4 mx-auto">
 
                 <!-- Content -->
-                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">KeepInventory</h5>
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Homebase</h5>
 
 
               </div>
@@ -1865,7 +1883,7 @@
 
                 <ul class="list-unstyled">
                   <li>
-                    <a href="#!">Dashboard</a>
+                    <a href="#!" onclick="openPage('About', this, 'transparent');closeNav();move();">Dashboard</a>
                   </li>
                   <li>
                     <a href="#!">Kitchen</a>
@@ -1976,15 +1994,15 @@
           <!-- Social buttons -->
 
           <!-- Copyright -->
-          <div class="footer-copyright text-center py-3">ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© 2020 Copyright:
-            <a href="https://pramodini.github.com/KeepInventory/Index.htm"> KeepInventory</a>
+          <div class="footer-copyright text-center py-3">Â© 2020 Copyright:
+            <a href="https://pramodini.github.com/KeepInventory/Index.htm"> Homebase</a>
           </div>
           <!-- Copyright -->
 
         </footer>
         </div>
 
-        <div id="News" class="tabcontent">
+        <div id="News" style="margin-left:70 !imortant" class="tabcontent">
 
           <?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" x="0px" y="0px" width="300px" height="300px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"><g style="isolation:isolate"><g id="Layer_1" data-name="Layer 1"><path d="M531.33,779.577H452.136a5,5,0,1,1,0-10H531.33a5,5,0,1,1,0,10Z" fill="#3b6b7d"/><path d="M430,779.577H417.345a5,5,0,0,1,0-10H430a5,5,0,1,1,0,10Z" fill="#3b6b7d"/><g opacity="0.23" style="mix-blend-mode:multiply"><path d="M606.905,428.378H545.043a3,3,0,0,1,0-6h58.862V394.447a3,3,0,0,1,6,0v30.931A3,3,0,0,1,606.905,428.378Z" fill="#474747"/><path d="M668.767,428.378H606.905a3,3,0,0,1-3-3V394.447a3,3,0,0,1,6,0v27.931h58.862a3,3,0,0,1,0,6Z" fill="#474747"/><path d="M637.836,459.309H575.974a3,3,0,0,1-3-3V425.378a3,3,0,0,1,3-3h61.862a3,3,0,0,1,3,3v30.931A3,3,0,0,1,637.836,459.309Zm-58.862-6h55.862V428.378H578.974Z" fill="#474747"/><path d="M624.482,490.24H606.905a3,3,0,0,1-3-3V456.309a3,3,0,0,1,3-3h61.862a3,3,0,0,1,0,6H609.905V484.24h14.577a3,3,0,0,1,0,6Z" fill="#474747"/><path d="M606.905,490.24H556.742a3,3,0,0,1,0-6h47.163V459.309H545.043a3,3,0,0,1,0-6h61.862a3,3,0,0,1,3,3V487.24A3,3,0,0,1,606.905,490.24Z" fill="#474747"/><path d="M575.974,459.309H545.043a3,3,0,0,1,0-6h27.931V428.378H523.956a3,3,0,0,1,0-6h52.018a3,3,0,0,1,3,3v30.931A3,3,0,0,1,575.974,459.309Z" fill="#474747"/><path d="M682.478,459.309H637.836a3,3,0,0,1-3-3V425.378a3,3,0,0,1,3-3h21.443a3,3,0,0,1,0,6H640.836v24.931h41.642a3,3,0,0,1,0,6Z" fill="#474747"/></g><g opacity="0.23" style="mix-blend-mode:multiply"><path d="M860.113,601.519H798.251a3,3,0,0,1,0-6h58.862V567.587a3,3,0,0,1,6,0v30.932A3,3,0,0,1,860.113,601.519Z" fill="#474747"/><path d="M921.975,601.519H860.113a3,3,0,0,1-3-3V567.587a3,3,0,0,1,6,0v27.932h58.862a3,3,0,1,1,0,6Z" fill="#474747"/><path d="M891.044,632.449H829.182a3,3,0,0,1-3-3v-30.93a3,3,0,0,1,3-3h61.862a3,3,0,0,1,3,3v30.93A3,3,0,0,1,891.044,632.449Zm-58.862-6h55.862v-24.93H832.182Z" fill="#474747"/><path d="M877.69,663.38H860.113a3,3,0,0,1-3-3V629.449a3,3,0,0,1,3-3h61.862a3,3,0,0,1,0,6H863.113V657.38H877.69a3,3,0,0,1,0,6Z" fill="#474747"/><path d="M860.113,663.38H809.95a3,3,0,0,1,0-6h47.163V632.449H798.251a3,3,0,0,1,0-6h61.862a3,3,0,0,1,3,3V660.38A3,3,0,0,1,860.113,663.38Z" fill="#474747"/><path d="M829.182,632.449H798.251a3,3,0,0,1,0-6h27.931v-24.93H777.164a3,3,0,0,1,0-6h52.018a3,3,0,0,1,3,3v30.93A3,3,0,0,1,829.182,632.449Z" fill="#474747"/><path d="M935.686,632.449H891.044a3,3,0,0,1-3-3v-30.93a3,3,0,0,1,3-3h21.443a3,3,0,0,1,0,6H894.044v24.93h41.642a3,3,0,0,1,0,6Z" fill="#474747"/></g><g opacity="0.23" style="mix-blend-mode:multiply"><path d="M119.116,556.534H57.253a3,3,0,0,1,0-6h58.863V522.6a3,3,0,0,1,6,0v30.93A3,3,0,0,1,119.116,556.534Z" fill="#474747"/><path d="M180.978,556.534H119.116a3,3,0,0,1-3-3V522.6a3,3,0,0,1,6,0v27.93h58.862a3,3,0,0,1,0,6Z" fill="#474747"/><path d="M150.046,587.466H88.185a3,3,0,0,1-3-3V553.534a3,3,0,0,1,3-3h61.861a3,3,0,0,1,3,3v30.932A3,3,0,0,1,150.046,587.466Zm-58.861-6h55.861V556.534H91.185Z" fill="#474747"/><path d="M136.693,618.4H119.116a3,3,0,0,1-3-3v-30.93a3,3,0,0,1,3-3h61.862a3,3,0,0,1,0,6H122.116V612.4h14.577a3,3,0,0,1,0,6Z" fill="#474747"/><path d="M119.116,618.4H68.953a3,3,0,1,1,0-6h47.163v-24.93H57.253a3,3,0,0,1,0-6h61.863a3,3,0,0,1,3,3V615.4A3,3,0,0,1,119.116,618.4Z" fill="#474747"/><path d="M88.185,587.466H57.253a3,3,0,0,1,0-6H85.185V556.534H36.167a3,3,0,0,1,0-6H88.185a3,3,0,0,1,3,3v30.932A3,3,0,0,1,88.185,587.466Z" fill="#474747"/><path d="M194.688,587.466H150.046a3,3,0,0,1-3-3V553.534a3,3,0,0,1,3-3H171.49a3,3,0,0,1,0,6H153.046v24.932h41.642a3,3,0,0,1,0,6Z" fill="#474747"/></g><path d="M902.947,731H618a5,5,0,0,1,0-10H902.947a5,5,0,1,1,0,10Z" fill="#3b6b7d"/><path d="M548,731H148.333a5,5,0,1,1,0-10H548a5,5,0,0,1,0,10Z" fill="#3b6b7d"/><path d="M125.5,731H119a5,5,0,0,1,0-10h6.5a5,5,0,0,1,0,10Z" fill="#3b6b7d"/><path d="M100,731H75.78a5,5,0,1,1,0-10H100a5,5,0,0,1,0,10Z" fill="#3b6b7d"/><path d="M475.209,560.479a25.635,25.635,0,0,0-23.243,14.82l-5.506-1.219a33.362,33.362,0,0,0-57.1-34.476,33.35,33.35,0,0,0-48.291-8.556,39.866,39.866,0,0,0-76.149-2.335A33.5,33.5,0,0,0,214.461,557.6c0,.033,0,.066,0,.1-.757-.06-1.52-.1-2.293-.1a28.516,28.516,0,0,0-28.516,28.517v50.116H500.846V586.117A25.638,25.638,0,0,0,475.209,560.479Z" fill="#f2cfb1"/><g opacity="0.58" style="mix-blend-mode:multiply"><path d="M475.209,560.479a25.635,25.635,0,0,0-23.243,14.82l-1.241-.275a33.176,33.176,0,0,1-4.265,14.056l5.506,1.219a25.637,25.637,0,0,1,48.88,10.818v-15A25.638,25.638,0,0,0,475.209,560.479Z" fill="#f2cfb1"/><path d="M212.17,572.6c.773,0,1.536.04,2.293.1,0-.034,0-.067,0-.1a33.5,33.5,0,0,1,50.459-28.887,39.866,39.866,0,0,1,76.149,2.335A33.35,33.35,0,0,1,389.36,554.6a33.359,33.359,0,0,1,60.595,10.473A33.355,33.355,0,0,0,389.36,539.6a33.35,33.35,0,0,0-48.291-8.556,39.866,39.866,0,0,0-76.149-2.335A33.5,33.5,0,0,0,214.461,557.6c0,.033,0,.066,0,.1-.757-.06-1.52-.1-2.293-.1a28.516,28.516,0,0,0-28.516,28.517v15A28.516,28.516,0,0,1,212.17,572.6Z" fill="#f2cfb1"/></g><path d="M500.847,641.233H183.653a5,5,0,0,1-5-5V586.116a33.561,33.561,0,0,1,31.12-33.431,38.5,38.5,0,0,1,52.572-30.8,44.867,44.867,0,0,1,81.326,1.608,38.392,38.392,0,0,1,45.689,7.973,38.362,38.362,0,0,1,66.115,31.238,30.614,30.614,0,0,1,50.372,23.408v50.117A5,5,0,0,1,500.847,641.233Zm-312.194-10H495.847V586.116a20.637,20.637,0,0,0-39.349-8.7,5,5,0,0,1-5.612,2.769l-5.507-1.219a5,5,0,0,1-3.265-7.356,28.362,28.362,0,0,0-48.547-29.3,5,5,0,0,1-8.415,0,28.35,28.35,0,0,0-41.053-7.281,5,5,0,0,1-7.851-2.652,34.866,34.866,0,0,0-66.6-2.04,5,5,0,0,1-7.265,2.689,28.5,28.5,0,0,0-42.925,24.557l0,.121a5,5,0,0,1-5.4,4.985c-.712-.058-1.332-.085-1.894-.085a23.543,23.543,0,0,0-23.517,23.516Z" fill="#3b6b7d"/><path d="M515,572H143v24h0a10,10,0,0,1,10,10v50a51.719,51.719,0,0,0,51.67,52h248c28.6,0,52.33-23.4,52.33-52V606a10,10,0,0,1,10-10h0Z" fill="#eaeaea"/><path d="M153,606v3.5H505V606a10,10,0,0,1,10-10V572H143v24A10,10,0,0,1,153,606Z" fill="#c6c6c6"/><path d="M452.67,713h-248A56.9,56.9,0,0,1,148,656V606a5.006,5.006,0,0,0-5-5,5,5,0,0,1-5-5V572a5,5,0,0,1,5-5H515a5,5,0,0,1,5,5v24a5,5,0,0,1-5,5,5.006,5.006,0,0,0-5,5v50A57.23,57.23,0,0,1,452.67,713ZM148,591.856A15.028,15.028,0,0,1,158,606v50a46.889,46.889,0,0,0,46.67,47h248A47.219,47.219,0,0,0,500,656V606a15.028,15.028,0,0,1,10-14.144V577H148Z" fill="#3b6b7d"/><rect x="143" y="572" width="372" height="24" fill="#d8d8d8"/><path d="M449,601H430.5a5,5,0,0,1,0-10H449a5,5,0,0,1,0,10Z" fill="#3b6b7d"/><path d="M515,601H463a5,5,0,0,1,0-10h47V577H148v14H413.07a5,5,0,0,1,0,10H143a5,5,0,0,1-5-5V572a5,5,0,0,1,5-5H515a5,5,0,0,1,5,5v24A5,5,0,0,1,515,601Z" fill="#3b6b7d"/><rect x="191" y="708" width="275" height="18" rx="9" fill="#c6c6c6"/><path d="M457,731H200a14,14,0,0,1,0-28H457a14,14,0,0,1,0,28ZM200,713a4,4,0,0,0,0,8H457a4,4,0,0,0,0-8Z" fill="#3b6b7d"/><path d="M173,575a6,6,0,0,1-6-6V303a57.767,57.767,0,0,1,107.81-28.849,6,6,0,0,1-10.392,6A45.766,45.766,0,0,0,179,303V569A6,6,0,0,1,173,575Z" fill="#3b6b7d"/><path d="M317.973,304.418c-.845-10.408-6.566-20.855-18.56-28.027a20.957,20.957,0,0,0-8.955-2.88c-30.846-2.636-47.018,26.251-35.837,48.612a33.4,33.4,0,0,0,7.755,10.1Z" fill="#87d1e8"/><path d="M262.377,337.22a5,5,0,0,1-3.314-1.255,38.507,38.507,0,0,1-6.325-50.472c8.243-12.148,22.144-18.334,38.145-16.964a26.06,26.06,0,0,1,11.1,3.571c12.462,7.451,19.913,18.785,20.977,31.914a5,5,0,0,1-2.747,4.877l-55.6,27.8A4.992,4.992,0,0,1,262.377,337.22Zm24.241-58.875c-10.823,0-20.03,4.547-25.605,12.763a28.526,28.526,0,0,0,2.331,35.038l49.188-24.6c-1.683-8.445-7.157-15.768-15.685-20.866a16,16,0,0,0-6.815-2.19Q288.3,278.345,286.618,278.345Z" fill="#3b6b7d"/><circle cx="327.844" cy="452.093" r="11.249" fill="#f2cfb1"/><path d="M327.844,468.342a16.25,16.25,0,1,1,16.249-16.249A16.267,16.267,0,0,1,327.844,468.342Zm0-22.5a6.25,6.25,0,1,0,6.249,6.25A6.257,6.257,0,0,0,327.844,445.843Z" fill="#3b6b7d"/><circle cx="392.833" cy="463.986" r="20.236" fill="#f2cfb1"/><path d="M392.833,489.223a25.237,25.237,0,1,1,25.237-25.237A25.265,25.265,0,0,1,392.833,489.223Zm0-40.473a15.237,15.237,0,1,0,15.237,15.236A15.253,15.253,0,0,0,392.833,448.75Z" fill="#3b6b7d"/><path d="M195,506.5H175.125a6.5,6.5,0,0,1,0-13H195a6.5,6.5,0,0,1,0,13Z" fill="#3b6b7d"/><path d="M206.667,513H191.25a5,5,0,0,1-5-5V492a5,5,0,0,1,5-5h15.417a13,13,0,1,1,0,26ZM196.25,503h10.417a3,3,0,1,0,0-6H196.25Z" fill="#3b6b7d"/><path d="M191.25,492h15.417a8,8,0,0,1,8,8v0a8,8,0,0,1-8,8H191.25a0,0,0,0,1,0,0V492A0,0,0,0,1,191.25,492Z" fill="#3b6b7d"/><path d="M298.87,383.205a2,2,0,0,1-1.925-1.459l-13.023-46.24a2,2,0,1,1,3.85-1.084l13.024,46.24a2,2,0,0,1-1.926,2.543Z" fill="#3b6b7d"/><path d="M342.251,356.75a2,2,0,0,1-1.533-.714l-28.812-34.312a2,2,0,0,1,3.064-2.572l28.812,34.312a2,2,0,0,1-1.531,3.286Z" fill="#3b6b7d"/><path d="M332.928,386.927a2,2,0,0,1-1.746-1.022l-11.343-20.223a2,2,0,1,1,3.489-1.957l11.342,20.223a2,2,0,0,1-1.742,2.979Z" fill="#3b6b7d"/><path d="M314.409,353.908a2,2,0,0,1-1.746-1.022l-13.407-23.9a2,2,0,0,1,3.488-1.957l13.407,23.9a2,2,0,0,1-1.742,2.979Z" fill="#3b6b7d"/><rect x="692.667" y="523" width="140" height="55" fill="#ef9e9d"/><rect x="692.667" y="523" width="140" height="12.5" fill="#ef9e9d" opacity="0.39" style="mix-blend-mode:color-burn"/><rect x="692.667" y="578" width="140" height="55" fill="#ef9e9d"/><rect x="692.667" y="577.75" width="140" height="12.5" fill="#ef9e9d" opacity="0.39" style="mix-blend-mode:color-burn"/><rect x="692.667" y="633" width="140" height="55" fill="#ef9e9d"/><rect x="692.667" y="633.75" width="140" height="12.5" fill="#ef9e9d" opacity="0.39" style="mix-blend-mode:color-burn"/><path d="M832.667,693h-140a5,5,0,0,1-5-5V523a5,5,0,0,1,5-5h140a5,5,0,0,1,5,5V688A5,5,0,0,1,832.667,693Zm-135-10h130V528h-130Z" fill="#3b6b7d"/><path d="M832.667,583h-140a5,5,0,0,1-5-5V523a5,5,0,0,1,5-5h140a5,5,0,0,1,5,5v55A5,5,0,0,1,832.667,583Zm-135-10h130V528h-130Z" fill="#3b6b7d"/><path d="M832.667,638h-140a5,5,0,0,1-5-5V578a5,5,0,0,1,5-5h140a5,5,0,0,1,5,5v55A5,5,0,0,1,832.667,638Zm-135-10h130V583h-130Z" fill="#3b6b7d"/><path d="M832.667,693h-140a5,5,0,0,1-5-5V633a5,5,0,0,1,5-5h140a5,5,0,0,1,5,5v55A5,5,0,0,1,832.667,693Zm-135-10h130V638h-130Z" fill="#3b6b7d"/><path d="M780.667,546h-36a5,5,0,1,1,0-10h36a5,5,0,0,1,0,10Z" fill="#3b6b7d"/><path d="M780.667,601h-36a5,5,0,1,1,0-10h36a5,5,0,0,1,0,10Z" fill="#3b6b7d"/><path d="M780.667,656h-36a5,5,0,1,1,0-10h36a5,5,0,0,1,0,10Z" fill="#3b6b7d"/><polygon points="714.85 726 701.683 726 716.85 688 742.85 688 714.85 726" fill="#3b6b7d"/><path d="M714.85,731H701.684a5,5,0,0,1-4.644-6.854l15.166-38A5,5,0,0,1,716.85,683h26a5,5,0,0,1,4.025,7.966l-28,38A5,5,0,0,1,714.85,731Zm-5.788-10h3.261l20.632-28H720.237Z" fill="#3b6b7d"/><path d="M827.066,731H813.9a5,5,0,0,1-4.025-2.034l-28-38A5,5,0,0,1,785.9,683h26a5,5,0,0,1,4.644,3.146l15.166,38A5,5,0,0,1,827.066,731Zm-10.639-10h3.261l-11.175-28H795.8Z" fill="#3b6b7d"/><polygon points="813.9 726 827.067 726 811.9 688 785.9 688 813.9 726" fill="#3b6b7d"/><rect x="755.667" y="448" width="14" height="42.667" fill="#87d1e8"/><path d="M769.667,495.667h-14a5,5,0,0,1-5-5V448a5,5,0,0,1,5-5h14a5,5,0,0,1,5,5v42.667A5,5,0,0,1,769.667,495.667Zm-9-10h4V453h-4Z" fill="#3b6b7d"/><circle cx="762.667" cy="503" r="18" fill="#87d1e8"/><path d="M762.667,526a23,23,0,1,1,23-23A23.025,23.025,0,0,1,762.667,526Zm0-36a13,13,0,1,0,13,13A13.015,13.015,0,0,0,762.667,490Z" fill="#3b6b7d"/><path d="M777.164,497.333a5,5,0,0,1-3.535-8.535l12.418-12.418a5,5,0,0,1,7.07,7.071L780.7,495.869A4.983,4.983,0,0,1,777.164,497.333Z" fill="#3b6b7d"/><path d="M796.946,488.5a4.984,4.984,0,0,1-3.535-1.464l-11-11a5,5,0,0,1,7.071-7.072l11,11a5,5,0,0,1-3.535,8.535Z" fill="#3b6b7d"/><path d="M778.337,458.5H747a5.265,5.265,0,0,1-4.928-7.118l4.546-12.092c2.311-6.147,8.775-10.29,16.053-10.29h0c7.278,0,13.741,4.143,16.052,10.29l4.547,12.092A5.265,5.265,0,0,1,778.337,458.5Z" fill="#87d1e8"/><path d="M778.338,463.5H747a10.266,10.266,0,0,1-9.609-13.877l4.548-12.093c3.041-8.092,11.373-13.53,20.732-13.53s17.689,5.438,20.732,13.53l4.547,12.093a10.265,10.265,0,0,1-9.608,13.877ZM762.667,434c-5.218,0-9.787,2.833-11.372,7.049l-4.548,12.093a.266.266,0,0,0,.249.358h31.342a.265.265,0,0,0,.248-.358l-4.547-12.093C772.454,436.833,767.884,434,762.667,434Z" fill="#3b6b7d"/><rect x="679.667" y="503" width="166" height="20" fill="#dd8a8a"/><path d="M845.667,528h-166a5,5,0,0,1-5-5V503a5,5,0,0,1,5-5h166a5,5,0,0,1,5,5v20A5,5,0,0,1,845.667,528Zm-161-10h156V508h-156Z" fill="#3b6b7d"/><rect x="682.667" y="224" width="160" height="192" fill="#bbeaf2"/><rect x="682.667" y="401.987" width="160" height="14.013" fill="#92d7e7" opacity="0.52" style="mix-blend-mode:multiply"/><rect x="682.667" y="224" width="160" height="14.107" fill="#92d7e7" opacity="0.48" style="mix-blend-mode:screen"/><path d="M842.667,421h-160a5,5,0,0,1-5-5V224a5,5,0,0,1,5-5h160a5,5,0,0,1,5,5V416A5,5,0,0,1,842.667,421Zm-155-10h150V229h-150Z" fill="#3b6b7d"/><path d="M866.333,421H659a5,5,0,0,1,0-10H866.333a5,5,0,1,1,0,10Z" fill="#3b6b7d"/><rect x="800.083" y="357.667" width="24.833" height="58.333" fill="#d3b379"/><path d="M824.917,421H800.083a5,5,0,0,1-5-5V357.667a5,5,0,0,1,5-5h24.834a5,5,0,0,1,5,5V416A5,5,0,0,1,824.917,421Zm-19.834-10h14.834V362.667H805.083Z" fill="#3b6b7d"/><path d="M811.5,333h2a6.417,6.417,0,0,1,6.417,6.417v18.25a0,0,0,0,1,0,0H805.083a0,0,0,0,1,0,0v-18.25A6.417,6.417,0,0,1,811.5,333Z" fill="#d0edf5"/><path d="M819.917,362.667H805.083a5,5,0,0,1-5-5v-18.25A11.43,11.43,0,0,1,811.5,328h2a11.43,11.43,0,0,1,11.417,11.417v18.25A5,5,0,0,1,819.917,362.667Zm-9.834-10h4.834v-13.25A1.418,1.418,0,0,0,813.5,338h-2a1.418,1.418,0,0,0-1.417,1.417Z" fill="#3b6b7d"/><path d="M710.744,313.281a3,3,0,0,1-2.121-5.121l43-43a3,3,0,0,1,4.242,4.242l-43,43A2.989,2.989,0,0,1,710.744,313.281Z" fill="#3b6b7d"/><path d="M764.315,300.831a3,3,0,0,1-2.121-5.122l38.75-38.75a3,3,0,0,1,4.243,4.243l-38.75,38.75A2.992,2.992,0,0,1,764.315,300.831Z" fill="#3b6b7d"/><path d="M722.982,342.164a3,3,0,0,1-2.121-5.121l27-27a3,3,0,0,1,4.243,4.242l-27,27A2.992,2.992,0,0,1,722.982,342.164Z" fill="#3b6b7d"/><path d="M589.736,244.107H440.093a6,6,0,0,1,0-12H589.736a6,6,0,0,1,0,12Z" fill="#3b6b7d"/><rect x="413.07" y="224" width="27.024" height="28.213" fill="#87d1e8"/><path d="M440.093,257.213H413.07a5,5,0,0,1-5-5V224a5,5,0,0,1,5-5h27.023a5,5,0,0,1,5,5v28.213A5,5,0,0,1,440.093,257.213Zm-22.023-10h17.023V229H418.07Z" fill="#3b6b7d"/><rect x="589.736" y="224" width="27.024" height="28.213" fill="#87d1e8"/><path d="M616.76,257.213H589.736a5,5,0,0,1-5-5V224a5,5,0,0,1,5-5H616.76a5,5,0,0,1,5,5v28.213A5,5,0,0,1,616.76,257.213Zm-22.024-10H611.76V229H594.736Z" fill="#3b6b7d"/><rect x="457" y="224" width="118" height="170.987" fill="#fff"/><rect x="457" y="224" width="118" height="18.511" fill="#d8d8d8" opacity="0.84"/><path d="M575,399.987H457a5,5,0,0,1-5-5V224a5,5,0,0,1,5-5H575a5,5,0,0,1,5,5V394.987A5,5,0,0,1,575,399.987Zm-113-10H570V229H462Z" fill="#3b6b7d"/><path d="M566.5,412.987a4,4,0,0,1-4-4v-14a4,4,0,0,1,8,0v14A4,4,0,0,1,566.5,412.987Z" fill="#3b6b7d"/><path d="M552.5,412.987a4,4,0,0,1-4-4v-14a4,4,0,0,1,8,0v14A4,4,0,0,1,552.5,412.987Z" fill="#3b6b7d"/><path d="M538.5,412.987a4,4,0,0,1-4-4v-14a4,4,0,0,1,8,0v14A4,4,0,0,1,538.5,412.987Z" fill="#3b6b7d"/><path d="M524.5,412.987a4,4,0,0,1-4-4v-14a4,4,0,0,1,8,0v14A4,4,0,0,1,524.5,412.987Z" fill="#3b6b7d"/><path d="M510.5,412.987a4,4,0,0,1-4-4v-14a4,4,0,0,1,8,0v14A4,4,0,0,1,510.5,412.987Z" fill="#3b6b7d"/><path d="M496.5,412.987a4,4,0,0,1-4-4v-14a4,4,0,0,1,8,0v14A4,4,0,0,1,496.5,412.987Z" fill="#3b6b7d"/><path d="M482.5,412.987a4,4,0,0,1-4-4v-14a4,4,0,0,1,8,0v14A4,4,0,0,1,482.5,412.987Z" fill="#3b6b7d"/><path d="M468.5,412.987a4,4,0,0,1-4-4v-14a4,4,0,0,1,8,0v14A4,4,0,0,1,468.5,412.987Z" fill="#3b6b7d"/><path d="M575,368.667H457a5,5,0,0,1,0-10H575a5,5,0,0,1,0,10Z" fill="#3b6b7d"/><path d="M500,331.005a3,3,0,0,1-3-3V227.24a3,3,0,0,1,6,0V328.005A3,3,0,0,1,500,331.005Z" fill="#3b6b7d"/><path d="M539.667,295a3,3,0,0,1-3-3V227.24a3,3,0,0,1,6,0V292A3,3,0,0,1,539.667,295Z" fill="#3b6b7d"/></g></g></svg>
 
@@ -2042,13 +2060,15 @@
           </div>
 
           <div id="About" class="tabcontent" style="text-align:center;margin-top:0">
+<div class="row">
+<div class="col">
 
             <h2 style="margin-left:35px;" id="lblGreetings"></h2>
             <div id="quoteContainer">
               <p></p>
               <p id="quoteGenius" style="display:inline-block;"></p>			
             </div><!--end quoteContainer-->
-
+</div>
             <script>
               var myDate = new Date();
               var hrs = myDate.getHours();
@@ -2065,7 +2085,7 @@
               document.getElementById('lblGreetings').innerHTML =
                 '<b>' + greet + '</b>';
             </script>
-
+<div class="col">
             <?xml version="1.0" encoding="UTF-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve" width="300px" height="300px">
             <path fill="#91A1AE" d="M687.443,272.333c-4.36-0.004-8.589,1.498-11.969,4.252c-8.149-19.344-30.436-28.419-49.78-20.27
                                     c-14.087,5.935-23.248,19.732-23.251,35.018h104C706.443,280.84,697.936,272.333,687.443,272.333z"/>
@@ -2310,7 +2330,8 @@
                                     L974.091,202.946z"/>
             </svg>
 
-
+</div>
+</div>
             <div class="container">
               <div class="row">
                 <div class="col-xs-12">
@@ -2375,6 +2396,14 @@
                 </fieldset>
               </form>
               <!-- this will be hidden at times -->
+<div class="row">
+  <div class="col">
+ 
+<div class="feedgrabbr_widget" id="fgid_d4df5d05d2b614fdb8ebccc4d"></div>
+<script>if (typeof (fg_widgets) === "undefined") fg_widgets = new Array(); fg_widgets.push("fgid_d4df5d05d2b614fdb8ebccc4d");</script>
+<script async src="https://www.feedgrabbr.com/widget/fgwidget.js"></script>
+  </div>
+  <div class="col">
               <div class="row" id="toDoDataRow">
                 <div class="col-xs-12">
                   <h2>My To Do Items</h2>
@@ -2396,6 +2425,10 @@
                         backdrop-filter:blur(10px);
                       filter: blur(10px);
                     }
+                    ::placeholder {
+  color: red !important;
+  font-size: 1.5em;
+}
                   </style>
                   <a href="#" id="showForm"class="btn btn-info" role="button">+ New item</a>
                   <button onclick="document.querySelector('#modal').showModal()" class="btn waves-effect btn-secondary" style="outline:none">Settings</button>
@@ -2432,7 +2465,7 @@
 
             <script src="https://macloo.github.io/to-do-list-localstorage/js/jquery.min.js"></script>
             <script src="https://macloo.github.io/to-do-list-localstorage/js/bootstrap.min.js"></script>
-            <script src="https://macloo.github.io/to-do-list-localstorage/js/main.js"></script>
+            <script src="https://macloo.github.io/to-do-list-localstorage/js/main.js"></script></div></div>
             <div class="container">
               <a role="button" class="btn btn-secondary waves-effect" href="http://pramodini.github.io/KeepInventory/livesearch2.htm">Help Center</a>
               <!-- Latest compiled and minified CSS -->
@@ -2547,6 +2580,9 @@
                 border-radius:100px;
 
               }
+              #launch {
+                margin-left:0px !important;
+              }
             </style>
 
             <script>
@@ -2598,7 +2634,7 @@
                   <div class="col-md-4 mx-auto">
 
                     <!-- Content -->
-                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">KeepInventory</h5>
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Homebase</h5>
 
 
                   </div>
@@ -2614,7 +2650,7 @@
 
                     <ul class="list-unstyled">
                       <li>
-                        <a href="#!">Dashboard</a>
+                        <a href="#!" onclick="openPage('About', this, 'transparent');closeNav();move();">Dashboard</a>
                       </li>
                       <li>
                         <a href="#!">Kitchen</a>
@@ -2726,7 +2762,7 @@
 
               <!-- Copyright -->
               <div class="footer-copyright text-center py-3">&copy; 2020 Copyright:
-                <a href="https://pramodini.github.com/KeepInventory/Index.htm"> KeepInventory</a>
+                <a href="https://pramodini.github.com/KeepInventory/Index.htm"> Homebase</a>
               </div>
               <!-- Copyright -->
               <style>
@@ -2782,32 +2818,179 @@
               <script>
                 $(document).ready(function(){
 
-$("#Before").css('display','none');
-	
-$("#After").css('display','none');
+                  $("#Before").css('display','none');
 
-$("#Button1").click(function(){
-		$("#Before").toggle(); 
-		
-		var beforeIsVisible = $("#Before").is(":visible"); 
-		localStorage.setItem('beforeIsVisible', beforeIsVisible);
-	});
-		var beforeIsVisible = localStorage.getItem('beforeIsVisible') === 'false' ? false : true;
-		beforeIsVisible ? $("#Before").toggle() : undefined;
-	
-	$("#Button2").click(function(){
-		$("#After").toggle(); 
-		
-		var afterIsVisible = $("#After").is(":visible"); 
-		localStorage.setItem('afterIsVisible', afterIsVisible);
-	});
-		var afterIsVisible = localStorage.getItem('afterIsVisible') === 'false' ? false : true;
-		afterIsVisible ? $("#After").toggle() : undefined;
+                  $("#After").css('display','none');
 
-});
+                  $("#Button1").click(function(){
+                    $("#Before").toggle(); 
+
+                    var beforeIsVisible = $("#Before").is(":visible"); 
+                    localStorage.setItem('beforeIsVisible', beforeIsVisible);
+                  });
+                  var beforeIsVisible = localStorage.getItem('beforeIsVisible') === 'false' ? false : true;
+                  beforeIsVisible ? $("#Before").toggle() : undefined;
+
+                  $("#Button2").click(function(){
+                    $("#After").toggle(); 
+
+                    var afterIsVisible = $("#After").is(":visible"); 
+                    localStorage.setItem('afterIsVisible', afterIsVisible);
+                  });
+                  var afterIsVisible = localStorage.getItem('afterIsVisible') === 'false' ? false : true;
+                  afterIsVisible ? $("#After").toggle() : undefined;
+
+                });
               </script>
               <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
+              <style>
+                @import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700|Sansita+One);
+                :root {
+                  --primary-color: #03fc94;
+                  --secondary-color: #536390;
+                  --font-color: #424242;
+                  --bg-color: #fff;
+                  --heading-color: #292922;
+                }
+
+                [data-theme="dark"] {
+                  --primary-color: #385575;
+                  --secondary-color: #818cab;
+                  --font-color: #e1e1ff;
+                  --bg-color: #161625;
+                  --heading-color: #818cab;
+                }
+
+                body,.tabcontent,.panel,td,th,input,.well,.panel-footer,.panel-body,.panel-header {
+                  font-family: "Lato", sans-serif;
+                  background-color: var(--bg-color) !important;
+                  color: var(--font-color);
+                  font-size: calc(1rem + 0.25vh);
+                }
+
+                h1 {
+                  color: var(--heading-color);
+                  font-family: "Sansita One", serif;
+                  font-size: 2rem;
+                  margin-bottom: 1vh;
+                }
+
+                p {
+                  font-size: 1.1rem;
+                  line-height: 1.6rem;
+                }
+
+                .sidebar,.sidebutton {
+                  background-color: var(--primary-color) !important;
+
+                }
+
+
+                section {
+                  max-width: 68%;
+                  margin: 0 auto;
+                }
+
+                .sidebar {
+                  font-size: 1rem;
+                  font-style: italic;
+                  display: block;
+                  margin-bottom: 4vh;
+                  color: var(--secondary-color);
+                }
+
+                nav {
+                  display: flex;
+                  justify-content: flex-end;
+                  padding: 20px 0;
+                }
+
+                /*slider switch css */
+                .theme-switch-wrapper {
+                  display: flex;
+                  align-items: center;
+                }
+                .theme-switch-wrapper em {
+                  margin-left: 10px;
+                  font-size: 1rem;
+                }
+
+                .theme-switch {
+                  display: inline-block;
+                  height: 34px;
+                  position: relative;
+                  width: 60px;
+                }
+
+                .theme-switch input {
+                  display: none;
+                }
+
+                .slider {
+                  background-color: #ccc;
+                  bottom: 0;
+                  cursor: pointer;
+                  left: 0;
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  transition: .4s;
+                }
+
+                .slider:before {
+                  background-color: #fff;
+                  bottom: 4px;
+                  content: "";
+                  height: 26px;
+                  left: 4px;
+                  position: absolute;
+                  transition: .4s;
+                  width: 26px;
+                }
+
+                input:checked + .slider {
+                  background-color: #66bb6a;
+                }
+
+                input:checked + .slider:before {
+                  transform: translateX(26px);
+                }
+
+                .slider.round {
+                  border-radius: 34px;
+                }
+
+                .slider.round:before {
+                  border-radius: 50%;
+                }
+              </style>
+
+              <script id="rendered-js">
+                const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+                const currentTheme = localStorage.getItem('theme');
+
+                if (currentTheme) {
+                  document.documentElement.setAttribute('data-theme', currentTheme);
+
+                  if (currentTheme === 'dark') {
+                    toggleSwitch.checked = true;
+                  }
+                }
+
+                function switchTheme(e) {
+                  if (e.target.checked) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                  }
+                  else { document.documentElement.setAttribute('data-theme', 'light');
+                        localStorage.setItem('theme', 'light');
+                       } 
+                }
+
+                toggleSwitch.addEventListener('change', switchTheme, false);
+              </script>
+
               </body>
-              </footer>
-            </html>
+            </footer>
+          </html>
