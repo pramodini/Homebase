@@ -844,16 +844,16 @@ a:hover {
         })(document);
     </script>
 <script type="text/javascript">
-document.getElementById("txt_1a").value = getSavedValue("txt_1");    // set the value to this input
-document.getElementById("txt_2a").value = getSavedValue("txt_2");   // set the value to this input
-document.getElementById("txt_3a").value = getSavedValue("txt_3");   // set the value to this input
-document.getElementById("txt_4a").value = getSavedValue("txt_4");   // set the value to this input
-document.getElementById("txt_5a").value = getSavedValue("txt_5");   // set the value to this input
-document.getElementById("txt_6a").value = getSavedValue("txt_6");   // set the value to this input
-document.getElementById("txt_7a").value = getSavedValue("txt_7");   // set the value to this input
-document.getElementById("txt_8a").value = getSavedValue("txt_8");   // set the value to this input
-document.getElementById("txt_9a").value = getSavedValue("txt_9");   // set the value to this input
-document.getElementById("txt_10a").value = getSavedValue("txt_10");   // set the value to this input
+document.getElementById("txt_1a").value = getSavedValue("txt_1a");    // set the value to this input
+document.getElementById("txt_2a").value = getSavedValue("txt_2a");   // set the value to this input
+document.getElementById("txt_3a").value = getSavedValue("txt_3a");   // set the value to this input
+document.getElementById("txt_4a").value = getSavedValue("txt_4a");   // set the value to this input
+document.getElementById("txt_5a").value = getSavedValue("txt_5a");   // set the value to this input
+document.getElementById("txt_6a").value = getSavedValue("txt_6a");   // set the value to this input
+document.getElementById("txt_7a").value = getSavedValue("txt_7a");   // set the value to this input
+document.getElementById("txt_8a").value = getSavedValue("txt_8a");   // set the value to this input
+document.getElementById("txt_9a").value = getSavedValue("txt_9a");   // set the value to this input
+document.getElementById("txt_10a").value = getSavedValue("txt_10a");   // set the value to this input
 document.getElementById("txt_11").value = getSavedValue("txt_11");   // set the value to this input
 document.getElementById("txt_12").value = getSavedValue("txt_12");   // set the value to this input
 document.getElementById("txt_13").value = getSavedValue("txt_13");   // set the value to this input
@@ -947,18 +947,18 @@ document.getElementById("txt_99").value = getSavedValue("txt_99");   // set the 
         /* Here you can add more inputs to set value. if it's saved */
 
         //Save the value function - save it to localStorage as (ID, VALUE)
-        function saveValue(ea){
-            var ids = ea.id;  // get the sender's id to save it .
-            var vals = ea.value; // get the value.
-            localStorage.setItem(ids, vals);// Every time user writing something, the localStorage's value will override .
+        function saveValue(e){
+            var id = e.id;  // get the sender's id to save it .
+            var val = e.value; // get the value.
+            localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override .
         }
 
         //get the saved value function - return the value of "v" from localStorage.
-        function getSavedValue  (vAa){
-            if (!localStorage.getItem(vAa)) {
+        function getSavedValue  (v){
+            if (!localStorage.getItem(v)) {
                 return "";// You can change this to your defualt value.
             }
-            return localStorage.getItem(vAa);
+            return localStorage.getItem(v);
         }
 </script>
 </body>
