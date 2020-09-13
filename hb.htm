@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 <!-- Google Fonts -->
@@ -16,6 +18,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+<title>Happy Birthday!</title>
 </head>
 <style>
 * {box-sizing: border-box}
@@ -57,11 +60,156 @@ background-color:white;
 </head>
 
 
-<body onload="openPage('Home', this, 'whitesmoke')">
+<body onload="my1Function();openPage('Home', this, 'whitesmoke')">
+  <div id="loader"><img src="https://assets.dryicons.com/uploads/icon/svg/10949/d8c88ed1-0c75-4f62-a347-4da4d7f7bd77.svg">
+  
+  
+  
+<style>
+.loader {
+  position: relative;
+  margin: 0 auto;
+  width: 100px;
+}
+.loader:before {
+  content: '';
+  display: block;
+  padding-top: 400%;
+}
+
+.circular {
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
+  height: 100%;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+          animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  stroke-linecap: round;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+@-webkit-keyframes color {
+  100%,
+  0% {
+    stroke: #0057e7;
+  }
+  40% {
+    stroke: #0057e7;
+  }
+  66% {
+    stroke: #0057e7;
+  }
+  80%,
+  90% {
+    stroke: #0057e7;
+  }
+}
+@keyframes color {
+  100%,
+  0% {
+    stroke: #0057e7;
+  }
+  40% {
+    stroke: #0057e7;
+  }
+  66% {
+    stroke: #0057e7;
+  }
+  80%,
+  90% {
+    stroke: #0057e7;
+  }
+}
+body {
+  background-color: white;
+}
+
+.showbox {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5%;
+}
+</style>
+
+  
+  
+  
+  
+
+<body translate="no" >
+  <div class="showbox">
+  <div class="loader">
+    <svg class="circular" viewBox="25 25 50 50">
+      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+    </svg>
+  </div>
+</div>
+
+
+</div>
+  <div style="display:none;" id="myDiv" class="animate-bottom">
+
   <div id="Home" class="tabcontent" style="text-align:center">
 <div class="jumbotron bg-success" style="text-align:center">    <h3>Happy Birthday, Mom!</h3>
     <p>Click the button for a surprise</p></div>
     <button class="btn btn-primary waves-effect" onclick="on()">See your surprise</button>
+
     <style>
     #overlay {
       position: fixed;
@@ -72,20 +220,26 @@ background-color:white;
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: rgba(0,0,0,0.5);
+      background-color: rgba(0,0,0,0.9);
       z-index: 2;
       cursor: pointer;
       backdrop-filter: blur(10px);
     }
     </style>
 
-    <div id="overlay" >
+    <div id="overlay" style="z-index:99999999999999999999999999999999999999999999999999999999999999999">
 
       <div id="text">
         Enter password: <input class="form-control" autofocus="autofocus" id='password' type='password'  />
-        <a role="button" class="btn btn-secondary" onclick="javascript:return validatePass()">Login</a>
-        <a role="button" class="btn btn-danger" onclick="off()">Cancel</a>
+        <a role="button" id="restartConfetti"  class="btn btn-secondary" onclick="javascript:return validatePass()">Login</a>
+        <a role="button" class="btn btn-secondary" onclick="openPage('News', this, 'whitesmoke');off();">Free mode (not supported and no effects)</a>
+<br><p style="font-size:10px;">Forgot password? Email me at coolbitmoji@gmail.com<br></p>
+<script>
 
+}
+
+
+</script>
       </div>
 </div>
 
@@ -100,6 +254,68 @@ background-color:white;
       -ms-transform: translate(-50%,-50%);
     }
     </style>
+    <style>
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+
+  width: 120px;
+  height: 120px;
+
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+</style>
+<script>
+var myVar;
+
+function my1Function() {
+  myVar = setTimeout(showPage, 1000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
     <script>
     function on() {
       document.getElementById("overlay").style.display = "block";
@@ -114,9 +330,13 @@ background-color:white;
 
   <div id="News" class="tabcontent">
     <div style="position:relative;z-index:99999999999999999999999999999999999999999999999999999999999999999999999;">
-<h3>Happy Birthday, Mom!</h3>
-    <button id="stopConfetti" class="btn btn-danger">Stop</button>
-<button id="restartConfetti" class="btn btn-success">Start</button>
+
+
+<br>
+<h1>Mom, </h1>
+<h3>Happy Birthday!<h3>
+<h3>Have a wonderful year ahead!</h3>
+<footer>Made by Manu using HTML, CSS, JS, jQuery and SCSS</footer>
 </div>
   </div>
 
