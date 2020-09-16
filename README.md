@@ -9,11 +9,11 @@ Homebase is a home 🏡 inventory app made by Manu G, Achu K, and Ram V.
 
 ## Code Samples
 
-> You can check out the code at https://github.com/pramodini/KeepInventory/tree/master
+> You can check out the code at https://github.com/pramodini/Homebase/tree/master
 
 ## Installation
 
-> You can check out the help center at: https://pramodini.github.io/KeepInventory/livesearch2.htm for installation and more...
+> You can check out the help center at: https://pramodini.github.io/Homebase/livesearch2.htm for installation and more...
 
 
 Slack: https://homebase-dev-app.slack.com
