@@ -9,10 +9,8 @@
 | 2.0.x   | :white_check_mark: |
 | < 3.0   | :white_check_mark:                |
 
-## Reporting a Vulnerability
+## Vulnerability
 
-Use this section to tell people how to report a vulnerability.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+The Homebase app is here. You can download the app at https://s3.amazonaws.com/gonativeio/static/5f615bb201ee294dc87559f4/app-release.apk
+[Please note that the app is apk and your phone will say that it is untrusted. I haven't purchased a license yet because it costs $250]
