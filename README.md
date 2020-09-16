@@ -17,3 +17,4 @@ Homebase is a home 🏡 inventory app made by Manu G, Achu K, and Ram V.
 
 
 Slack: https://homebase-dev-app.slack.com
+Download the app at 
