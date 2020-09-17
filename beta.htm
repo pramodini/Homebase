@@ -2,6 +2,8 @@
 
 
 
+
+
 <!DOCTYPE html>
 
 <html>
@@ -64,9 +66,14 @@
 .complete {
   width:1000px;
   overflow:hidden;
-  height:100%;
-    min-width: 500px;
-
+  height:251px;
+    min-width: 490px;
+margin-right:1000px;
+text-align:left !important;
+border-radius:10px;
+background-color:transparent !important;
+max-width:1000px;
+text-align:center;
 }
 input + div {
     display: none;
@@ -404,6 +411,16 @@ display:block;
         document.getElementById("myDiv").style.display = "block";
       }
     </script>
+    <style>
+.topnav{
+Position:fixed;
+Top:0;
+Left:0;
+width:100%;
+height:60px;z-index:9999;
+background-color:whitesmoke;
+</style>
+<div class="topnav"></div>
     <div id="loader">
       <img src="https://img.icons8.com/plasticine/100/000000/warehouse-1.png" height="100" width="100">
       <style>
@@ -603,86 +620,128 @@ display:block;
 
     </script>
     <div style="display:none;" id="myDiv" class="animate-bottom">
-<div class="r" style="text-align:center !important;padding:5px;position:fixed;top:0;left:0;margin-left:70px;width:500px;background-color:rgba(200,200,200,0.37) !important;backdrop-filter:blur(10px); width:100%;z-index:9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999">
-<style>.list-group-item {margin-top:10px;margin-left:10px;margin-right:80px;background-color: whitesmoke !important; margin-top:0px;backdrop-filter: blur(10px);border: 2px solid whitesoke !important;border-radius:0px;color:black !important}</style>
-  <div id="myDropdown" class="dropdown-content" style="text-align:left !important">
-    <div class="wpr" >
-    <input type="search" style="margin-right:1090px !important ;width:900px !important;margin-left:10px;padding:20px;text-align:left;border-radius:0px !important" autocomplete="off" placeholder="🔎 Quick Search..." id="myInput" class="form-control w-100" onkeyup="filterFunctiona()">
-    <div class="complete">
-      <ul class="list-group">
-    <a href="#" class="list-group-item waves-effect" style="text-align:center;display:block !important">    💡Search Suggestions</a>
-    <a href="#about" class="list-group-item waves-effect" onclick="openPage('About', this, 'transparent');closeNav();move();offa()">Home</a>
-    <a href="#base" class="list-group-item waves-effect" onclick="openPage('Home', this, 'transparent');closeNav();move();offa()">Bedroom <h1 class="badge badge-danger">Coming Soon</h1></a>
-    <a href="#contact" class="list-group-item waves-effect" onclick="openPage('News', this, 'transparent');closeNav();move();offa()">Bathroom <h1 class="badge badge-danger">Coming Soon</h1></a>
-    <a href="#custom" class="list-group-item waves-effect" onclick="openPage('Contact', this, 'transparent');closeNav();move();offa()">Garage <h1 class="badge badge-success">Beta</h1></a>
-    <a href="#support" class="list-group-item waves-effect" onclick="openPage('About1', this, 'transparent');closeNav();move();offa()">Kitchen <h1 class="badge badge-success">Beta</h1></a>
-            <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Storage room <h1 class="badge badge-danger">Coming Soon</h1></a>
-        <a href="#tools" class="list-group-item waves-effect" onclick="openPage('About2', this, 'transparent');closeNav();move();offa()">Living Room <h1 class="badge badge-danger">Coming Soon</h1></a>
-    <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Misc. <h1 class="badge badge-danger">Coming Soon</h1></a>
-            <a href="#tools" class="list-group-item waves-effect" onclick="openPage('todo', this, 'transparent');closeNav();move();offa()">Todo list <h1 class="badge badge-success">Beta</h1></a>
-        <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Manu's Personal Website</a>
-        <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Slack for Homebase <h1 class="badge badge-success">Beta</h1></a>
-                <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Slack Homebase | Getting Started</a>
-        <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Github</a>
-        <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Dev Page <h1 class="badge badge-success">Beta</h1></a>
+
+<button class="btn waves-effect" style="position:absolute;top:0;left:90%;border-radius:0px !important;display:inline-block !important;padding:10px 15px 10px 15px !important;position:fixed;background-color:white !important;margin-top:10px;z-index:99999999999999999999999" onclick="openPage('settings', this, 'transparent');closeNav();move();offa()"><i class="fa fa-user" ></i></button>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('https://www.w3schools.com/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 70%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  position:absolute;
+  top:10 !important;
+  left:80px;
+  margin-top:10px;
+  position:fixed;
+  z-index:9999999999999999999999999999999999999999999999999999999999999999;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color:white !important;
+  
+}
+
+#myUL li a {
+  margin-top: -1px; /* Prevent double borders */
+  padding: 12px !important;
+  text-decoration: none !important;
+  font-size: 18px !important;
+  color: black !important;
+  display: block !important;
+}
+
+#myUL {
+border:1px solid #c0c0c0
+}
+#myUL li a:hover:not(.header) {
+  background-color: #eee !important;
+}
+input + div {
+    display: none;
+    height: 221px;
+    width: 70%;
+    overflow-x: auto; 
+    overflow-y: hidden;
+    z-index:99999;
+    position:fixed;
+    top:50px;
+    left:80px
+    
+}
+
+
+.wpr:focus-within div {
+  display: block;
+}
+</style>
+
+
+<div class="wpr">
+<input type="text" id="myInput" class="form-control" autocomplete="off" onkeyup="filter()" placeholder="Search..." title="Type in a name">
+<div class="wpr">
+<ul id="myUL">
+
+    <li>  <a href="#" class="" style="text-align:center;display:block !important">    ðŸ’¡Search Suggestions</a></li>
+   <li> <a href="#about" class="" onclick="openPage('About', this, 'transparent');closeNav();move();offa()">Home</a></li>
+   <li> <a href="#base" class="" onclick="openPage('Home', this, 'transparent');closeNav();move();offa()">Bedroom <h1 class="badge badge-danger">Coming Soon</h1></a></li>
+   <li> <a href="#contact" class="" onclick="openPage('News', this, 'transparent');closeNav();move();offa()">Bathroom <h1 class="badge badge-danger">Coming Soon</h1></a></li>
+   <li> <a href="#custom" class="" onclick="openPage('Contact', this, 'transparent');closeNav();move();offa()">Garage <h1 class="badge badge-success">Beta</h1></a></li>
+   <li> <a href="#support" class="" onclick="openPage('About1', this, 'transparent');closeNav();move();offa()">Kitchen <h1 class="badge badge-success">Beta</h1></a></li>
+        <li>    <a href="#tools" class="" onclick="offa()">Storage room <h1 class="badge badge-danger">Coming Soon</h1></a>
+     <li>   <a href="#tools" class="" onclick="openPage('About2', this, 'transparent');closeNav();move();offa()">Living Room <h1 class="badge badge-danger">Coming Soon</h1></a></li>
+   <li> <a href="#tools" class="" onclick="offa()">Misc. <h1 class="badge badge-danger">Coming Soon</h1></a>
+          <li>  <a href="#tools" class="" onclick="openPage('todo', this, 'transparent');closeNav();move();offa()">Todo list <h1 class="badge badge-success">Beta</h1></a></li>
+     <li>   <a href="#tools" class="" onclick="offa()">Manu's Personal Website</a>
+      <li>  <a href="#tools" class="" onclick="offa()">Slack for Homebase <h1 class="badge badge-success">Beta</h1></a></li>
+              <li>  <a href="#tools" class="" onclick="offa()">Slack Homebase | Getting Started</a></li>
+      <li>  <a href="#tools" class="" onclick="offa()">Github</a>
+      <li>  <a href="#tools" class="" onclick="offa()">Dev Page <h1 class="badge badge-success">Beta</h1></a></li>
         
-                <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Dashboard <h1 class="badge badge-success">Beta</h1></a>
-                        <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Support team</a>
+              <li>  <a href="#tools" class="" onclick="offa()">Dashboard <h1 class="badge badge-success">Beta</h1></a></li>
+                     <li>   <a href="#tools" class="" onclick="offa()">Support team</a></li>
 
-        <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Help Center</a>
-        <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Changelog</a>
-        <a href="#tools" class="list-group-item waves-effect" onclick="openPage('settings', this, 'transparent');closeNav();move();offa()">Settings</a>
-                <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Profile</a>
-                <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Dark Mode!</a>
-
+     <li>   <a href="#tools" class="" onclick="offa()">Help Center</a></li>
+       <li> <a href="#tools" class="" onclick="offa()">Changelog</a></li>
+      <li>  <a href="#tools" class="" onclick="openPage('settings', this, 'transparent');closeNav();move();offa()">Settings</a></li>
+              <li>  <a href="#tools" class="" onclick="offa()">Profile</a></li>
+               <li> <a href="#tools" class="" onclick="offa()">Dark Mode!</a></li>
 </ul>
-
-<br>
 </div>
-</div></div> 
-<button class="btn waves-effect" style="position:absolute;top:0;left:90%;border-radius:0px !important;display:inline-block !important;padding:10px 15px 10px 15px !important;background-color:white !important " onclick="openPage('settings', this, 'transparent');closeNav();move();offa()"><i class="fa fa-user" ></i></button>
 </div>
-<div id="overlay1" style="margin-left:70px;z-index:99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999">
-<style>.list-group-item {margin-top:10px;margin-left:10px;margin-right:80px;background-color: whitesmoke !important; margin-top:0px;backdrop-filter: blur(10px);border: 2px solid whitesoke !important;border-radius:0px;color:black !important}</style>
-  <div id="myDropdown" class="dropdown-content" style="text-align:left !important">
-    <div class="wpr" >
-    <input type="search" style="margin-right:990px !important ;margin-left:0px;padding:20px;text-align:left;border-radius:0px !important" autocomplete="off" placeholder="Quick Search..." id="myInput" class="form-control w-100" onkeyup="filterFunctiona()">
-    <div class="complete">
-      <ul class="list-group">
-    <a href="#" class="list-group-item waves-effect" style="text-align:center;display:block !important">    💡Search Suggestions</a>
-    <a href="#about" class="list-group-item waves-effect" onclick="openPage('About', this, 'transparent');closeNav();move();offa()">Home</a>
-    <a href="#base" class="list-group-item waves-effect" onclick="openPage('Home', this, 'transparent');closeNav();move();offa()">Bedroom <h1 class="badge badge-danger">Coming Soon</h1></a>
-    <a href="#contact" class="list-group-item waves-effect" onclick="openPage('News', this, 'transparent');closeNav();move();offa()">Bathroom <h1 class="badge badge-danger">Coming Soon</h1></a>
-    <a href="#custom" class="list-group-item waves-effect" onclick="openPage('Contact', this, 'transparent');closeNav();move();offa()">Garage <h1 class="badge badge-success">Beta</h1></a>
-    <a href="#support" class="list-group-item waves-effect" onclick="openPage('About1', this, 'transparent');closeNav();move();offa()">Kitchen <h1 class="badge badge-success">Beta</h1></a>
-            <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Storage room <h1 class="badge badge-danger">Coming Soon</h1></a>
-        <a href="#tools" class="list-group-item waves-effect" onclick="openPage('About2', this, 'transparent');closeNav();move();offa()">Living Room <h1 class="badge badge-danger">Coming Soon</h1></a>
-    <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Misc. <h1 class="badge badge-danger">Coming Soon</h1></a>
-            <a href="#tools" class="list-group-item waves-effect" onclick="openPage('todo', this, 'transparent');closeNav();move();offa()">Todo list <h1 class="badge badge-success">Beta</h1></a>
-        <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Manu's Personal Website</a>
-        <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Slack for Homebase <h1 class="badge badge-success">Beta</h1></a>
-                <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Slack Homebase | Getting Started</a>
-        <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Github</a>
-        <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Dev Page <h1 class="badge badge-success">Beta</h1></a>
-        
-                <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Dashboard <h1 class="badge badge-success">Beta</h1></a>
-                        <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Support team</a>
 
-        <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Help Center</a>
-        <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Changelog</a>
-        <a href="#tools" class="list-group-item waves-effect" onclick="openPage('settings', this, 'transparent');closeNav();move();offa()">Settings</a>
-                <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Profile</a>
-                <a href="#tools" class="list-group-item waves-effect" onclick="offa()">Dark Mode!</a>
+<script>
+function filter() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
 
-</ul>
 
-<br>
-</div>
-</div></div>
-  <button class="btn btn-danger w-100" style="position:absolute;left:0;top:92%;margin:0" onclick="offa()">Exit</button>
-
-</div>
-      <div id="mySidenav" class="sidenav">
+      <div id="mySidenav" class="sidenav" style="z-index:99999999999999999999999999999999999999999999999999999999999999999999999999999">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
         <a class="waves-effect" onclick="openPage('launch', this, 'transparent');closeNav();move();" style="display:none;" id="defaultOpen">Dashboard</a>
@@ -698,7 +757,7 @@ display:block;
 
       </div>
       <div id="sidenav2">
-        <span style="font-size:30px;cursor:pointer;" onclick="openNav()" id="sidenavbutton">&#9776; Homebase</span>
+        <span style="margin-left:20px;magin-top:50px;position:absolute;top:50 !important;left:20;text-align:left !important; font-size:30px;cursor:pointer;z-index:9999999999999999999999999999999999999999999999;position:fixed;" onclick="openNav()" id="sidenavbutton">&#9776;</span>
         <div class="sidebar">
 
 
@@ -780,7 +839,7 @@ display:block;
           </script>
           <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
           <style>
-            body,.tabcontent,.waves-effect,button,h1,h2,h3,h4,h5,h6,h7,h8,iframe,p,kbd,#loader {
+            body,#myUL,.tabcontent,.waves-effect,button,h1,h2,h3,h4,h5,h6,h7,h8,iframe,p,kbd,#loader {
               font-family: 'Quicksand' !important;
             }
           </style>
@@ -1179,15 +1238,187 @@ display:block;
           <br><br>
           Introduction<br>
           Homebase is a home inventory app! You can save all of the items in your home, and then retrieve them at any time. I got this idea when I saw my mom at the grocery store wondering what she had at home.
+<br><hr>
+<div class="row">
+  <div class="col r">
+  <h1>  Download the Desktop App</h1>
+  <h5>Get the best experience.</h5>
+
+    <a role="button" class="btn btn-success" href="https://padlet-uploads.storage.googleapis.com/446844750/2165837092140fb4d69bfd4eb65b20a6/pramodini_github_com.crx">Download now</a>
+    <ol>
+      <li>Go to Chrome://extensions</li>
+      <li>Click Developer mode at the top right</li>
+      <li>Drag-and-drop the file to the page. It will say Drop to install</li>
+    </ol>
+  </div>
+  <div class="col">
+ <h1>  Download the Mobile App</h1>
+ <h5>Anywhere, Anytime</h5>
+ <a role="button" class="btn btn-success" href="https://s3.amazonaws.com/gonativeio/static/5f615bb201ee294dc87559f4/app-release.apk">Download now</a>
+    <ol>
+      <li>Open file</li>
+      <li>Click Install, it will say unsafe, because a liscense costs $250 and We will figure out how to get that huge amount</li>
+      <li>Open App</li>
+    </ol>
+  </div>
+    <div class="col r">
+<h1>Check it out in your browser</h1>
+<h5>Free, as always</h5>
+      <button class="btn btn-success" onclick="openPage('About', this, 'transparent');closeNav();move();side();on();">Try it out</button>
+
+  </div>
+</div>
+</div>
+        <footer class="page-footer font-small stylish-color-dark pt-4" style="width:100% !important;margin:0!important;padding:0!important">
+
+          <!-- Footer Links -->
+          <div class="container text-center text-md-left" style="margin:0 ">
+
+            <!-- Grid row -->
+            <div class="row">
+
+              <!-- Grid column -->
+              <div class="col-md-4 mx-auto">
+
+                <!-- Content -->
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Homebase</h5>
+
+
+              </div>
+              <!-- Grid column -->
+
+              <hr class="clearfix w-100 d-md-none">
+
+              <!-- Grid column -->
+              <div class="col-md-2 mx-auto">
+
+                <!-- Links -->
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Rooms</h5>
+
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#!" onclick="openPage('About', this, 'transparent');closeNav();move();">Dashboard</a>
+                  </li>
+                  <li>
+                    <a href="#!">Kitchen</a>
+                  </li>
+                  <li>
+                    <a href="#!">Bathroom</a>
+                  </li>
+                  <li>
+                    <a href="#!">Garage</a>
+                  </li>
+                </ul>
+
+              </div>
+              <!-- Grid column -->
+
+              <hr class="clearfix w-100 d-md-none">
+
+              <!-- Grid column -->
+              <div class="col-md-2 mx-auto">
+
+                <!-- Links -->
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Manu</h5>
+
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#!">Personal website</a>
+                  </li>
+                  <li>
+                    <a href="#!">Github</a>
+                  </li>
+                  <li>
+                    <a href="#!">Volunteer</a>
+                  </li>
+                  <li>
+                    <a href="#!">Other projects</a>
+                  </li>
+                </ul>
+
+              </div>
+              <!-- Grid column -->
+
+              <hr class="clearfix w-100 d-md-none">
+
+              <!-- Grid column -->
+              <div class="col-md-2 mx-auto">
+
+                <!-- Links -->
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Other</h5>
+
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#!">Help Center</a>
+                  </li>
+                  <li>
+                    <a href="#!">Forums</a>
+                  </li>
+                  <li>
+                    <a href="#!">Github</a>
+                  </li>
+                  <li>
+                    <a href="#!">Feedback</a>
+                  </li>
+                </ul>
+
+              </div>
+              <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+          </div>
+          <!-- Footer Links -->
+
+          <hr>
+
+          <!-- Call to action -->
+          <ul class="list-unstyled list-inline text-center py-2">
+            <li class="list-inline-item">
+              <h5 class="mb-1">Register for free</h5>
+            </li>
+            <li class="list-inline-item">
+              <a href="#!" class="btn btn-danger btn-rounded btn lightbox-202517481336049">Sign up!</a>
+            </li>
+          </ul>
+          <!-- Call to action -->
+
+          <hr>
+
+          <!-- Social buttons -->
+          <ul class="list-unstyled list-inline text-center">
+
+            <li class="list-inline-item">
+              <a class="btn-floating btn-gplus mx-1">
+                <i class="fab fa-google-plus-g"> </i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-li mx-1">
+                <i class="fab fa-github"> </i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-dribbble mx-1">
+                <i class="fab fa-dribbble"> </i>
+              </a>
+            </li>
+          </ul>
+          <!-- Social buttons -->
+
+          <!-- Copyright -->
+          <div class="footer-copyright text-center py-3">Â© 2020 Copyright:
+            <a href="https://pramodini.github.com/KeepInventory/Index.htm"> Homebase</a>
+          </div>
+          <!-- Copyright -->
+
+        </footer>
 
 
 
 
 
-
-
-
-        </div>
       </div>
     </div>
 
@@ -2129,7 +2360,7 @@ display:block;
           <!-- Social buttons -->
 
           <!-- Copyright -->
-          <div class="footer-copyright text-center py-3">© 2020 Copyright:
+          <div class="footer-copyright text-center py-3">Â© 2020 Copyright:
             <a href="https://pramodini.github.com/KeepInventory/Index.htm"> Homebase</a>
           </div>
           <!-- Copyright -->
