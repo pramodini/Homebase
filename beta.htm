@@ -727,6 +727,7 @@ z-index:9999999999999999999999999999999999999999999999999999;
                 margin-left:0px !important;
               }
             </style>
+    <link rel="manifest" href="https://mdn.github.io/pwa-examples/a2hs/manifest.webmanifest">
   </head>
 
   <body onload="side();myFunction();move();myfunction();side1();">
@@ -1376,7 +1377,7 @@ background-color: var(--primary-color);
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
 </svg> Settings</h1>
           <div class="separator">General</div>
-
+    <button class="add-button">Add to home screen</button>
           <nav style="text-align:center !important;display:block;margin-left:auto;margin-right:auto">
             <div class="theme-switch-wrapper">
               <label class="theme-switch" for="checkbox">
@@ -4343,4 +4344,42 @@ function filterFunctiona() {
 </style>
 
 </div>
+<script>
+
+let deferredPrompt;
+const addBtn = document.querySelector('.add-button');
+addBtn.style.display = 'none';
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent Chrome 67 and earlier from automatically showing the prompt
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+  // Update UI to notify the user they can add to home screen
+  addBtn.style.display = 'block';
+
+  addBtn.addEventListener('click', (e) => {
+    // hide our user interface that shows our A2HS button
+    addBtn.style.display = 'none';
+    // Show the prompt
+    deferredPrompt.prompt();
+    // Wait for the user to respond to the prompt
+    deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('User accepted the A2HS prompt');
+        } else {
+          console.log('User dismissed the A2HS prompt');
+        }
+        deferredPrompt = null;
+      });
+  });
+});
+
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker
+           .register('/pwa-examples/a2hs/sw.js')
+           .then(function() { console.log('Service Worker Registered'); });
+}
+
+</script>
           </html>
