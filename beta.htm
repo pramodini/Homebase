@@ -3634,7 +3634,7 @@ background-color: var(--bg-color) !important;
               </div> <!-- close row -->
 
               <form id="newItemForm" class="form-horizontal">
-                <p id="paraToHideForm"><a href="#" id="hideForm">View your To Do list</a></p>
+                <p id="paraToHideForm"><a href="#" id="hideForm" role="button" class="btn btn-danger">View your To Do list</a></p>
 
                 <fieldset class="well">
                   <legend>Add a New To Do Item</legend>
@@ -3642,7 +3642,7 @@ background-color: var(--bg-color) !important;
                   <div class="form-group">
                     <label for="itemname" class="col-sm-2 control-label">Item Name</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" placeholder="0" list="browsers" style="text-align:center;"  class="form-control" placeholder="0" list="browsers"  name="itemname" id="itemname" class="form-control" placeholder="0" list="browsers" maxlength="80" required>
+                      <input type="text" class="form-control" placeholder="0" list="browsers" style="text-align:center;"  class="form-control" placeholder="0" list="browsers"  name="itemname" id="itemname" class="form-control" placeholder="0" maxlength="80" required>
                     </div>
                   </div>
 
@@ -3732,10 +3732,12 @@ left:85%;
   color: red ;
 }
                   </style>
-                  <a href="#" id="showForm"class="btn btn-info" role="button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="30" height="30" stroke="currentColor" style="color:black !important">
+                  <a href="#" id="showForm"class="waves-effect" role="button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="30" height="30" stroke="currentColor" style="color:black !important">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
 </svg></a>
-                  <button onclick="document.querySelector('#modal').showModal()" class="btn waves-effect btn-secondary" style="outline:none">Settings</button>
+                  <button onclick="document.querySelector('#modal').showModal()" class="waves-effect" style="outline:none"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg></button>
                   <dialog id="modal" onclick="this.parentNode.close()">
 
 
