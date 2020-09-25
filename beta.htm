@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿
+
+<!DOCTYPE html>
 
 <html>
   <head>
@@ -47,9 +49,75 @@
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+#qr {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+  backdrop-filter: blur(10px)
+}
+
+#qrtext{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+    font-family: 'Quicksand', sans-serif !important;
+text-align:center;
+line-height: 20px;
+
+}
+h8 {
+font-size: 20px;
+}
+</style>
+
+<style>
                 .form-control {display:block;width:100%;height:calc(1.5em + .75rem + 2px);padding:.375rem .75rem;font-size:1rem;font-weight:400;line-height:1.5;color:#495057;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da;border-radius:.25rem;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}@media (prefers-reduced-motion:reduce){.form-control{transition:none}}.form-control::-ms-expand{background-color:transparent;border:0}.form-control:-moz-fo  cusring{color:transparent;text-shadow:0 0 0 #495057}.form-control:focus{color:#495057;background-color:#fff;border-color:#80bdff;outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)}.form-control::-webkit-input-placeholder{color:#6c757d;opacity:1}.form-control::-moz-placeholder{color:#6c757d;opacity:1}.form-control:-ms-input-placeholder{color:#6c757d;opacity:1}.form-control::-ms-input-placeholder{color:#6c757d;opacity:1}.form-control::placeholder{color:#6c757d;opacity:1}.form-control:disabled,.form-control[readonly]{background-color:#e9ecef;opacity:1}input[type=date].form-control,input[type=datetime-local].form-control,input[type=month].form-control,input[type=time].form-control{-webkit-appearance:none;-moz-appearance:none;appearance:none}select.form-control:focus::-ms-value{color:#495057;background-color:#fff}.form-control-file,.form-control-range{display:block;width:100%}.col-form-label{padding-top:calc(.375rem + 1px);padding-bottom:calc(.375rem + 1px);margin-bottom:0;font-size:inherit;line-height:1.5}.col-form-label-lg{padding-top:calc(.5rem + 1px);padding-bottom:calc(.5rem + 1px);font-size:1.25rem;line-height:1.5}.col-form-label-sm{padding-top:calc(.25rem + 1px);padding-bottom:calc(.25rem + 1px);font-size:.875rem;line-height:1.5}.form-control-plaintext{display:block;width:100%;padding:.375rem 0;margin-bottom:0;font-size:1rem;line-height:1.5;color:#212529;background-color:transparent;border:solid transparent;border-width:1px 0}.form-control-plaintext.form-control-lg,.form-control-plaintext.form-control-sm{padding-right:0;padding-left:0}.form-control-sm{height:calc(1.5em + .5rem + 2px);padding:.25rem .5rem;font-size:.875rem;line-height:1.5;border-radius:.2rem}.form-control-lg{height:calc(1.5em + 1rem + 2px);padding:.5rem 1rem;font-size:1.25rem;line-height:1.5;border-radius:.3rem}select.form-control[multiple],select.form-control[size]{height:auto}textarea.form-control{height:auto}.form-group{margin-bottom:1rem}.form-text{display:block;margin-top:.25rem}.form-row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-5px;margin-left:-5px}.form-row>.col,.form-row>[class*=col-]{padding-right:5px;padding-left:5px}.form-check{position:relative;display:block;padding-left:1.25rem}.form-check-input{position:absolute;margin-top:.3rem;margin-left:-1.25rem}.form-check-input:disabled~.form-check-label,.form-check-input[disabled]~.form-check-label{color:#6c757d}.form-check-label{margin-bottom:0}.form-check-inline{display:-ms-inline-flexbox;display:inline-flex;-ms-flex-align:center;align-items:center;padding-left:0;margin-right:.75rem}.form-check-inline .form-check-input{position:static;margin-top:0;margin-right:.3125rem;margin-left:0}.valid-feedback{display:none;width:100%;margin-top:.25rem;font-size:80%;color:#28a745}.valid-tooltip{position:absolute;top:100%;z-index:5;display:none;max-width:100%;padding:.25rem .5rem;margin-top:.1rem;font-size:.875rem;line-height:1.5;color:#fff;background-color:rgba(40,167,69,.9);border-radius:.25rem}.is-valid~.valid-feedback,.is-valid~.valid-tooltip,.was-validated :valid~.valid-feedback,.was-validated :valid~.valid-tooltip{display:block}.form-control.is-valid,.was-validated .form-control:valid{border-color:#28a745;padding-right:calc(1.5em + .75rem);background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");background-repeat:no-repeat;background-position:right calc(.375em + .1875rem) center;background-size:calc(.75em + .375rem) calc(.75em + .375rem)}.form-control.is-valid:focus,.was-validated .form-control:valid:focus{border-color:#28a745;box-shadow:0 0 0 .2rem rgba(40,167,69,.25)}.was-validated textarea.form-control:valid,textarea.form-control.is-valid{padding-right:calc(1.5em + .75rem);background-position:top calc(.375em + .1875rem) right calc(.375em + .1875rem)}
 .label{display:inline;padding:.2em .6em .3em;font-size:75%;font-weight:700;line-height:1;color:#fff;text-align:center;white-space:nowrap;vertical-align:baseline;border-radius:.25em}a.label:focus,a.label:hover{color:#fff;text-decoration:none;cursor:pointer}.label:empty{display:none}.btn .label{position:relative;top:-1px}.label-default{background-color:#777}.label-default[href]:focus,.label-default[href]:hover{background-color:#5e5e5e}.label-primary{background-color:#337ab7}.label-primary[href]:focus,.label-primary[href]:hover{background-color:#286090}.label-success{background-color:#5cb85c}.label-success[href]:focus,.label-success[href]:hover{background-color:#449d44}.label-info{background-color:#5bc0de}.label-info[href]:focus,.label-info[href]:hover{background-color:#31b0d5}.label-warning{background-color:#f0ad4e}.label-warning[href]:focus,.label-warning[href]:hover{background-color:#ec971f}.label-danger{background-color:#d9534f}.label-danger[href]:focus,.label-danger[href]:hover{background-color:#c9302c}
               </style>
+              <style>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+.tooltip {
+  position: relative !important;
+  display: inline-block !important;
+  cursor: help !important
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden !important;
+  width: 120px !important;
+  background-color: black !important;
+  color: #fff !important;
+  text-align: center !important;
+  border-radius: 6px !important;
+  padding: 5px 0 !important;
+  
+  /* Position the tooltip */
+  position: absolute !important;
+  z-index: 1 !important;
+  top: -5px !important;
+  left: 105% !important;
+  font-family: 'Quicksand', sans-serif !important;
+
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible !important;
+}
+</style>
 <style>
 html, body {
   margin: 0;
@@ -500,7 +568,6 @@ display:block;
 
     </style>
 
-    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="430f205a-f429-4f1e-b81f-abcb912d6ad2";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
     <style>
       /* Center the loader */
       #loader {
@@ -1008,7 +1075,10 @@ href="mailto:coolbitmoji@gmail.com">coolbitmoji@gmail.com</a></li>
     </script>
     <div style="display:none;" id="myDiv" class="animate-bottom">
 <div class="topnav"></div>
-<button class="btn waves-effect r" style="position:absolute;top:0;left:90%;border-radius:0px !important;padding:10px 15px 10px 15px !important;position:fixed;background-color:white !important;margin-top:10px;z-index:99999999999999999999999" onclick="openPage('settings', this, 'transparent');closeNav();move();offa()"><i class="fa fa-user" ></i></button>
+<button class="btn waves-effect r" style="position:absolute;top:0;left:90%;border-radius:0px !important;padding:10px 15px 10px 15px !important;position:fixed;background-color:white !important;margin-top:10px;z-index:999999" onclick="qron();closeNav();move();offa()">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+</svg></button>
 
 <style>
 * {
@@ -1079,7 +1149,7 @@ input + div {
 <div class="wpr">
 <ul id="myUL">
 
-    <li class="waves-effect">  <a href="#" class="" style="text-align:center;display:block !important">    💡Search Suggestions</a></li>
+    <li class="waves-effect">  <a href="#" class="" style="text-align:center;display:block !important">    ðŸ’¡Search Suggestions</a></li>
    <li class="waves-effect"> <a href="#about" class="" onclick="openPage('About', this, 'transparent');closeNav();move();offa()">Home</a></li>
    <li class="waves-effect"> <a href="#base" class="" onclick="openPage('Home', this, 'transparent');closeNav();move();offa()">Bedroom <h1 class="badge badge-danger">Coming Soon</h1></a></li>
    <li class="waves-effect"> <a href="#contact" class="" onclick="openPage('News', this, 'transparent');closeNav();move();offa()">Bathroom <h1 class="badge badge-danger">Coming Soon</h1></a></li>
@@ -1252,11 +1322,11 @@ function filter() {
                   }
                 }
               }
-            }
+            
           </script>
 
           <div class="sidebutton waves-effect" onclick="openPage('About1', this, 'transparent');bar();closeNav();move();storage();" accesskey="s"><a href="#" data-toggle="tooltip" data-placement="right" title="Storage"><img src="https://image.flaticon.com/icons/svg/501/501857.svg" width="35" height="35"></div></a><br>
-          <div class="sidebutton waves-effect" onclick="openPage('About1', this, 'transparent');bar();closeNav();move();kitchen();" accesskey="k"><a href="#"><img src="https://image.flaticon.com/icons/svg/864/864615.svg" width="35" height="35"></a></div><br>
+          <div class="sidebutton waves-effect" onclick="openPage('About1', this, 'transparent');bar();closeNav();move();kitchen();" accesskey="k"><a href="#"><img data-toggle="tooltip" title="Kitchen" data-placement="right" src="https://image.flaticon.com/icons/svg/864/864615.svg" width="35" height="35"></a></div><br>
           <div class="sidebutton waves-effect" onclick="openPage('Home', this, 'transparent');closeNav();bar();move();bedroom();" accesskey="b"><a href="#"><img src="https://image.flaticon.com/icons/svg/2905/2905630.svg" width="35" height="35"></div><br></a>
           <div class="sidebutton waves-effect" onclick="openPage('Contact', this, 'transparent');closeNav();bar();move();garage();" accesskey="g"><a href="#"><img src="https://image.flaticon.com/icons/svg/887/887258.svg" width="35" height="35"></div><br></a>
           <div class="sidebutton waves-effect" onclick="openPage('Contact', this, 'transparent');closeNav();bar();move();family();" accesskey="l"><a href="#"><img src="https://image.flaticon.com/icons/svg/2866/2866865.svg" width="35" height="35"></div><br></a>
@@ -1268,6 +1338,11 @@ function filter() {
           <div class="sidebutton waves-effect" style="positon:fixed;top100%;left:0" onclick="openPage('settings', this, 'transparent');closeNav();bar();move();settings();" accesskey="p"><img src="https://image.flaticon.com/icons/svg/849/849358.svg" width="35" height="35"></div><br>
         </div>
       </div>
+      <script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
       <style>
         .tooltip {
           position: relative;
@@ -1369,50 +1444,30 @@ background-color: var(--primary-color);
 
       </script>
       <div id="settings" class="tabcontent" style="text-align:center !important;padding:0px !important">
-<div class="jumbotron jumbotron-fluid" style="background-image: url(https://imgproxy.natucate.com/PAd5WVIh-tjEKQM4Z6tm6W1J4Yc2JIYWrKEroD1c7mM/rs:fill/g:ce/w:3840/h:2160/aHR0cHM6Ly93d3cubmF0dWNhdGUuY29tL21lZGlhL3BhZ2VzL3JlaXNlYXJ0ZW4vNmMwODZlYmEtNzk3Yi00ZDVjLTk2YTItODhhNGM4OWUyODdlLzM3NjYwMTQ2NjMtMTU2NzQzMzYxMi8xMl9kYW5pZWxfY2FuX2JjLTIwNy5qcGc") !important;filter:blur(10px);"><h1 style="color:white;">Settings</h1></div>
-        <div class="text-center">
+        <br><br><div class="text-center">
           <h1><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="40" height="40" style="display:inline-block">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
 </svg> Settings</h1>
-          <div class="separator">General</div>
-    <button class="add-button">Add to home screen</button>
-          <nav style="text-align:center !important;display:block;margin-left:auto;margin-right:auto">
-            <div class="theme-switch-wrapper">
-              <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox" />
+<ul class="list-group">
+<li class="list-group-item waves-effect" onclick="openPage('dark', this, 'transparent')" >General</li>
+<li class="list-group-item waves-effect">Privacy</li>
+<li class="list-group-item waves-effect">Home page</li>
+<li class="list-group-item waves-effect">Kitchen</li>
+<li class="list-group-item waves-effect">Bathroom</li>
+<li class="list-group-item waves-effect">Bedroom</li>
+<li class="list-group-item waves-effect">Garage</li>
+<li class="list-group-item waves-effect">Office supplies</li>
+<li class="list-group-item waves-effect">Todo list</li>
+<li class="list-group-item waves-effect">Garage</li>
+<li class="list-group-item waves-effect">Desktop app</li>
+<a href="http://pramodini.github.com/Homebase/terms.htm"><li class="list-group-item waves-effect">Terms and conditions</li></a>
+<li class="list-group-item waves-effect">Changelog</li>
+<li class="list-group-item waves-effect">Specials</li>
+<li class="list-group-item waves-effect bg-danger" href="#myModal" data-toggle="modal">Delete Account</li>
+</ul>
 
-              <a role="button" class="btn btn-info"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="30" height="30">
-  <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-</svg>Enable Dark Mode!</a> </label>
-            </div>
-          </nav>
-          <div id="google_translate_element"></div>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-          <script type="text/javascript">
-            function googleTranslateElementInit() {
-              new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-            }
-          </script>
-          <div class="separator">Kitchen</div><br>
-          <button class="btn btn-secondary waves-effect">Coming soon</button><br>
-          <br>
-          <div class="separator">Bathroom</div>
-          <br>
-          <button class="btn btn-secondary waves-effect">Coming soon</button><br>
-          <br>
-          <div class="separator">Bedroom</div>
-          <br>
-          <button class="btn btn-secondary waves-effect">Coming soon</button><br>
-          <br>
-          <div class="separator">Garage</div>
-          <br>
-          <button class="btn btn-secondary waves-effect">Coming soon</button><br>
-          <br>
-         
-
-          <div class="separator">Extreme Measures</div>
           <style>
             .separator {
               display: flex;
@@ -1430,10 +1485,10 @@ background-color: var(--primary-color);
             .separator::after {
               margin-left: .25em;
             }
+            #dark{ background-color:white;}
             .sidebutton img {color:white; filter: hue-rotate(180deg);}
           </style>
           <!-- Button HTML (to Trigger Modal) -->
-          <a role="button" href="#myModal" class="trigger-btn btn waves-effect bg-danger" data-toggle="modal">Delete Account</a>
         </div>
         <!-- Modal HTML -->
         <div id="myModal" class="modal fade">
@@ -1556,6 +1611,28 @@ background-color: var(--bg-color) !important;
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
       </div>
+       <div class="tabcontent" id="dark">
+       <button class="add-button">Add to home screen</button>
+          <nav style="text-align:center !important;display:block;margin-left:auto;margin-right:auto">
+            <div class="theme-switch-wrapper">
+              <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+
+              <a role="button" class="btn btn-info"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="30" height="30">
+  <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+</svg>Enable Dark Mode!</a> </label>
+            </div>
+          </nav>
+          <div id="google_translate_element"></div>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+          <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+            }
+          </script>
+          <button onclick="openPage('settings', this, 'transparent')" class="btn btn-danger">Back ></button>
+ </div>
       <div class="tabcontent" id="launch" style="padding-top:0px !important;">
 
         <style>
@@ -1623,11 +1700,12 @@ background-color: var(--bg-color) !important;
           <div class="hero-text" style="padding:10px;border-radius:10px;font-family: 'Quicksand', sans-serif;
                                         ">
             <h1 class="ree"><b>Built for all families.</b></h1>
-            <h3 class="ree">Homebase lets you track what you have in your home wherever you are!</h3>
-            <a role="button" id="quoteButton" class="btn btn-danger waves-effect" onclick="openPage('About', this, 'transparent');closeNav();move();side();on();">Launch Homebase</a>
+            <h3 class="ree">From milk to shampoo, we've got you covered!</h3>
+            <a role="button" data-toggle="tooltip" data-placement="right" title="Hooray!" id="quoteButton" class="btn btn-danger waves-effect" onclick="openPage('About', this, 'transparent');closeNav();move();side();on();"  data-placement="right">Launch Homebase</a>
           </div>
         </div><br>
 <div class="row" style="text-align:left;margin-left:20px">
+
   <div class="col-sm-8"><h2>Whatever you have, wherever you are</h2><h5>Whether you're a bachelor, or you're living in a family of 6, Homebase lets you keep track of what you have at home</h5></div>
   <div class="col-sm-4"><img src="https://i.ibb.co/6yLRcNC/pale-ordering-food-delivery.png"></div><br><br><br>
 <div class="col-sm-8"><h2><br>Even without an internet connection!</h2><h5>Homebase stores the data on your phone, not on cloud, so you can look at it wherever you are!</h5></div>
@@ -1678,7 +1756,7 @@ background-color: var(--bg-color) !important;
 </div>
 <hr>
 <div style="text-align:left">
-  <div class="card" style="width:400px;margin-left:35px;display:inline-block;margin-top:20px">
+  <div class="card" style="width:300px;margin-left:35px;display:inline-block;margin-top:20px">
   <img class="card-img-top" src="https://g4.padlet.pics/X_wfK4IacJIuHGmfgbOovdX0zGCRj2gsFo2TeE5NSeMhhBFDFwOwTI4qV1k6RBjh7d7miBuFo8_qX_zpjFGy4uhz1SlaTlhUJjo=w1366-h671-nu-rw-e365" alt="Card image">
   <div class="card-body">
     <h4 class="card-title">Sidebar and Quick Search</h4>
@@ -1686,7 +1764,7 @@ background-color: var(--bg-color) !important;
     <a href="#" class="btn btn-primary">Read article</a>
   </div>
 </div>
-  <div class="card" style="width:400px;margin-left:35px;display:inline-block;margin-top:20px">
+  <div class="card" style="width:300px;margin-left:35px;display:inline-block;margin-top:20px">
   <img class="card-img-top" src="https://g4.padlet.pics/_MrBnl1Fp0BE44F1aq_G8IUmqolZU9HwH9LJN3Bk54EvyLDghOS31UW2POc8Cd7FeVvwcYUa8ODKQjYZH7tPfSdjvFq3e4rQsg=w1366-h623-nu-rw-e365" alt="Card image">
   <div class="card-body">
     <h4 class="card-title">New Homepage</h4>
@@ -1694,7 +1772,7 @@ background-color: var(--bg-color) !important;
     <a href="#" class="btn btn-primary">Read article</a>
   </div>
 </div>
-  <div class="card" style="width:400px;margin-left:35px;display:inline-block;margin-top:20px">
+  <div class="card" style="width:300px;margin-left:35px;display:inline-block;margin-top:20px">
   <img class="card-img-top" src="https://g4.padlet.pics/LW_QXLU0lSk2bMQ8bvfqMVn_abity3RhEu0a7_1B0Lk7vbX35A8hj0mH8JrCiNRs794PewcisUOtNwYieO1ia9YjGRv0jxFtHw=w1366-h623-nu-rw-e365" alt="Card image">
   <div class="card-body">
     <h4 class="card-title">Dark Mode</h4>
@@ -1702,7 +1780,7 @@ background-color: var(--bg-color) !important;
     <a href="#" class="btn btn-primary">Read article</a>
   </div>
 </div>
-<div class="card" style="width:400px;margin-left:35px;display:inline-block;margin-top:20px">
+<div class="card" style="width:300px;margin-left:35px;display:inline-block;margin-top:20px">
   <img class="card-img-top" src="https://i.ibb.co/F7Wxm1c/Screenshot-2020-09-16-at-5-59-07-PM.png" alt="Card image">
   <div class="card-body">
     <h4 class="card-title">Update Beta</h4>
@@ -1710,7 +1788,7 @@ background-color: var(--bg-color) !important;
     <a href="#" class="btn btn-primary">Read article</a>
   </div>
 </div>
-<div class="card" style="width:400px;margin-left:35px;display:inline-block;margin-top:20px">
+<div class="card" style="width:300px;margin-left:35px;display:inline-block;margin-top:20px">
   <img class="card-img-top" src="https://i.ibb.co/Jn9Pdg7/Screenshot-2020-09-16-at-5-59-33-PM.png" alt="Card image">
   <div class="card-body">
     <h4 class="card-title">Update Alpha</h4>
@@ -1718,11 +1796,11 @@ background-color: var(--bg-color) !important;
     <a href="#" class="btn btn-primary">Read article</a>
   </div>
 </div>
-<div class="card" style="width:400px;margin-left:35px;display:inline-block;margin-top:20px">
+<div class="card" style="width:300px;margin-left:35px;display:inline-block;margin-top:20px">
   <img class="card-img-top" src="https://i.ibb.co/3s7NGXY/1-0.png" alt="Card image">
   <div class="card-body">
     <h4 class="card-title">Pre-release</h4>
-    <p class="card-text">You don’t want to know how bad this looked!</p>
+    <p class="card-text">You donâ€™t want to know how bad this looked!</p>
     <a href="#" class="btn btn-primary">Read article</a>
   </div>
 </div>
@@ -1890,7 +1968,7 @@ background-color: var(--bg-color) !important;
           <!-- Social buttons -->
 
           <!-- Copyright -->
-          <div class="footer-copyright text-center py-3">© 2020 Copyright:
+          <div class="footer-copyright text-center py-3">Â© 2020 Copyright:
             <a href="https://pramodini.github.com/KeepInventory/Index.htm"> Homebase</a>
           </div>
           <!-- Copyright -->
@@ -2842,7 +2920,7 @@ background-color: var(--bg-color) !important;
           <!-- Social buttons -->
 
           <!-- Copyright -->
-          <div class="footer-copyright text-center py-3">© 2020 Copyright:
+          <div class="footer-copyright text-center py-3">Â© 2020 Copyright:
             <a href="https://pramodini.github.com/KeepInventory/Index.htm"> Homebase</a>
           </div>
           <!-- Copyright -->
@@ -3354,7 +3432,10 @@ background-color: var(--bg-color) !important;
               <p id="quoteGenius" style="display:inline-block;"></p>
 
             </div><!--end quoteContainer-->
+            <div id="After">
+
             <iframe src="https://www.meteoblue.com/en/weather/widget/three?geoloc=detect&nocurrent=0&noforecast=0&noforecast=1&days=4&tempunit=FAHRENHEIT&windunit=MILE_PER_HOUR&layout=bright" width="100%" height="200" frameborder="no" scrolling="no"></iframe>
+</div>
 </div>
             <script>
               var myDate = new Date();
@@ -3633,6 +3714,14 @@ background-color: var(--bg-color) !important;
                 </div> <!-- close col -->
               </div> <!-- close row -->
 
+
+              <!-- this will be hidden at times -->
+<div class="row">
+<div class="col" style="min-height:800px">
+  <iframe src="https://padlet-uploads.storage.googleapis.com/446844750/b9d1c725096ab2af5f6bedd01c237944/Google_Drive.html" width="100%" height="100%" frameborder="no"></iframe>
+</div>
+  <div class="col r" style="min-height:800px">
+
               <form id="newItemForm" class="form-horizontal">
                 <p id="paraToHideForm"><a href="#" id="hideForm" role="button" class="btn btn-danger">View your To Do list</a></p>
 
@@ -3684,11 +3773,6 @@ background-color: var(--bg-color) !important;
 
                 </fieldset>
               </form>
-
-              <!-- this will be hidden at times -->
-<div class="row">
-
-  <div class="col">
               <div class="row" id="toDoDataRow">
                 <div class="col-xs-12">
                   <h2>My To Do Items</h2>
@@ -3713,7 +3797,6 @@ left:85%;
 }
 </style>
 <br>
-<div id="After">
                   <style>
                     /**
                     * Native modal dialog (limited support)
@@ -3768,7 +3851,6 @@ left:85%;
                 </div>
               </div>
             </div> <!-- close container -->
-</div>
             <script src="https://macloo.github.io/to-do-list-localstorage/js/jquery.min.js"></script>
             <script src="https://macloo.github.io/to-do-list-localstorage/js/bootstrap.min.js"></script>
             <script src="https://macloo.github.io/to-do-list-localstorage/js/main.js"></script></div></div>
@@ -3804,7 +3886,7 @@ left:85%;
                 z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
                 top: 0;
                 left: 0;
-                background-color: rgba(255,255,255,0.37);
+                background-color: rgba(0,0,0,0.9);
                 backdrop-filter:blur(10px);
                 overflow-x: hidden;
                 transition: 0.5s;
@@ -4138,7 +4220,7 @@ dialog {
                   --font-color: #424242;
                   --bg-color: #fff;
                   --heading-color: #292922;
-                  --aheading-color: whitesmoke;
+                  --aheading-color: rgba(200,200,200,0.3);
                   --hover-color: whitesmoke;
                   --hovera-color: #0000;
                 }
@@ -4170,6 +4252,7 @@ dialog {
 }
                 .topnav {
                     background-color: var(--aheading-color);
+                    backdrop-filter: blur(10px);
 
                 }
 
@@ -4267,7 +4350,7 @@ dialog {
 
                 toggleSwitch.addEventListener('change', switchTheme, false);
               </script>
-
+<script type="text/javascript">!function(t,e){t.artibotApi={l:[],t:[],on:function(){this.l.push(arguments)},trigger:function(){this.t.push(arguments)}};var a=!1,i=e.createElement("script");i.async=!0,i.type="text/javascript",i.src="https://app.artibot.ai/loader.js",e.getElementsByTagName("head").item(0).appendChild(i),i.onreadystatechange=i.onload=function(){if(!(a||this.readyState&&"loaded"!=this.readyState&&"complete"!=this.readyState)){new window.ArtiBot({i:"7ca40190-1071-4323-b686-a3f9c5870a63"});a=!0}}}(window,document);</script>
               </body>
               <style>
               .help {
@@ -4385,4 +4468,20 @@ if('serviceWorker' in navigator) {
 }
 
 </script>
+<script>
+function qron() {
+  document.getElementById("qr").style.display = "block";
+}
+
+function qroff() {
+  document.getElementById("qr").style.display = "none";
+}
+</script>
+<div id="qr">
+  <div id="qrtext"><img src="https://i.ibb.co/HhVHJWr/Screenshot-2020-09-24-at-10-25-19-AM.png" alt="Screenshot-2020-09-24-at-10-25-19-AM"><br><h8>Scan this QR code on your phone and share it with your friends!</h8>
+  <br><button onclick="qroff()" class="btn btn-danger">Close</button>
+  </div>
+</div>
+
           </html>
+          
