@@ -1,6 +1,8 @@
 ﻿
 
 
+
+
 <!DOCTYPE html>
 
 <html>
@@ -51,6 +53,29 @@
 </script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label{
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  font-size: 11px;
+  opacity: 1;
+}
+
+.inputText {
+  font-size: 14px;
+  width: 200px;
+  height: 35px;
+  outline:0;
+}
+
+.floating-label {
+  position: absolute;
+  pointer-events: none;
+  left: 20px;
+  top: 18px;
+  transition: 0.2s ease all;
+}
 
 #qr {
   position: fixed;
@@ -279,11 +304,7 @@ body, html {
   }
 }
 .topnav {
-      animation: 1.2s ease-in 0s 1 top;
-  animation-delay: 1.5s;
-  opacity:0;
-    animation-delay: .2s;
-    animation-fill-mode: forwards;
+      
 }
 @keyframes zoominoutsinglefeatured {
     0% {
@@ -307,7 +328,7 @@ body, html {
         transform: scale(1,1);
     }
 }
-#loader,#overlay1,#overlay,dialog {
+#loaderb,#overlay1,#overlay,dialog {
 	animation: zoominoutsinglefeatured 0.5s  ;
 }
 .btn:hover,.label:hover {
@@ -334,7 +355,7 @@ nav,#myInput {
     animation-delay: .2s;
     animation-fill-mode: forwards;
 }
-#loadera,.card {
+#loaderb,.card {
       animation: 0.2s ease-in 0s 1 load;
   animation-delay: 1.5s;
   opacity:0;
@@ -461,6 +482,9 @@ input + div {
       @media only screen and (max-width: 600px) {
         .sidebar {
           display:none !important;
+        }
+        .row {
+          
         }
         .x {margin-left:0px}
         .hero-image h1{font-size:30px;}
@@ -677,15 +701,14 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
 #myInput {
   background-position: 10px 12px;
   background-repeat: no-repeat;
-  background-image: url(https://v1.padlet.pics/3/image.webp?t=c_limit%2Cdpr_1%2Ch_631%2Cw_1366&url=https%3A%2F%2Fpadlet-uploads.storage.googleapis.com%2F446844750%2F783e162294600874df95c0642cc4ce22%2Flightning_bolt.svg);
+  background-image: url("https://v1.padlet.pics/3/image.webp?t=c_limit%2Cdpr_1%2Ch_631%2Cw_1366&url=https%3A%2F%2Fpadlet-uploads.storage.googleapis.com%2F446844750%2F783e162294600874df95c0642cc4ce22%2Flightning_bolt.svg");
   width: 70%;
-   background-image: url('/css/searchicon.png'); /* Add a search icon to input */
   background-position: 10px 12px; /* Position the search icon */
   background-repeat: no-repeat; /* Do not repeat the icon image */
   padding-left:10px;
   font-size: 16px;
   padding: 12px;
-  border: 1px solid #ddd;
+  border: 0px;
   margin-bottom: 12px;
   position:absolute;
   top:10 !important;
@@ -796,19 +819,23 @@ z-index:9999999999999999999999999999999999999999999999999999;
             </style>
     <link rel="manifest" href="https://mdn.github.io/pwa-examples/a2hs/manifest.webmanifest">
   </head>
+<div class="progress" style="color:#03f8fc;position:fixed;display:none;top:55px;left:0;margin:0;z-index:999999999999999999999999999999999999999999999999999999999999999999999999999" id="loading">
+      <div class="indeterminate" style="color:#03f8fc;"></div>
+  </div>
 
-  <body onload="side();myFunction();move();myfunction();side1();">
+  <body onload="side();myFunction();myfunction();side1();">
+    <textarea id="url" rows="0" cols="0" style="position:absolute;top:-999999999999999;left:-9999999999;opacity:0;"></textarea>
 <div class="menu">
   <ul class="menu-options waves-effect">
     <li class="menu-option waves-effect" onclick="history.back();">Back</li>
+        <li class="menu-option waves-effect" onclick="history.forward();">Forward</li>
     <li class="menu-option waves-effect" onclick="location.reload();">Reload</li>
-    <li class="menu-option waves-effect">Dashboard</li>
-<li class="menu-option waves-effect">Bedroom</li>
-<li class="menu-option waves-effect">Bathroom</li>
-<li class="menu-option waves-effect">Garage</li>
-<li class="menu-option waves-effect">Living Room</li>
-<li class="menu-option">Kitchen</li>
-<li class="menu-option">Settings</li>
+    <hr style="width:300">
+    <li class="menu-option waves-effect" onclick="openPage('About', this, 'transparent');">Dashboard</li>
+<li class="menu-option waves-effect" onclick="openPage('Home', this, 'transparent');">Bedroom</li>
+<li class="menu-option waves-effect" onclick="openPage('About1', this, 'transparent');">Kitchen</li>
+<li class="menu-option waves-effect" onclick="openPage('settings', this, 'transparent');">Settings</li>
+<li class="menu-option waves-effect" onclick="Copy();">Copy URL</li>
 
   </ul>
 </div>
@@ -832,11 +859,11 @@ font-weight:100px;
   display: none;
 background-color:white;
   transition: 1.2s display ease-in;
+  text-align:left !important;
 }
 .menu .menu-options {
   list-style: none;
 text-decoration:bold;
-font-weight: bolder;
 font-weight:1000px;
   padding: 0px 0;
   z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
@@ -948,7 +975,10 @@ closeNav();move();offa()
             event.preventDefault();
 document.getElementById("myInput").focus();
   }
-  
+  else if( keysDown["/"]){
+            event.preventDefault();
+document.getElementById("myInput").focus();
+  }
 }
 window.onkeyup = function(e) {
   keysDown[e.key] = false;
@@ -1013,6 +1043,18 @@ href="mailto:coolbitmoji@gmail.com">coolbitmoji@gmail.com</a></li>
           <div id="myBar"></div>
         </div>
       </div>
+      <div class="progress" style="color:#03f8fc">
+      <div class="indeterminate" style="color:#03f8fc;"></div>
+  </div>
+   <!-- Compiled and minified CSS -->
+
+    <style>
+    progress{display:inline-block;vertical-align:baseline}
+     .indeterminate{background-color:#26a69a}.progress .indeterminate:before{content:'';position:absolute;background-color:inherit;top:0;left:0;bottom:0;will-change:left, right;-webkit-animation:indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;animation:indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite}.progress .indeterminate:after{content:'';position:absolute;background-color:inherit;top:0;left:0;bottom:0;will-change:left, right;-webkit-animation:indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;animation:indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;-webkit-animation-delay:1.15s;animation-delay:1.15s}@-webkit-keyframes indeterminate{0%{left:-35%;right:100%}60%{left:100%;right:-90%}100%{left:100%;right:-90%}}@keyframes indeterminate{0%{left:-35%;right:100%}60%{left:100%;right:-90%}100%{left:100%;right:-90%}}@-webkit-keyframes indeterminate-short{0%{left:-200%;right:100%}60%{left:107%;right:-8%}100%{left:107%;right:-8%}}@keyframes indeterminate-short{0%{left:-200%;right:100%}60%{left:107%;right:-8%}100%{left:107%;right:-8%}}.hide{display:none !important}.left-align{text-align:left}.right-align{text-align:right}.center,.center-align{text-align:center}.left{float:left !important}.right{float:right !important}
+     .progress{position:relative;height:4px;display:block;width:100%;background-color:#acece6;border-radius:2px;margin:.5rem 0 1rem 0;overflow:hidden}.progress .determinate{position:absolute;top:0;left:0;bottom:0;background-color:#26a69a;-webkit-transition:width .3s linear;transition:width .3s linear}.progress .indeterminate{background-color:#26a69a}.progress .indeterminate:before{content:'';position:absolute;background-color:inherit;top:0;left:0;bottom:0;will-change:left, right;-webkit-animation:indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;animation:indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite}.progress .indeterminate:after{content:'';position:absolute;background-color:inherit;top:0;left:0;bottom:0;will-change:left, right;-webkit-animation:indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;animation:indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;-webkit-animation-delay:1.15s;animation-delay:1.15s}@-webkit-keyframes indeterminate{0%{left:-35%;right:100%}60%{left:100%;right:-90%}100%{left:100%;right:-90%}}@keyframes indeterminate{0%{left:-35%;right:100%}60%{left:100%;right:-90%}100%{left:100%;right:-90%}}@-webkit-keyframes indeterminate-short{0%{left:-200%;right:100%}60%{left:107%;right:-8%}100%{left:107%;right:-8%}}@keyframes indeterminate-short{0%{left:-200%;right:100%}60%{left:107%;right:-8%}100%{left:107%;right:-8%}}.hide{display:none !important}.left-align{text-align:left}.right-align{text-align:right}.center,.center-align{text-align:center}.left{float:left !important}.right{float:right !important}
+    </style>
+
+  <!--
       <div id="loadera">
       <div class="showbox">
         <div class="loader">
@@ -1022,6 +1064,7 @@ href="mailto:coolbitmoji@gmail.com">coolbitmoji@gmail.com</a></li>
         </div>
       </div>
 </div>
+-->
     </div>
     <script>
       $(document).ready(function(){
@@ -1232,7 +1275,7 @@ input + div {
 
 
 <div class="wpr">
-<input type="text" id="myInput" class="form-control" autocomplete="off" onkeyup="filter()" placeholder="Search..." title="Type in a name">
+<input type="text" id="myInput" class="form-control inputText" autocomplete="off" onkeyup="filter();" placeholder="⚡ Search..." >
 <div class="wpr">
 <ul id="myUL">
 
@@ -1310,7 +1353,7 @@ function filter() {
 
 
           <img data-toggle="tooltip" data-placement="right"
-               title="Tooltip on right" onclick="openPage('About', this, 'transparent');closeNav();move();Main();" class="waves-effect" style="  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+               title="Tooltip on right" onclick="openPage('About', this, 'transparent');load();setTimeout(function() { load(); }, 5000);closeNav();move();Main();" class="waves-effect" style="  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
                                                                                                                                                filter: grayscale(0%);" src="https://img.icons8.com/plasticine/100/000000/warehouse-1.png" width="40" height="40">
           <p style="font-size:10px;">Homebase</p>
           <style>
@@ -1413,16 +1456,16 @@ function filter() {
           </script>
 
           <div class="sidebutton waves-effect" onclick="openPage('About1', this, 'transparent');bar();closeNav();move();storage();" accesskey="s"><a href="#" data-toggle="tooltip" data-placement="right" title="Storage"><img src="https://image.flaticon.com/icons/svg/501/501857.svg" width="35" height="35"></div></a><br>
-          <div class="sidebutton waves-effect" onclick="openPage('About1', this, 'transparent');bar();closeNav();move();kitchen();" accesskey="k"><a href="#"><img data-toggle="tooltip" title="Kitchen" data-placement="right" src="https://image.flaticon.com/icons/svg/864/864615.svg" width="35" height="35"></a></div><br>
-          <div class="sidebutton waves-effect" onclick="openPage('Home', this, 'transparent');closeNav();bar();move();bedroom();" accesskey="b"><a href="#"><img src="https://image.flaticon.com/icons/svg/2905/2905630.svg" width="35" height="35"></div><br></a>
-          <div class="sidebutton waves-effect" onclick="openPage('Contact', this, 'transparent');closeNav();bar();move();garage();" accesskey="g"><a href="#"><img src="https://image.flaticon.com/icons/svg/887/887258.svg" width="35" height="35"></div><br></a>
-          <div class="sidebutton waves-effect" onclick="openPage('Contact', this, 'transparent');closeNav();bar();move();family();" accesskey="l"><a href="#"><img src="https://image.flaticon.com/icons/svg/2866/2866865.svg" width="35" height="35"></div><br></a>
-          <div class="sidebutton waves-effect" onclick="openPage('News', this, 'transparent');closeNav();bar();move();bathroom();" accesskey="r"><a href="#"><img src="https://image.flaticon.com/icons/svg/2844/2844030.svg" width="35" height="35"></div><br></a>
-          <div class="sidebutton waves-effect" onclick="openPage('settings', this, 'transparent');closeNav();bar();move();garden();" accesskey="f"><a href="#"><img src="https://image.flaticon.com/icons/svg/3228/3228867.svg" width="35" height="35"></div><br></a>
-          <div class="sidebutton waves-effect" onclick="openPage('settings', this, 'transparent');closeNav();bar();move();misc();" accesskey="m"><a href="#"><img src="https://image.flaticon.com/icons/svg/2913/2913136.svg" width="35" height="35"></div><br></a>
-          <div class="sidebutton waves-effect" onclick="openPage('todo', this, 'transparent');closeNav();bar();move();todo()" accesskey="t"><a href="#"><img src="https://image.flaticon.com/icons/svg/847/847476.svg" width="35" height="35"></div><br></a>
-          <div class="sidebutton waves-effect" onclick="openPage('office', this, 'transparent');closeNav();bar();move();todo()" accesskey="q"><a href="#"><img src="https://www.flaticon.com/svg/static/icons/svg/876/876210.svg" width="35" height="35"></div><br></a>
-          <div class="sidebutton waves-effect" style="positon:fixed;top100%;left:0" onclick="openPage('settings', this, 'transparent');closeNav();bar();move();settings();" accesskey="p"><img src="https://image.flaticon.com/icons/svg/849/849358.svg" width="35" height="35"></div><br>
+          <div class="sidebutton waves-effect" onclick="openPage('About1', this, 'transparent');load();setTimeout(function() { load(); }, 5000);bar();closeNav();move();kitchen();" accesskey="k"><a href="#"><img data-toggle="tooltip" title="Kitchen" data-placement="right" src="https://image.flaticon.com/icons/svg/864/864615.svg" width="35" height="35"></a></div><br>
+          <div class="sidebutton waves-effect" onclick="openPage('Home', this, 'transparent');load();setTimeout(function() { load(); }, 2000);closeNav();bar();move();bedroom();" accesskey="b"><a href="#"><img src="https://image.flaticon.com/icons/svg/2905/2905630.svg" width="35" height="35"></div><br></a>
+          <div class="sidebutton waves-effect" onclick="openPage('Contact', this, 'transparent');load();setTimeout(function() { load(); }, 2000);closeNav();bar();move();garage();" accesskey="g"><a href="#"><img src="https://image.flaticon.com/icons/svg/887/887258.svg" width="35" height="35"></div><br></a>
+          <div class="sidebutton waves-effect" onclick="openPage('Contact', this, 'transparent');load();setTimeout(function() { load(); }, 2000);closeNav();bar();move();family();" accesskey="l"><a href="#"><img src="https://image.flaticon.com/icons/svg/2866/2866865.svg" width="35" height="35"></div><br></a>
+          <div class="sidebutton waves-effect" onclick="openPage('News', this, 'transparent');load();setTimeout(function() { load(); }, 2000);closeNav();bar();move();bathroom();" accesskey="r"><a href="#"><img src="https://image.flaticon.com/icons/svg/2844/2844030.svg" width="35" height="35"></div><br></a>
+          <div class="sidebutton waves-effect" onclick="openPage('settings', this, 'transparent');load();setTimeout(function() { load(); }, 2000);closeNav();bar();move();garden();" accesskey="f"><a href="#"><img src="https://image.flaticon.com/icons/svg/3228/3228867.svg" width="35" height="35"></div><br></a>
+          <div class="sidebutton waves-effect" onclick="openPage('settings', this, 'transparent');load();setTimeout(function() { load(); }, 2000);closeNav();bar();move();misc();" accesskey="m"><a href="#"><img src="https://image.flaticon.com/icons/svg/2913/2913136.svg" width="35" height="35"></div><br></a>
+          <div class="sidebutton waves-effect" onclick="openPage('todo', this, 'transparent');load();setTimeout(function() { load(); }, 2000);closeNav();bar();move();todo()" accesskey="t"><a href="#"><img src="https://image.flaticon.com/icons/svg/847/847476.svg" width="35" height="35"></div><br></a>
+          <div class="sidebutton waves-effect" onclick="openPage('office', this, 'transparent');load();setTimeout(function() { load(); }, 2000);closeNav();bar();move();todo()" accesskey="q"><a href="#"><img src="https://www.flaticon.com/svg/static/icons/svg/876/876210.svg" width="35" height="35"></div><br></a>
+          <div class="sidebutton waves-effect" style="positon:fixed;top100%;left:0" onclick="openPage('settings', this, 'transparent');load();setTimeout(function() { load(); }, 2000);closeNav();bar();move();settings();" accesskey="p"><img src="https://image.flaticon.com/icons/svg/849/849358.svg" width="35" height="35"></div><br>
         </div>
       </div>
       <script>
@@ -1530,6 +1573,15 @@ background-color: var(--primary-color);
       <script>
 
       </script>
+      <div id="cs" class="tabcontent">
+        Coming Soon<br>
+                <button onclick="openPage('settings', this, 'transparent')" class="btn btn-danger">Back ></button>
+      </div>
+      <div id="privacy" class="tabcontent">
+        <h1>Privacy</h1>
+        <h5>We, at Homebase try our best to keep your data safe from attackers. <b>Did you know that the data is stored on your device, not on the cloud?</b> This data canbe deleted by clicking "Delete Acccount" or clearing your browser history. (NOT for desktop and phone app, just click delete at the big red button below in the settings). </h5>
+        <button onclick="openPage('settings', this, 'transparent')" class="btn btn-danger">Back ></button>
+      </div>
       <div id="settings" class="tabcontent" style="text-align:center !important;padding:0px !important">
         <br><br><div class="text-center">
           <h1><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="40" height="40" style="display:inline-block">
@@ -1537,17 +1589,17 @@ background-color: var(--primary-color);
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
 </svg> Settings</h1>
 <ul class="list-group">
-<li class="list-group-item waves-effect" onclick="openPage('dark', this, 'transparent')" >General</li>
-<li class="list-group-item waves-effect">Privacy</li>
-<li class="list-group-item waves-effect">Home page</li>
-<li class="list-group-item waves-effect">Kitchen</li>
-<li class="list-group-item waves-effect">Bathroom</li>
-<li class="list-group-item waves-effect">Bedroom</li>
-<li class="list-group-item waves-effect">Garage</li>
-<li class="list-group-item waves-effect">Office supplies</li>
-<li class="list-group-item waves-effect">Todo list</li>
-<li class="list-group-item waves-effect">Garage</li>
-<li class="list-group-item waves-effect">Desktop app</li>
+<li class="list-group-item waves-effect"  style="border:0 !important" onclick="openPage('dark', this, 'transparent')" >General</li>
+<li class="list-group-item waves-effect"  style="border:0 !important" onclick="openPage('privacy', this, 'transparent')">Privacy</li>
+<li class="list-group-item waves-effect" style="border:0 !important">Home page</li>
+<li class="list-group-item waves-effect"  style="border:0 !important" onclick="openPage('cs', this, 'transparent')">Kitchen</li>
+<li class="list-group-item waves-effect"  style="border:0 !important"  onclick="openPage('cs', this, 'transparent')">Bathroom</li>
+<li class="list-group-item waves-effect"  style="border:0 !important" onclick="openPage('cs', this, 'transparent')">Bedroom</li>
+<li class="list-group-item waves-effect"  style="border:0 !important" onclick="openPage('cs', this, 'transparent')">Garage</li>
+<li class="list-group-item waves-effect"  style="border:0 !important" onclick="openPage('cs', this, 'transparent')">Office supplies</li>
+<li class="list-group-item waves-effect"  style="border:0 !important" onclick="openPage('cs', this, 'transparent')">Todo list</li>
+<li class="list-group-item waves-effect"  style="border:0 !important" onclick="openPage('cs', this, 'transparent')">Garage</li>
+<li class="list-group-item waves-effect"  style="border:0 !important" onclick="openPage('cs', this, 'transparent')">Desktop app</li>
 <a href="http://pramodini.github.com/Homebase/terms.htm"><li class="list-group-item waves-effect">Terms and conditions</li></a>
 <li class="list-group-item waves-effect">Changelog</li>
 <li class="list-group-item waves-effect">Specials</li>
@@ -2102,7 +2154,10 @@ background-color: var(--bg-color) !important;
               <?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" x="0px" y="0px" width="300px" height="300px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"><g style="isolation:isolate"><g id="Layer_1" data-name="Layer 1"><g opacity="0.23" style="mix-blend-mode:multiply"><path d="M541.354,301.862H479.493a3,3,0,0,1,0-6h58.861V267.931a3,3,0,0,1,6,0v30.931A3,3,0,0,1,541.354,301.862Z" fill="#474747"/><path d="M603.217,301.862H541.354a3,3,0,0,1-3-3V267.931a3,3,0,0,1,6,0v27.931h58.863a3,3,0,0,1,0,6Z" fill="#474747"/><path d="M572.286,332.793H510.424a3,3,0,0,1-3-3V298.862a3,3,0,0,1,3-3h61.862a3,3,0,0,1,3,3v30.931A3,3,0,0,1,572.286,332.793Zm-58.862-6h55.862V301.862H513.424Z" fill="#474747"/><path d="M558.932,363.724H541.354a3,3,0,0,1-3-3V329.793a3,3,0,0,1,3-3h61.863a3,3,0,0,1,0,6H544.354v24.931h14.578a3,3,0,0,1,0,6Z" fill="#474747"/><path d="M541.354,363.724H491.192a3,3,0,0,1,0-6h47.162V332.793H479.493a3,3,0,0,1,0-6h61.861a3,3,0,0,1,3,3v30.931A3,3,0,0,1,541.354,363.724Z" fill="#474747"/><path d="M510.424,332.793H479.493a3,3,0,0,1,0-6h27.931V301.862H458.406a3,3,0,0,1,0-6h52.018a3,3,0,0,1,3,3v30.931A3,3,0,0,1,510.424,332.793Z" fill="#474747"/><path d="M616.928,332.793H572.286a3,3,0,0,1-3-3V298.862a3,3,0,0,1,3-3h21.443a3,3,0,0,1,0,6H575.286v24.931h41.642a3,3,0,0,1,0,6Z" fill="#474747"/></g><g opacity="0.23" style="mix-blend-mode:multiply"><path d="M117.568,555.122H55.707a3,3,0,1,1,0-6h58.861V521.19a3,3,0,0,1,6,0v30.932A3,3,0,0,1,117.568,555.122Z" fill="#474747"/><path d="M179.43,555.122H117.568a3,3,0,0,1-3-3V521.19a3,3,0,0,1,6,0v27.932H179.43a3,3,0,0,1,0,6Z" fill="#474747"/><path d="M148.5,586.053H86.637a3,3,0,0,1-3-3V552.122a3,3,0,0,1,3-3H148.5a3,3,0,0,1,3,3v30.931A3,3,0,0,1,148.5,586.053Zm-58.862-6H145.5V555.122H89.637Z" fill="#474747"/><path d="M135.146,616.983H117.568a3,3,0,0,1-3-3v-30.93a3,3,0,0,1,3-3H179.43a3,3,0,0,1,0,6H120.568v24.93h14.578a3,3,0,0,1,0,6Z" fill="#474747"/><path d="M117.568,616.983H67.406a3,3,0,1,1,0-6h47.162v-24.93H55.707a3,3,0,1,1,0-6h61.861a3,3,0,0,1,3,3v30.93A3,3,0,0,1,117.568,616.983Z" fill="#474747"/><path d="M86.637,586.053H55.707a3,3,0,1,1,0-6h27.93V555.122H34.619a3,3,0,0,1,0-6H86.637a3,3,0,0,1,3,3v30.931A3,3,0,0,1,86.637,586.053Z" fill="#474747"/><path d="M193.141,586.053H148.5a3,3,0,0,1-3-3V552.122a3,3,0,0,1,3-3h21.444a3,3,0,0,1,0,6H151.5v24.931h41.642a3,3,0,0,1,0,6Z" fill="#474747"/></g><g opacity="0.23" style="mix-blend-mode:multiply"><path d="M933.879,445.535H872.017a3,3,0,0,1-3-3V411.6a3,3,0,0,1,6,0v27.931h58.862a3,3,0,0,1,0,6Z" fill="#474747"/><path d="M872.017,445.535H810.154a3,3,0,0,1,0-6h58.863V411.6a3,3,0,0,1,6,0v30.931A3,3,0,0,1,872.017,445.535Z" fill="#474747"/><path d="M902.947,476.465H841.086a3,3,0,0,1-3-3v-30.93a3,3,0,0,1,3-3h61.861a3,3,0,0,1,3,3v30.93A3,3,0,0,1,902.947,476.465Zm-58.861-6h55.861v-24.93H844.086Z" fill="#474747"/><path d="M872.017,507.4H854.439a3,3,0,0,1,0-6h14.578V476.465H810.154a3,3,0,0,1,0-6h61.863a3,3,0,0,1,3,3V504.4A3,3,0,0,1,872.017,507.4Z" fill="#474747"/><path d="M895.205,507.4H872.017a3,3,0,0,1-3-3V473.465a3,3,0,0,1,3-3h61.862a3,3,0,0,1,0,6H875.017V501.4h20.188a3,3,0,0,1,0,6Z" fill="#474747"/><path d="M933.879,476.465H902.947a3,3,0,0,1-3-3v-30.93a3,3,0,0,1,3-3h52.019a3,3,0,0,1,0,6H905.947v24.93h27.932a3,3,0,0,1,0,6Z" fill="#474747"/><path d="M841.086,476.465H796.444a3,3,0,0,1,0-6h41.642v-24.93H819.643a3,3,0,0,1,0-6h21.443a3,3,0,0,1,3,3v30.93A3,3,0,0,1,841.086,476.465Z" fill="#474747"/></g><path d="M902.947,731H75.78a5,5,0,1,1,0-10H902.947a5,5,0,1,1,0,10Z" fill="#333"/><path d="M637.577,221.576H741.491a0,0,0,0,1,0,0v154a0,0,0,0,1,0,0H637.577a12,12,0,0,1-12-12v-130A12,12,0,0,1,637.577,221.576Z" fill="#cc6675"/><path d="M753.491,221.576H857.4a0,0,0,0,1,0,0v154a0,0,0,0,1,0,0H753.491a12,12,0,0,1-12-12v-130A12,12,0,0,1,753.491,221.576Z" transform="translate(1598.896 597.151) rotate(-180)" fill="#fee2ca"/><path d="M753.491,221.576H857.4a0,0,0,0,1,0,0v154a0,0,0,0,1,0,0H753.491a12,12,0,0,1-12-12v-130A12,12,0,0,1,753.491,221.576Z" transform="translate(1598.896 597.151) rotate(-180)" fill="#cc6675"/><path d="M845.405,380.576H637.577a17.019,17.019,0,0,1-17-17v-130a17.019,17.019,0,0,1,17-17H845.405a17.019,17.019,0,0,1,17,17v130A17.019,17.019,0,0,1,845.405,380.576Zm-207.828-154a7.008,7.008,0,0,0-7,7v130a7.008,7.008,0,0,0,7,7H845.405a7.008,7.008,0,0,0,7-7v-130a7.008,7.008,0,0,0-7-7Z" fill="#333"/><path d="M741.491,380.576H637.577a17.019,17.019,0,0,1-17-17v-130a17.019,17.019,0,0,1,17-17H741.491a5,5,0,0,1,5,5v154A5,5,0,0,1,741.491,380.576Zm-103.914-154a7.008,7.008,0,0,0-7,7v130a7.008,7.008,0,0,0,7,7h98.914v-144Z" fill="#333"/><path d="M741.491,380.576H637.577a17.019,17.019,0,0,1-17-17v-130a17.019,17.019,0,0,1,17-17H741.491a5,5,0,0,1,5,5v154A5,5,0,0,1,741.491,380.576Zm-103.914-154a7.008,7.008,0,0,0-7,7v130a7.008,7.008,0,0,0,7,7h98.914v-144Z" fill="#333"/><rect x="623.093" y="257.178" width="120.882" height="82.796" transform="translate(982.11 -384.958) rotate(90)" fill="#f26b79"/><rect x="679.256" y="313.341" width="8.556" height="82.796" transform="translate(1038.273 -328.795) rotate(90)" fill="#99675e" opacity="0.5" style="mix-blend-mode:multiply"/><rect x="678.566" y="201.705" width="9.935" height="82.796" transform="translate(926.637 -440.432) rotate(90)" fill="#99675e" opacity="0.53" style="mix-blend-mode:screen"/><path d="M724.932,363.017h-82.8a4,4,0,0,1-4-4V238.135a4,4,0,0,1,4-4h82.8a4,4,0,0,1,4,4V359.017A4,4,0,0,1,724.932,363.017Zm-78.8-8h74.8V242.135h-74.8Z" fill="#333"/><path d="M845.405,380.576H741.491a5,5,0,0,1-5-5v-154a5,5,0,0,1,5-5H845.405a17.019,17.019,0,0,1,17,17v130A17.019,17.019,0,0,1,845.405,380.576Zm-98.914-10h98.914a7.008,7.008,0,0,0,7-7v-130a7.008,7.008,0,0,0-7-7H746.491Z" fill="#333"/><rect x="739.007" y="257.178" width="120.882" height="82.796" transform="translate(1098.024 -500.872) rotate(90)" fill="#f26b79"/><rect x="795.17" y="313.341" width="8.556" height="82.796" transform="translate(1154.187 -444.709) rotate(90)" fill="#99675e" opacity="0.5" style="mix-blend-mode:multiply"/><rect x="794.48" y="201.705" width="9.935" height="82.796" transform="translate(1042.551 -556.346) rotate(90)" fill="#99675e" opacity="0.53" style="mix-blend-mode:screen"/><path d="M840.846,363.017H758.051a4,4,0,0,1-4-4V238.135a4,4,0,0,1,4-4h82.795a4,4,0,0,1,4,4V359.017A4,4,0,0,1,840.846,363.017Zm-78.795-8h74.795V242.135H762.051Z" fill="#333"/><path d="M703.926,318.755a5,5,0,0,1-5-5V278.429a5,5,0,0,1,10,0v35.326A5,5,0,0,1,703.926,318.755Z" fill="#333"/><path d="M777.338,318.755a5,5,0,0,1-5-5V278.429a5,5,0,1,1,10,0v35.326A5,5,0,0,1,777.338,318.755Z" fill="#333"/><circle cx="481.16" cy="254" r="56" fill="#ffe9bd"/><path d="M481.16,220a56.015,56.015,0,0,1,54.914,45,56,56,0,1,0-109.827,0A56.014,56.014,0,0,1,481.16,220Z" fill="#e2e2e2" style="mix-blend-mode:multiply"/><path d="M481.161,315a61,61,0,1,1,61-61A61.068,61.068,0,0,1,481.161,315Zm0-112a51,51,0,1,0,51,51A51.057,51.057,0,0,0,481.161,203Z" fill="#333"/><path d="M481.16,303a49,49,0,1,1,49-49A49.055,49.055,0,0,1,481.16,303Zm0-92a43,43,0,1,0,43,43A43.048,43.048,0,0,0,481.16,211Z" fill="#333"/><path d="M505.994,257H481.161a3,3,0,0,1-2.678-1.646l-14.667-29a3,3,0,0,1,5.355-2.708L483.005,251h22.989a3,3,0,0,1,0,6Z" fill="#333"/><circle cx="481.16" cy="254" r="7.083" fill="#333"/><circle cx="756.25" cy="468.352" r="8.25" fill="#fff3e9"/><path d="M756.25,480.6a12.25,12.25,0,1,1,12.25-12.25A12.264,12.264,0,0,1,756.25,480.6Zm0-16.5a4.25,4.25,0,1,0,4.25,4.25A4.254,4.254,0,0,0,756.25,464.1Z" fill="#333"/><rect x="779.705" y="535.667" width="67.071" height="190.333" fill="#f29f4d"/><rect x="779.705" y="715.312" width="67.071" height="10.688" fill="#db8945"/><rect x="779.705" y="535.667" width="67.071" height="12.833" fill="#db8945"/><rect x="595.705" y="495" width="251.071" height="40.667" fill="#f4b47a"/><rect x="595.705" y="527.667" width="251.071" height="8" fill="#db8945" opacity="0.63"/><rect x="595.705" y="495" width="251.071" height="8.5" fill="#f9c59b"/><rect x="595.705" y="630.833" width="92" height="95.167" fill="#f29f4d"/><rect x="595.705" y="715.312" width="92" height="10.688" fill="#db8945"/><path d="M687.705,731h-92a5,5,0,0,1-5-5V495a5,5,0,0,1,5-5h92a5,5,0,0,1,5,5V726A5,5,0,0,1,687.705,731Zm-87-10h82V500h-82Z" fill="#333"/><path d="M779.705,731h-92a5,5,0,0,1-5-5V495a5,5,0,0,1,5-5h92a5,5,0,0,1,5,5V726A5,5,0,0,1,779.705,731Zm-87-10h82V500h-82Z" fill="#333"/><path d="M846.775,731h-67.07a5,5,0,0,1-5-5V495a5,5,0,0,1,5-5h67.07a5,5,0,0,1,5,5V726A5,5,0,0,1,846.775,731Zm-62.07-10h57.07V500h-57.07Z" fill="#333"/><path d="M687.705,731h-92a5,5,0,0,1-5-5V535.667a5,5,0,0,1,5-5h92a5,5,0,0,1,5,5V726A5,5,0,0,1,687.705,731Zm-87-10h82V540.667h-82Z" fill="#333"/><path d="M687.705,731h-92a5,5,0,0,1-5-5V630.833a5,5,0,0,1,5-5h92a5,5,0,0,1,5,5V726A5,5,0,0,1,687.705,731Zm-87-10h82V635.833h-82Z" fill="#333"/><rect x="595.705" y="535.667" width="92" height="95.167" fill="#f29f4d"/><rect x="595.705" y="535.667" width="92" height="12.833" fill="#db8945"/><path d="M687.705,635.833h-92a5,5,0,0,1-5-5V535.667a5,5,0,0,1,5-5h92a5,5,0,0,1,5,5v95.166A5,5,0,0,1,687.705,635.833Zm-87-10h82V540.667h-82Z" fill="#333"/><rect x="687.705" y="535.667" width="92" height="190.333" fill="#f29f4d"/><rect x="687.705" y="715.312" width="92" height="10.688" fill="#db8945"/><rect x="687.705" y="535.667" width="92" height="12.833" fill="#db8945"/><path d="M779.705,731h-92a5,5,0,0,1-5-5V535.667a5,5,0,0,1,5-5h92a5,5,0,0,1,5,5V726A5,5,0,0,1,779.705,731Zm-87-10h82V540.667h-82Z" fill="#333"/><rect x="664.626" y="610.104" width="138.159" height="53.125" transform="translate(1370.372 -97.038) rotate(90)" fill="#f4b77f"/><polygon points="707.142 655.839 760.268 585.8 760.268 567.587 745.381 567.587 707.142 618 707.142 655.839" fill="#f9c59b" opacity="0.39" style="mix-blend-mode:screen"/><polygon points="707.142 683.511 760.268 613.473 760.268 599.517 707.142 669.556 707.142 683.511" fill="#f9c59b" opacity="0.39" style="mix-blend-mode:screen"/><polygon points="707.142 702.613 760.268 632.574 760.268 625.237 707.142 695.277 707.142 702.613" fill="#f9c59b" opacity="0.39" style="mix-blend-mode:screen"/><path d="M760.268,708.746H707.143a3,3,0,0,1-3-3V567.587a3,3,0,0,1,3-3h53.125a3,3,0,0,1,3,3V705.746A3,3,0,0,1,760.268,708.746Zm-50.125-6h47.125V570.587H710.143Z" fill="#333"/><rect x="618.665" y="564.064" width="46.08" height="53.125" transform="translate(1232.332 -51.078) rotate(90)" fill="#f4b77f"/><polygon points="639.619 567.587 615.142 599.857 615.142 613.667 620.847 613.667 655.799 567.587 639.619 567.587" fill="#f9c59b" opacity="0.43" style="mix-blend-mode:screen"/><polygon points="638.315 613.667 668.268 574.177 668.268 567.587 662.666 567.587 627.714 613.667 638.315 613.667" fill="#f9c59b" opacity="0.43" style="mix-blend-mode:screen"/><path d="M668.268,616.667H615.142a3,3,0,0,1-3-3v-46.08a3,3,0,0,1,3-3h53.126a3,3,0,0,1,3,3v46.08A3,3,0,0,1,668.268,616.667Zm-50.126-6h47.126v-40.08H618.142Z" fill="#333"/><path d="M846.775,731h-67.07a5,5,0,0,1-5-5V535.667a5,5,0,0,1,5-5h67.07a5,5,0,0,1,5,5V726A5,5,0,0,1,846.775,731Zm-62.07-10h57.07V540.667h-57.07Z" fill="#333"/><rect x="744.161" y="620.907" width="138.159" height="31.519" transform="translate(1449.907 -176.574) rotate(90)" fill="#f4b77f"/><polygon points="797.481 656.27 829 614.715 829 576.876 797.481 618.431 797.481 656.27" fill="#f9c59b" opacity="0.32" style="mix-blend-mode:screen"/><polygon points="797.481 678.417 829 636.863 829 622.907 797.481 664.461 797.481 678.417" fill="#f9c59b" opacity="0.32" style="mix-blend-mode:screen"/><polygon points="797.481 693.97 829 652.416 829 645.08 797.481 686.634 797.481 693.97" fill="#f9c59b" opacity="0.32" style="mix-blend-mode:screen"/><path d="M829,708.746H797.48a3,3,0,0,1-3-3V567.587a3,3,0,0,1,3-3H829a3,3,0,0,1,3,3V705.746A3,3,0,0,1,829,708.746Zm-28.52-6H826V570.587H800.48Z" fill="#333"/><path d="M595.705,731h-216a5,5,0,0,1-5-5V495a5,5,0,0,1,5-5h216a5,5,0,0,1,5,5V726A5,5,0,0,1,595.705,731Zm-211-10h206V500h-206Z" fill="#333"/><rect x="379.705" y="535.667" width="216" height="184.623" fill="#f29f4d"/><rect x="379.705" y="710.333" width="216" height="9.957" fill="#db8945"/><rect x="379.705" y="535.667" width="216" height="12.833" fill="#db8945"/><path d="M595.705,725.29h-216a5,5,0,0,1-5-5V535.667a5,5,0,0,1,5-5h216a5,5,0,0,1,5,5V720.29A5,5,0,0,1,595.705,725.29Zm-211-10h206V540.667h-206Z" fill="#333"/><rect x="437.205" y="563.137" width="101" height="150.725" rx="21.034" transform="translate(1126.205 150.795) rotate(90)" fill="#cfe5e8"/><path d="M458.239,577.137h58.932a7.034,7.034,0,0,1,7.034,7.034V692.829a7.033,7.033,0,0,1-7.033,7.033H458.239a7.034,7.034,0,0,1-7.034-7.034V584.171A7.034,7.034,0,0,1,458.239,577.137Z" transform="translate(1126.205 150.795) rotate(90)" fill="#a7e3e8"/><path d="M542.034,693H433.376a25.062,25.062,0,0,1-25.034-25.034V609.034A25.062,25.062,0,0,1,433.376,584H542.034a25.061,25.061,0,0,1,25.033,25.034v58.932A25.061,25.061,0,0,1,542.034,693ZM433.376,592a17.053,17.053,0,0,0-17.034,17.034v58.932A17.053,17.053,0,0,0,433.376,685H542.034a17.053,17.053,0,0,0,17.033-17.034V609.034A17.053,17.053,0,0,0,542.034,592Z" fill="#333"/><path d="M527.263,566.5H448.147a5,5,0,1,1,0-10h79.116a5,5,0,0,1,0,10Z" fill="#333"/><rect x="467.372" y="407.333" width="40.667" height="216" transform="translate(1003.038 27.628) rotate(90)" fill="#f4b47a"/><rect x="483.705" y="423.667" width="8" height="216" transform="translate(1019.372 43.962) rotate(90)" fill="#db8945" opacity="0.63"/><rect x="483.455" y="391.25" width="8.5" height="216" transform="translate(986.955 11.545) rotate(90)" fill="#f9c59b"/><path d="M595.705,540.667h-216a5,5,0,0,1-5-5V495a5,5,0,0,1,5-5h216a5,5,0,0,1,5,5v40.667A5,5,0,0,1,595.705,540.667Zm-211-10h206V500h-206Z" fill="#333"/><path d="M447.667,521.333H401a6,6,0,1,1,0-12h46.667a6,6,0,1,1,0,12Z" fill="#333"/><circle cx="527.263" cy="515.333" r="7.115" fill="#ea5050"/><path d="M527.263,524.448a9.115,9.115,0,1,1,9.115-9.115A9.126,9.126,0,0,1,527.263,524.448Zm0-14.23a5.115,5.115,0,1,0,5.115,5.115A5.122,5.122,0,0,0,527.263,510.218Z" fill="#333"/><circle cx="548.723" cy="515.333" r="7.115" fill="#7dc163"/><path d="M548.723,524.448a9.115,9.115,0,1,1,9.115-9.115A9.126,9.126,0,0,1,548.723,524.448Zm0-14.23a5.115,5.115,0,1,0,5.115,5.115A5.122,5.122,0,0,0,548.723,510.218Z" fill="#333"/><path d="M570.183,524.448a9.115,9.115,0,1,1,9.115-9.115A9.126,9.126,0,0,1,570.183,524.448Zm0-14.23a5.115,5.115,0,1,0,5.115,5.115A5.122,5.122,0,0,0,570.183,510.218Z" fill="#333"/><circle cx="570.183" cy="515.333" r="7.115" fill="#333"/><path d="M729.714,486.458c12.318,0,22.3-13.189,22.3-29.458H707.41C707.41,473.269,717.4,486.458,729.714,486.458Z" fill="#fff3e9"/><path d="M740.241,457c0,13.576-6.956,25-16.416,28.412a17.29,17.29,0,0,0,5.889,1.046c12.318,0,22.3-13.189,22.3-29.458Z" fill="#c4cecd" opacity="0.45"/><path d="M729.714,490.458c-14.505,0-26.305-15.009-26.305-33.458a4,4,0,0,1,4-4h44.609a4,4,0,0,1,4,4C756.018,475.449,744.218,490.458,729.714,490.458ZM711.635,461c1.384,12.144,8.964,21.458,18.079,21.458s16.694-9.314,18.078-21.458Z" fill="#333"/><path d="M748,495H711.428a5,5,0,1,1,0-10H748a5,5,0,0,1,0,10Z" fill="#333"/><path d="M722.393,450.417a3,3,0,0,1-2.418-4.773c1.543-2.113,3.691-5.91,3.867-8.043a14.444,14.444,0,0,0-2.96-1.085c-2.367-.691-5.945-1.734-5.945-5.183,0-3.227,3.149-8.3,4.5-10.331a3,3,0,0,1,4.994,3.328,34.111,34.111,0,0,0-3.236,6.009c.441.147.957.3,1.364.416,2.727.8,7.292,2.126,7.292,6.578,0,4.742-4.2,10.71-5.04,11.858A2.994,2.994,0,0,1,722.393,450.417Z" fill="#333"/><path d="M737.03,444.844a3,3,0,0,1-2.418-4.774c1.543-2.112,3.692-5.91,3.867-8.043a14.433,14.433,0,0,0-2.959-1.086c-2.368-.69-5.946-1.733-5.946-5.182,0-3.226,3.15-8.3,4.5-10.33a3,3,0,0,1,4.993,3.327,34.163,34.163,0,0,0-3.235,6.009c.44.147.957.3,1.363.416,2.728.8,7.292,2.126,7.292,6.578,0,4.741-4.2,10.71-5.039,11.858A3,3,0,0,1,737.03,444.844Z" fill="#333"/><path d="M726.853,412.334a3,3,0,0,1-2.8-4.084l2.454-6.334a3,3,0,1,1,5.593,2.168l-2.454,6.333A3,3,0,0,1,726.853,412.334Z" fill="#333"/><path d="M846.775,540.667H595.705a5,5,0,0,1-5-5V495a5,5,0,0,1,5-5h251.07a5,5,0,0,1,5,5v40.667A5,5,0,0,1,846.775,540.667Zm-246.07-10h241.07V500H600.705Z" fill="#333"/><path d="M652.353,555H631.058a4,4,0,0,1,0-8h21.295a4,4,0,1,1,0,8Z" fill="#333"/><rect x="618.665" y="656.144" width="46.08" height="53.125" transform="translate(1324.411 41.002) rotate(90)" fill="#f4b77f"/><polygon points="639.619 659.667 615.142 691.937 615.142 705.746 620.847 705.746 655.799 659.667 639.619 659.667" fill="#f9c59b" opacity="0.43" style="mix-blend-mode:screen"/><polygon points="638.315 705.746 668.268 666.257 668.268 659.667 662.666 659.667 627.714 705.746 638.315 705.746" fill="#f9c59b" opacity="0.43" style="mix-blend-mode:screen"/><path d="M668.268,708.746H615.142a3,3,0,0,1-3-3V659.667a3,3,0,0,1,3-3h53.126a3,3,0,0,1,3,3v46.079A3,3,0,0,1,668.268,708.746Zm-50.126-6h47.126V662.667H618.142Z" fill="#333"/><path d="M652.353,649.079H631.058a4,4,0,0,1,0-8h21.295a4,4,0,0,1,0,8Z" fill="#333"/><path d="M724.5,555H707.143a4,4,0,0,1,0-8H724.5a4,4,0,0,1,0,8Z" fill="#333"/><path d="M810.5,555H797.48a4,4,0,0,1,0-8H810.5a4,4,0,0,1,0,8Z" fill="#333"/><rect x="445.709" y="484.427" width="81.553" height="10.573" rx="5.286" fill="#333"/><polygon points="534.378 457 568 429.468 563.067 422.667 525 441.844 534.378 457" fill="#fff3e9"/><path d="M534.378,462a4.946,4.946,0,0,1-.822-.068,5,5,0,0,1-3.43-2.3l-9.378-15.156a5,5,0,0,1,2-7.1L560.817,418.2a5,5,0,0,1,6.3,1.53l4.933,6.8a5,5,0,0,1-.88,6.8l-33.622,27.532A5.007,5.007,0,0,1,534.378,462Zm-2.255-18.146,3.5,5.661,23.568-19.3Z" fill="#333"/><rect x="434.714" y="422.667" width="103.786" height="61.761" rx="18.464" fill="#dbdddd"/><path d="M448.107,465.964V441.13a18.463,18.463,0,0,1,18.464-18.463H453.178a18.463,18.463,0,0,0-18.464,18.463v24.834a18.463,18.463,0,0,0,18.464,18.463h13.393A18.463,18.463,0,0,1,448.107,465.964Z" fill="#fff" opacity="0.55"/><path d="M520.036,422.667H501.684a18.464,18.464,0,0,1,18.464,18.463v24.834a18.464,18.464,0,0,1-18.464,18.463h18.352A18.463,18.463,0,0,0,538.5,465.964V441.13A18.463,18.463,0,0,0,520.036,422.667Z" fill="#c4cecd"/><path d="M520.036,489.427H453.178a23.49,23.49,0,0,1-23.464-23.463V441.13a23.49,23.49,0,0,1,23.464-23.463h66.858A23.489,23.489,0,0,1,543.5,441.13v24.834A23.489,23.489,0,0,1,520.036,489.427Zm-66.858-61.76a13.479,13.479,0,0,0-13.464,13.463v24.834a13.478,13.478,0,0,0,13.464,13.463h66.858A13.478,13.478,0,0,0,533.5,465.964V441.13a13.479,13.479,0,0,0-13.464-13.463Z" fill="#333"/><rect x="422" y="443.946" width="12.714" height="14.054" fill="#333"/><path d="M434.714,463H422a5,5,0,0,1-5-5V443.946a5,5,0,0,1,5-5h12.714a5,5,0,0,1,5,5V458A5,5,0,0,1,434.714,463ZM427,453h2.714v-4.054H427Z" fill="#333"/><path d="M487,434.5a196.623,196.623,0,0,1-32.208-2.345c-8.467-1.48-17.123-3.874-17.123-10.4s8.656-8.925,17.123-10.4a222.364,222.364,0,0,1,64.417,0c8.467,1.48,17.123,3.874,17.123,10.4s-8.656,8.925-17.123,10.4A196.636,196.636,0,0,1,487,434.5ZM453.63,421.75c6.679,1.417,17.955,2.75,33.368,2.75s26.69-1.333,33.368-2.75C513.688,420.333,502.411,419,487,419S460.309,420.333,453.63,421.75Zm73.556,2.243h0Z" fill="#333"/><rect x="476.667" y="398" width="19.667" height="24.667" rx="5" fill="#333"/><path d="M574,417a3,3,0,0,1-2.311-4.91l4.871-5.9-4.851-5.753a3,3,0,0,1-.336-3.379l3.3-6a3,3,0,0,1,5.258,2.89l-2.306,4.195,5.137,6.092a3,3,0,0,1,.02,3.844l-6.465,7.834A2.994,2.994,0,0,1,574,417Z" fill="#333"/><polygon points="464.075 675 519.446 602 498.246 602 442.875 675 464.075 675" fill="#d7fff7"/><path d="M487.032,675l55.358-72.982c-.119-.006-.236-.018-.356-.018H531.8l-55.371,73Z" fill="#d7fff7"/><path d="M531.33,779.577H452.136a5,5,0,1,1,0-10H531.33a5,5,0,1,1,0,10Z" fill="#1d2f3d"/><path d="M430,779.577H417.345a5,5,0,0,1,0-10H430a5,5,0,1,1,0,10Z" fill="#1d2f3d"/><rect x="145" y="230" width="202" height="496" rx="12" fill="#aecbd9"/><path d="M159.463,714V242c0-6.627,5.756-12,12.857-12H157.857c-7.1,0-12.857,5.373-12.857,12V714c0,6.627,5.756,12,12.857,12H172.32C165.219,726,159.463,720.627,159.463,714Z" fill="#c4e7f4"/><path d="M335,230H312.5a12,12,0,0,1,12,12V714a12,12,0,0,1-12,12H335a12,12,0,0,0,12-12V242A12,12,0,0,0,335,230Z" fill="#8ca2ae" opacity="0.89"/><path d="M335,731H157a17.019,17.019,0,0,1-17-17V242a17.019,17.019,0,0,1,17-17H335a17.019,17.019,0,0,1,17,17V714A17.019,17.019,0,0,1,335,731ZM157,235a7.008,7.008,0,0,0-7,7V714a7.008,7.008,0,0,0,7,7H335a7.008,7.008,0,0,0,7-7V242a7.008,7.008,0,0,0-7-7Z" fill="#333"/><path d="M347,387H145a5,5,0,0,1-5-5V242a17.019,17.019,0,0,1,17-17H335a17.019,17.019,0,0,1,17,17V382A5,5,0,0,1,347,387ZM150,377H342V242a7.008,7.008,0,0,0-7-7H157a7.008,7.008,0,0,0-7,7Z" fill="#333"/><path d="M172.32,353a5,5,0,0,1-5-5V301.667a5,5,0,0,1,10,0V348A5,5,0,0,1,172.32,353Z" fill="#333"/><path d="M172.32,549a5,5,0,0,1-5-5V459.881a5,5,0,0,1,10,0V544A5,5,0,0,1,172.32,549Z" fill="#333"/><rect x="145" y="382" width="202" height="27.333" fill="#64809b"/><rect x="324" y="382" width="23" height="27.333" fill="#8ca2ae" opacity="0.71" style="mix-blend-mode:multiply"/><rect x="145" y="382" width="14.463" height="27.333" fill="#64809b" opacity="0.26" style="mix-blend-mode:color-dodge"/><path d="M347,414.333H145a5,5,0,0,1-5-5V382a5,5,0,0,1,5-5H347a5,5,0,0,1,5,5v27.333A5,5,0,0,1,347,414.333Zm-197-10H342V387H150Z" fill="#333"/><path d="M284,398.667H207a3,3,0,1,1,0-6h77a3,3,0,0,1,0,6Z" fill="#333"/></g></g></svg>
         <h3>
               <span>Kitchen <p class="badge badge-success" type="button" href="#">Beta</p></span>
-              <input type="search" autofocus="autofocus" placeholder="Search..." class="form-control search-input" data-table="customers-list"/>
+              
+              
+              <input type="search" autofocus="autofocus" placeholder="Search..." class="inputText form-control search-input" data-table="customers-list"/>
+                  <span class="floating-label">Your email address</span>
               </h3>
               <style>
                 .table thead th{vertical-align:bottom;border-bottom:2px solid #dee2e6}.table tbody+tbody{border-top:2px solid #dee2e6}.table-sm td,.table-sm th{padding:.3rem}.table-bordered{border:1px solid #dee2e6}.table-bordered td,.table-bordered th{border:1px solid #dee2e6}.table-bordered thead td,.table-bordered thead th{border-bottom-width:2px}.table-borderless tbody+tbody,.table-borderless td,.table-borderless th,.table-borderless thead th{border:0}.table-striped tbody tr:nth-of-type(odd){background-color:rgba(0,0,0,.05)}.table-hover tbody tr:hover{color:#212529;background-color:rgba(0,0,0,.075)}.table-primary,.table-primary>td,.table-primary>th{background-color:#b8daff}.table-primary tbody+tbody,.table-primary td,.table-primary th,.table-primary thead th{border-color:#7abaff}.table-hover .table-primary:hover{background-color:#9fcdff}.table-hover .table-primary:hover>td,.table-hover .table-primary:hover>th{background-color:#9fcdff}.table-secondary,.table-secondary>td,.table-secondary>th{background-color:#d6d8db}.table-secondary tbody+tbody,.table-secondary td,.table-secondary th,.table-secondary thead th{border-color:#b3b7bb}.table-hover .table-secondary:hover{background-color:#c8cbcf}.table-hover .table-secondary:hover>td,.table-hover .table-secondary:hover>th{background-color:#c8cbcf}.table-success,.table-success>td,.table-success>th{background-color:#c3e6cb}.table-success tbody+tbody,.table-success td,.table-success th,.table-success thead th{border-color:#8fd19e}.table-hover .table-success:hover{background-color:#b1dfbb}.table-hover .table-success:hover>td,.table-hover .table-success:hover>th{background-color:#b1dfbb}.table-info,.table-info>td,.table-info>th{background-color:#bee5eb}.table-info tbody+tbody,.table-info td,.table-info th,.table-info thead th{border-color:#86cfda}.table-hover .table-info:hover{background-color:#abdde5}.table-hover .table-info:hover>td,.table-hover .table-info:hover>th{background-color:#abdde5}.table-warning,.table-warning>td,.table-warning>th{background-color:#ffeeba}.table-warning tbody+tbody,.table-warning td,.table-warning th,.table-warning thead th{border-color:#ffdf7e}.table-hover .table-warning:hover{background-color:#ffe8a1}.table-hover .table-warning:hover>td,.table-hover .table-warning:hover>th{background-color:#ffe8a1}.table-danger,.table-danger>td,.table-danger>th{background-color:#f5c6cb}.table-danger tbody+tbody,.table-danger td,.table-danger th,.table-danger thead th{border-color:#ed969e}.table-hover .table-danger:hover{background-color:#f1b0b7}.table-hover .table-danger:hover>td,.table-hover .table-danger:hover>th{background-color:#f1b0b7}.table-light,.table-light>td,.table-light>th{background-color:#fdfdfe}.table-light tbody+tbody,.table-light td,.table-light th,.table-light thead th{border-color:#fbfcfc}.table-hover .table-light:hover{background-color:#ececf6}.table-hover .table-light:hover>td,.table-hover .table-light:hover>th{background-color:#ececf6}.table-dark,.table-dark>td,.table-dark>th{background-color:#c6c8ca}.table-dark tbody+tbody,.table-dark td,.table-dark th,.table-dark thead th{border-color:#95999c}.table-hover .table-dark:hover{background-color:#b9bbbe}.table-hover .table-dark:hover>td,.table-hover .table-dark:hover>th{background-color:#b9bbbe}.table-active,.table-active>td,.table-active>th{background-color:rgba(0,0,0,.075)}.table-hover .table-active:hover{background-color:rgba(0,0,0,.075)}.table-hover .table-active:hover>td,.table-hover .table-active:hover>th{background-color:rgba(0,0,0,.075)}.table .thead-dark th{color:#fff;background-color:#343a40;border-color:#454d55}.table .thead-light th{color:#495057;background-color:#e9ecef;border-color:#dee2e6}.table-dark{color:#fff;background-color:#343a40}.table-dark td,.table-dark th,.table-dark thead th{border-color:#454d55}.table-dark.table-bordered{border:0}.table-dark.table-striped tbody tr:nth-of-type(odd){background-color:rgba(255,255,255,.05)}.table-dark.table-hover tbody tr:hover{color:#fff;background-color:rgba(255,255,255,.075)}@media (max-width:575.98px){.table-responsive-sm{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.table-responsive-sm>.table-bordered{border:0}}@media (max-width:767.98px){.table-responsive-md{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.table-responsive-md>.table-bordered{border:0}}@media (max-width:991.98px){.table-responsive-lg{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.table-responsive-lg>.table-bordered{border:0}}@media (max-width:1199.98px){.table-responsive-xl{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.table-responsive-xl>.table-bordered{border:0}}.table-responsive{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.table-responsive>.table-bordered{border:0}.form-control{display:block;width:100%;height:calc(1.5em + .75rem + 2px);padding:.375rem .75rem;font-size:1rem;font-weight:400;line-height:1.5;color:#495057;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da;border-radius:.25rem;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}@media (prefers-reduced-motion:reduce){.form-control{transition:none}}
@@ -3913,7 +3968,7 @@ left:85%;
 
                     <!-- buttons above list -->
                     <div class='floater' style="display:inline-block;">
-                      <button style="display:inline-block;outline:none;" class='btn btn-success removeAll waves-effect '>Remove Checked Items</button>
+                      <button style="display:inline-block;outline:none;" class='btn btn-success removeAll waves-effect' onclick="toggleConfetti();setTimeout(function() { toggleConfetti(); }, 2000);">Remove Checked Items</button>
                     </div>
                     <div class='floater' style="display:inline-block;">
                       <button style="display:inline-block;outline:none;" class='btn btn-primary waves-effect ' id='sortPri'>Filter by Priority</button>
@@ -3926,7 +3981,7 @@ left:85%;
                   <div id="toDoData" class="clearfix"></div>
                   <!-- final button -->
                   <div class='floater'>
-                    <button style="outline:none;" class='btn  waves-effect removeAll'>Remove Checked Items</button>
+                    <button style="outline:none;" class='btn  waves-effect removeAll' onclick="toggleConfetti();setTimeout(function() { toggleConfetti(); }, 2000);">Remove Checked Items</button>
                   </div>
                 </div>
               </div>
@@ -4230,6 +4285,14 @@ dialog {
 }
               </style>
               <script>
+function Copy() {
+  var Url = document.getElementById("url");
+  Url.innerHTML = window.location.href;
+  Url.select();
+  document.execCommand("copy");
+}
+</script>
+              <script>
                 function on() {
                   document.getElementById("overlay").style.display = "block";
                 }
@@ -4342,7 +4405,13 @@ dialog {
                     backdrop-filter: blur(10px);
 
                 }
-
+.topnav {
+      animation: 1.2s ease-in 0s 1 top;
+  animation-delay: 1.5s;
+  opacity:0;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+}
                 .sidebar,.sidebutton, {
                   background-color: var(--primary-color) !important;
                 }
@@ -4496,7 +4565,7 @@ function filterFunctiona() {
   <div id="text" style="width:100%;height:100%;overflow:scroll;"><iframe src="https://padlet-uploads.storage.googleapis.com/446844750/c0eeb2c07617640fc7101de96138fe66/ssg.html" width="100%" height="80%" scrolling="yes" frameborder="no"></iframe>
 <br><b style="text-align:center;color:black">Welcome to Homebase!</b>
 <br><h5 style="color:black">In this video, it explains how to use Homebase, and it's features</h5>
-<button class="btn btn-success" onclick="offa();openPage('About', this, 'transparent');closeNav();move();">I'm ready</button></div>
+<button class="btn btn-success" onclick="offa();openPage('About', this, 'transparent');closeNav();move();toggleConfetti();setTimeout(function() { toggleConfetti(); }, 2000);window.scrollTo(0, 0);">I'm ready</button></div>
 </div>
 <style>
 #overlay1 {
@@ -4553,6 +4622,37 @@ if('serviceWorker' in navigator) {
            .register('/pwa-examples/a2hs/sw.js')
            .then(function() { console.log('Service Worker Registered'); });
 }
+
+</script>
+<script>
+    function load() {
+  var load = document.getElementById("loading");
+  if (load.style.display === "none") {
+    load.style.display = "block";
+} else {
+    load.style.display = "none";  }
+}
+</script>
+<style>
+canvas { position: fixed;top:0;left:0;z-index:999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;}
+</style>
+<script>
+var maxParticleCount=150;var particleSpeed=10;var startConfetti;var stopConfetti;var toggleConfetti;var removeConfetti;(function(){startConfetti=startConfettiInner;stopConfetti=stopConfettiInner;toggleConfetti=toggleConfettiInner;removeConfetti=removeConfettiInner;var colors=["DodgerBlue","OliveDrab","Gold","Pink","SlateBlue","LightBlue","Violet","PaleGreen","SteelBlue","SandyBrown","Chocolate","Crimson"]
+var streamingConfetti=false;var animationTimer=null;var particles=[];var waveAngle=0;function resetParticle(particle,width,height){particle.color=colors[(Math.random()*colors.length)|0];particle.x=Math.random()*width;particle.y=Math.random()*height-height;particle.diameter=Math.random()*10+5;particle.tilt=Math.random()*10-10;particle.tiltAngleIncrement=Math.random()*0.07+0.05;particle.tiltAngle=0;return particle;}
+function startConfettiInner(){var width=window.innerWidth;var height=window.innerHeight;window.requestAnimFrame=(function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(callback){return window.setTimeout(callback,16.6666667);};})();var canvas=document.getElementById("confetti-canvas");if(canvas===null){canvas=document.createElement("canvas");canvas.setAttribute("id","confetti-canvas");canvas.setAttribute("style","display:block;z-index:999999;pointer-events:none");document.body.appendChild(canvas);canvas.width=width;canvas.height=height;window.addEventListener("resize",function(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;},true);}
+var context=canvas.getContext("2d");while(particles.length<maxParticleCount)
+particles.push(resetParticle({},width,height));streamingConfetti=true;if(animationTimer===null){(function runAnimation(){context.clearRect(0,0,window.innerWidth,window.innerHeight);if(particles.length===0)
+animationTimer=null;else{updateParticles();drawParticles(context);animationTimer=requestAnimFrame(runAnimation);}})();}}
+function stopConfettiInner(){streamingConfetti=false;}
+function removeConfettiInner(){stopConfetti();particles=[];}
+function toggleConfettiInner(){if(streamingConfetti)
+stopConfettiInner();else
+startConfettiInner();}
+function drawParticles(context){var particle;var x;for(var i=0;i<particles.length;i++){particle=particles[i];context.beginPath();context.lineWidth=particle.diameter;context.strokeStyle=particle.color;x=particle.x+particle.tilt;context.moveTo(x+particle.diameter/2,particle.y);context.lineTo(x,particle.y+particle.tilt+particle.diameter/2);context.stroke();}}
+function updateParticles(){var width=window.innerWidth;var height=window.innerHeight;var particle;waveAngle+=0.01;for(var i=0;i<particles.length;i++){particle=particles[i];if(!streamingConfetti&&particle.y<-15)
+particle.y=height+100;else{particle.tiltAngle+=particle.tiltAngleIncrement;particle.x+=Math.sin(waveAngle);particle.y+=(Math.cos(waveAngle)+particle.diameter+particleSpeed)*0.5;particle.tilt=Math.sin(particle.tiltAngle)*15;}
+if(particle.x>width+20||particle.x<-20||particle.y>height){if(streamingConfetti&&particles.length<=maxParticleCount)
+resetParticle(particle,width,height);else{particles.splice(i,1);i--;}}}}})();
 
 </script>
 <script>
