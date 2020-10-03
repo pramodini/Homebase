@@ -1,4 +1,6 @@
-﻿
+
+
+
 
 
 
@@ -55,6 +57,44 @@
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 <style>
+
+body {
+  font-family: "Roboto", san-serif;
+}
+.center {
+  text-align: center;
+}
+.menu {
+  width: 220px;
+  z-index: 199999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+font-weight:100px;
+  box-shadow: 0 4px 4px 3px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  display: none;
+background-color:white;
+  transition: 1.2s display ease-in;
+  text-align:left !important;
+}
+.menu .menu-options {
+  list-style: none;
+text-decoration:bold;
+font-weight:1000px;
+  padding: 0px 0;
+  z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+}
+.menu .menu-options .menu-option {
+  font-weight: 900;
+  z-index: 1;
+  font-size: 14px;
+  padding: 10px 40px 10px 20px;
+  cursor: pointer;
+}
+.menu .menu-options .menu-option:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+</style>
+<style>
                 .form-control {display:block;width:100%;height:calc(1.5em + .75rem + 2px);padding:.375rem .75rem;font-size:1rem;font-weight:400;line-height:1.5;color:#495057;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da;border-radius:.25rem;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}@media (prefers-reduced-motion:reduce){.form-control{transition:none}}.form-control::-ms-expand{background-color:transparent;border:0}.form-control:-moz-fo  cusring{color:transparent;text-shadow:0 0 0 #495057}.form-control:focus{color:#495057;background-color:#fff;border-color:#80bdff;outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)}.form-control::-webkit-input-placeholder{color:#6c757d;opacity:1}.form-control::-moz-placeholder{color:#6c757d;opacity:1}.form-control:-ms-input-placeholder{color:#6c757d;opacity:1}.form-control::-ms-input-placeholder{color:#6c757d;opacity:1}.form-control::placeholder{color:#6c757d;opacity:1}.form-control:disabled,.form-control[readonly]{background-color:#e9ecef;opacity:1}input[type=date].form-control,input[type=datetime-local].form-control,input[type=month].form-control,input[type=time].form-control{-webkit-appearance:none;-moz-appearance:none;appearance:none}select.form-control:focus::-ms-value{color:#495057;background-color:#fff}.form-control-file,.form-control-range{display:block;width:100%}.col-form-label{padding-top:calc(.375rem + 1px);padding-bottom:calc(.375rem + 1px);margin-bottom:0;font-size:inherit;line-height:1.5}.col-form-label-lg{padding-top:calc(.5rem + 1px);padding-bottom:calc(.5rem + 1px);font-size:1.25rem;line-height:1.5}.col-form-label-sm{padding-top:calc(.25rem + 1px);padding-bottom:calc(.25rem + 1px);font-size:.875rem;line-height:1.5}.form-control-plaintext{display:block;width:100%;padding:.375rem 0;margin-bottom:0;font-size:1rem;line-height:1.5;color:#212529;background-color:transparent;border:solid transparent;border-width:1px 0}.form-control-plaintext.form-control-lg,.form-control-plaintext.form-control-sm{padding-right:0;padding-left:0}.form-control-sm{height:calc(1.5em + .5rem + 2px);padding:.25rem .5rem;font-size:.875rem;line-height:1.5;border-radius:.2rem}.form-control-lg{height:calc(1.5em + 1rem + 2px);padding:.5rem 1rem;font-size:1.25rem;line-height:1.5;border-radius:.3rem}select.form-control[multiple],select.form-control[size]{height:auto}textarea.form-control{height:auto}.form-group{margin-bottom:1rem}.form-text{display:block;margin-top:.25rem}.form-row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-5px;margin-left:-5px}.form-row>.col,.form-row>[class*=col-]{padding-right:5px;padding-left:5px}.form-check{position:relative;display:block;padding-left:1.25rem}.form-check-input{position:absolute;margin-top:.3rem;margin-left:-1.25rem}.form-check-input:disabled~.form-check-label,.form-check-input[disabled]~.form-check-label{color:#6c757d}.form-check-label{margin-bottom:0}.form-check-inline{display:-ms-inline-flexbox;display:inline-flex;-ms-flex-align:center;align-items:center;padding-left:0;margin-right:.75rem}.form-check-inline .form-check-input{position:static;margin-top:0;margin-right:.3125rem;margin-left:0}.valid-feedback{display:none;width:100%;margin-top:.25rem;font-size:80%;color:#28a745}.valid-tooltip{position:absolute;top:100%;z-index:5;display:none;max-width:100%;padding:.25rem .5rem;margin-top:.1rem;font-size:.875rem;line-height:1.5;color:#fff;background-color:rgba(40,167,69,.9);border-radius:.25rem}.is-valid~.valid-feedback,.is-valid~.valid-tooltip,.was-validated :valid~.valid-feedback,.was-validated :valid~.valid-tooltip{display:block}.form-control.is-valid,.was-validated .form-control:valid{border-color:#28a745;padding-right:calc(1.5em + .75rem);background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");background-repeat:no-repeat;background-position:right calc(.375em + .1875rem) center;background-size:calc(.75em + .375rem) calc(.75em + .375rem)}.form-control.is-valid:focus,.was-validated .form-control:valid:focus{border-color:#28a745;box-shadow:0 0 0 .2rem rgba(40,167,69,.25)}.was-validated textarea.form-control:valid,textarea.form-control.is-valid{padding-right:calc(1.5em + .75rem);background-position:top calc(.375em + .1875rem) right calc(.375em + .1875rem)}
 .label{display:inline;padding:.2em .6em .3em;font-size:75%;font-weight:700;line-height:1;color:#fff;text-align:center;white-space:nowrap;vertical-align:baseline;border-radius:.25em}a.label:focus,a.label:hover{color:#fff;text-decoration:none;cursor:pointer}.label:empty{display:none}.btn .label{position:relative;top:-1px}.label-default{background-color:#777}.label-default[href]:focus,.label-default[href]:hover{background-color:#5e5e5e}.label-primary{background-color:#337ab7}.label-primary[href]:focus,.label-primary[href]:hover{background-color:#286090}.label-success{background-color:#5cb85c}.label-success[href]:focus,.label-success[href]:hover{background-color:#449d44}.label-info{background-color:#5bc0de}.label-info[href]:focus,.label-info[href]:hover{background-color:#31b0d5}.label-warning{background-color:#f0ad4e}.label-warning[href]:focus,.label-warning[href]:hover{background-color:#ec971f}.label-danger{background-color:#d9534f}.label-danger[href]:focus,.label-danger[href]:hover{background-color:#c9302c}
               </style>
@@ -106,7 +146,7 @@ display:none;
     border: solid 3px transparent;
 }
 </style>
-  
+
                   <style>
       body,button {
         font-family: 'Quicksand', sans-serif;
@@ -219,10 +259,10 @@ display:none;
         transform: scale(1,1);
     }
 }
-#loader,#overlay1,#overlay,dialog {
+#overlay1,#overlay,dialog {
 	animation: zoominoutsinglefeatured 0.5s  ;
 }
-.btn:hover,.label:hover {
+.label:hover {
   	animation-duration: 0.5s  ;
   	        transform: scale(1.11,1.11);
 
@@ -480,8 +520,9 @@ display:block;
       }
 
     </style>
+<script type="text/javascript">!function(t,e){t.artibotApi={l:[],t:[],on:function(){this.l.push(arguments)},trigger:function(){this.t.push(arguments)}};var a=!1,i=e.createElement("script");i.async=!0,i.type="text/javascript",i.src="https://app.artibot.ai/loader.js",e.getElementsByTagName("head").item(0).appendChild(i),i.onreadystatechange=i.onload=function(){if(!(a||this.readyState&&"loaded"!=this.readyState&&"complete"!=this.readyState)){new window.ArtiBot({i:"7ca40190-1071-4323-b686-a3f9c5870a63"});a=!0}}}(window,document);</script>
 
-    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="430f205a-f429-4f1e-b81f-abcb912d6ad2";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+    <script type="text/javascript">//window.$crisp=[];window.CRISP_WEBSITE_ID="430f205a-f429-4f1e-b81f-abcb912d6ad2";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
     <style>
       /* Center the loader */
       #loader {
@@ -649,6 +690,37 @@ Top:0;
 Left:0;
 width:100%;
 height:55px;z-index:999;
+}
+#qr {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+  backdrop-filter: blur(10px)
+}
+
+#qrtext{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+    font-family: 'Quicksand', sans-serif !important;
+text-align:center;
+line-height: 20px;
+
+}
+h8 {
+font-size: 20px;
+}
 </style>
       <style>
 
@@ -699,9 +771,40 @@ z-index:9999999999999999999999999999999999999999999999999999;
                 margin-left:0px !important;
               }
             </style>
+             <style>
+    progress{display:inline-block;vertical-align:baseline}
+     .indeterminate{background-color:#26a69a}.progress .indeterminate:before{content:'';position:absolute;background-color:inherit;top:0;left:0;bottom:0;will-change:left, right;-webkit-animation:indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;animation:indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite}.progress .indeterminate:after{content:'';position:absolute;background-color:inherit;top:0;left:0;bottom:0;will-change:left, right;-webkit-animation:indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;animation:indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;-webkit-animation-delay:1.15s;animation-delay:1.15s}@-webkit-keyframes indeterminate{0%{left:-35%;right:100%}60%{left:100%;right:-90%}100%{left:100%;right:-90%}}@keyframes indeterminate{0%{left:-35%;right:100%}60%{left:100%;right:-90%}100%{left:100%;right:-90%}}@-webkit-keyframes indeterminate-short{0%{left:-200%;right:100%}60%{left:107%;right:-8%}100%{left:107%;right:-8%}}@keyframes indeterminate-short{0%{left:-200%;right:100%}60%{left:107%;right:-8%}100%{left:107%;right:-8%}}.hide{display:none !important}.left-align{text-align:left}.right-align{text-align:right}.center,.center-align{text-align:center}.left{float:left !important}.right{float:right !important}
+     .progress{position:relative;height:4px;display:block;width:100%;background-color:#acece6;border-radius:2px;margin:.5rem 0 1rem 0;overflow:hidden}.progress .determinate{position:absolute;top:0;left:0;bottom:0;background-color:#26a69a;-webkit-transition:width .3s linear;transition:width .3s linear}.progress .indeterminate{background-color:#26a69a}.progress .indeterminate:before{content:'';position:absolute;background-color:inherit;top:0;left:0;bottom:0;will-change:left, right;-webkit-animation:indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;animation:indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite}.progress .indeterminate:after{content:'';position:absolute;background-color:inherit;top:0;left:0;bottom:0;will-change:left, right;-webkit-animation:indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;animation:indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;-webkit-animation-delay:1.15s;animation-delay:1.15s}@-webkit-keyframes indeterminate{0%{left:-35%;right:100%}60%{left:100%;right:-90%}100%{left:100%;right:-90%}}@keyframes indeterminate{0%{left:-35%;right:100%}60%{left:100%;right:-90%}100%{left:100%;right:-90%}}@-webkit-keyframes indeterminate-short{0%{left:-200%;right:100%}60%{left:107%;right:-8%}100%{left:107%;right:-8%}}@keyframes indeterminate-short{0%{left:-200%;right:100%}60%{left:107%;right:-8%}100%{left:107%;right:-8%}}.hide{display:none !important}.left-align{text-align:left}.right-align{text-align:right}.center,.center-align{text-align:center}.left{float:left !important}.right{float:right !important}
+    </style>
   </head>
-
+<div class="progress" style="color:#03f8fc;position:fixed;display:none;top:55px;left:0;margin:0;z-index:999999999999999999999999999999999999999999999999999999999999999999999999999" id="loading">
+      <div class="indeterminate" style="color:#03f8fc;"></div>
+  </div>
   <body onload="side();myFunction();move();myfunction();side1();">
+        <textarea id="url" rows="0" cols="0" style="position:absolute;top:-999999999999999;left:-9999999999;opacity:0;"></textarea>
+    <script>
+function Copy() {
+  var Url = document.getElementById("url");
+  Url.innerHTML = window.location.href;
+  Url.select();
+  document.execCommand("copy");
+}
+</script>
+    <div class="menu">
+  <ul class="menu-options waves-effect">
+    <li class="menu-option waves-effect" onclick="history.back();">Back</li>
+        <li class="menu-option waves-effect" onclick="history.forward();">Forward</li>
+    <li class="menu-option waves-effect" onclick="location.reload();">Reload</li>
+    <hr style="width:300">
+    <li class="menu-option waves-effect" onclick="openPage('About', this, 'transparent');">Dashboard</li>
+<li class="menu-option waves-effect" onclick="openPage('Home', this, 'transparent');">Bedroom</li>
+<li class="menu-option waves-effect" onclick="openPage('About1', this, 'transparent');">Kitchen</li>
+<li class="menu-option waves-effect" onclick="openPage('settings', this, 'transparent');">Settings</li>
+<li class="menu-option waves-effect" onclick="Copy();">Copy URL</li>
+
+  </ul>
+</div>
+
     <div id="Before" href="#">
       <div id="overlay" style="text-align:left;">
         <div id="text" style="color:black;padding:40px;border-radius:10px;">Update 2.0 is finally here! <br>New Features:<br><li>Sidebar</li><li>Settings page</li><li><a href="http://homebase-dev-app.slack.com/" style="color:blue">Slack workspace</a></li><li>Entire page remake</li><li>Performance updates &amp; bug fixes</li><br><div style="text-align:center;"><button onclick="off();" class="btn btn-danger"  id="Button1" style="text-align:center;">Close</button></div></div>
@@ -731,6 +834,10 @@ z-index:9999999999999999999999999999999999999999999999999999;
           <div id="myBar"></div>
         </div>
       </div>
+      <div class="progress" style="color:#03f8fc">
+      <div class="indeterminate" style="color:#03f8fc;"></div>
+  </div>
+      <!--
       <div id="loadera">
       <div class="showbox">
         <div class="loader">
@@ -740,6 +847,7 @@ z-index:9999999999999999999999999999999999999999999999999999;
         </div>
       </div>
 </div>
+-->
     </div>
     <script>
       $(document).ready(function(){
@@ -880,7 +988,7 @@ z-index:9999999999999999999999999999999999999999999999999999;
     </script>
     <div style="display:none;" id="myDiv" class="animate-bottom">
 <div class="topnav"></div>
-<button class="btn waves-effect r" style="position:absolute;top:0;left:90%;border-radius:0px !important;padding:10px 15px 10px 15px !important;position:fixed;background-color:white !important;margin-top:10px;z-index:99999999999999999999999" onclick="openPage('settings', this, 'transparent');closeNav();move();offa()"><i class="fa fa-user" ></i></button>
+<button class="btn waves-effect r" style="position:absolute;top:0;left:90%;border-radius:0px !important;padding:10px 15px 10px 15px !important;position:fixed;background-color:white !important;margin-top:10px;z-index:999999" onclick="qron();"><i class="fa fa-qrcode" ></i></button>
 
 <style>
 * {
@@ -947,6 +1055,7 @@ input + div {
 
 
 <div class="wpr">
+
 <input type="text" id="myInput" class="form-control" autocomplete="off" onkeyup="filter()" placeholder="Search..." title="Type in a name">
 <div class="wpr">
 <ul id="myUL">
@@ -1028,58 +1137,7 @@ function filter() {
                title="Tooltip on right" onclick="openPage('About', this, 'transparent');closeNav();move();Main();" class="waves-effect" style="  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
                                                                                                                                                filter: grayscale(0%);" src="https://img.icons8.com/plasticine/100/000000/warehouse-1.png" width="40" height="40">
           <p style="font-size:10px;">Homebase</p>
-          <style>
-            #snackbar {
-              visibility: hidden;
-              min-width: 250px;
-              margin-left: -125px;
-              background-color: #333;
-              color: #fff;
-              text-align: center;
-              border-radius: 2px;
-              padding: 16px !important;
-              position: fixed;
-              padding-bottom:0;
-              z-index: 19999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
-              left: 50%;
-              bottom: 0px !important;
-              font-size: 17px;
-            }
 
-            #snackbar.show {
-              visibility: visible;
-              -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-              animation: fadein 0.5s, fadeout 0.5s 2.5s;
-            }
-
-            @-webkit-keyframes fadein {
-              from {bottom: 0; opacity: 0;}
-              to {bottom: 0px; opacity: 1;}
-            }
-
-            @keyframes fadein {
-              from {bottom: 0; opacity: 0;}
-              to {bottom: 0px; opacity: 1;}
-            }
-
-            @-webkit-keyframes fadeout {
-              from {bottom: 0px; opacity: 1;}
-              to {bottom: 0; opacity: 0;}
-            }
-
-            @keyframes fadeout {
-              from {bottom: 0px; opacity: 1;}
-              to {bottom: 0; opacity: 0;}
-            }
-          </style>
-
-
-          <div id="snackbar">Coming soon!
-            <br><br><div id="myProgressa">
-            <div id="myBara"></div>
-            </div>
-
-          </div>
           <style>
             #myProgressa {
               width: 100%;
@@ -1127,17 +1185,17 @@ function filter() {
             }
           </script>
 
-          <div class="sidebutton waves-effect" onclick="openPage('About1', this, 'transparent');bar();closeNav();move();storage();" accesskey="s"><a href="#" data-toggle="tooltip" data-placement="right" title="Storage"><img src="https://image.flaticon.com/icons/svg/501/501857.svg" width="35" height="35"></div></a><br>
-          <div class="sidebutton waves-effect" onclick="openPage('About1', this, 'transparent');bar();closeNav();move();kitchen();" accesskey="k"><a href="#"><img src="https://image.flaticon.com/icons/svg/864/864615.svg" width="35" height="35"></a></div><br>
-          <div class="sidebutton waves-effect" onclick="openPage('Home', this, 'transparent');closeNav();bar();move();bedroom();" accesskey="b"><a href="#"><img src="https://image.flaticon.com/icons/svg/2905/2905630.svg" width="35" height="35"></div><br></a>
-          <div class="sidebutton waves-effect" onclick="openPage('Contact', this, 'transparent');closeNav();bar();move();garage();" accesskey="g"><a href="#"><img src="https://image.flaticon.com/icons/svg/887/887258.svg" width="35" height="35"></div><br></a>
-          <div class="sidebutton waves-effect" onclick="openPage('Contact', this, 'transparent');closeNav();bar();move();family();" accesskey="l"><a href="#"><img src="https://image.flaticon.com/icons/svg/2866/2866865.svg" width="35" height="35"></div><br></a>
-          <div class="sidebutton waves-effect" onclick="openPage('News', this, 'transparent');closeNav();bar();move();bathroom();" accesskey="r"><a href="#"><img src="https://image.flaticon.com/icons/svg/2844/2844030.svg" width="35" height="35"></div><br></a>
-          <div class="sidebutton waves-effect" onclick="openPage('settings', this, 'transparent');closeNav();bar();move();garden();" accesskey="f"><a href="#"><img src="https://image.flaticon.com/icons/svg/3228/3228867.svg" width="35" height="35"></div><br></a>
-          <div class="sidebutton waves-effect" onclick="openPage('settings', this, 'transparent');closeNav();bar();move();misc();" accesskey="m"><a href="#"><img src="https://image.flaticon.com/icons/svg/2913/2913136.svg" width="35" height="35"></div><br></a>
-          <div class="sidebutton waves-effect" onclick="openPage('todo', this, 'transparent');closeNav();bar();move();todo()" accesskey="t"><a href="#"><img src="https://image.flaticon.com/icons/svg/847/847476.svg" width="35" height="35"></div><br></a>
-          <div class="sidebutton waves-effect" onclick="openPage('office', this, 'transparent');closeNav();bar();move();todo()" accesskey="q"><a href="#"><img src="https://www.flaticon.com/svg/static/icons/svg/876/876210.svg" width="35" height="35"></div><br></a>
-          <br><br><br><br><br><br><div class="sidebutton waves-effect" style="positon:fixed;top100%;left:0" onclick="openPage('settings', this, 'transparent');closeNav();bar();move();settings();" accesskey="p"><img src="https://image.flaticon.com/icons/svg/849/849358.svg" width="35" height="35"></div><br>
+          <div class="sidebutton waves-effect" onclick="openPage('About1', this, 'transparent');bar();closeNav();move();storage();"><a href="#" data-toggle="tooltip" data-placement="right" title="Storage"><img src="https://image.flaticon.com/icons/svg/501/501857.svg" width="35" height="35"></div></a><br>
+          <div class="sidebutton js-sample-4" onclick="openPage('About1', this, 'transparent');load();setTimeout(function() { load(); }, 5000);bar();closeNav();move();kitchen();"><a href="#"><img data-toggle="tooltip" title="Kitchen" data-placement="right" src="https://image.flaticon.com/icons/svg/864/864615.svg" width="35" height="35"></a></div><br>
+          <div class="sidebutton js-sample-5" onclick="openPage('Home', this, 'transparent');load();setTimeout(function() { load(); }, 2000);closeNav();bar();move();bedroom();"><a href="#"><img src="https://image.flaticon.com/icons/svg/2905/2905630.svg" width="35" height="35"></div><br></a>
+          <div class="sidebutton js-sample-6" onclick="openPage('Contact', this, 'transparent');load();setTimeout(function() { load(); }, 2000);closeNav();bar();move();garage();"><a href="#"><img src="https://image.flaticon.com/icons/svg/887/887258.svg" width="35" height="35"></div><br></a>
+          <div class="sidebutton js-sample-7" onclick="openPage('Contact', this, 'transparent');load();setTimeout(function() { load(); }, 2000);closeNav();bar();move();family();"><a href="#"><img src="https://image.flaticon.com/icons/svg/2866/2866865.svg" width="35" height="35"></div><br></a>
+          <div class="sidebutton js-sample-8" onclick="openPage('News', this, 'transparent');load();setTimeout(function() { load(); }, 2000);closeNav();bar();move();bathroom();" accesskey=""><a href="#"><img src="https://image.flaticon.com/icons/svg/2844/2844030.svg" width="35" height="35"></div><br></a>
+          <div class="sidebutton js-sample-9" onclick="openPage('settings', this, 'transparent');load();setTimeout(function() { load(); }, 2000);closeNav();bar();move();garden();"><a href="#"><img src="https://image.flaticon.com/icons/svg/3228/3228867.svg" width="35" height="35"></div><br></a>
+          <div class="sidebutton js-sample-10" onclick="openPage('settings', this, 'transparent');load();setTimeout(function() { load(); }, 2000);closeNav();bar();move();misc();"><a href="#"><img src="https://image.flaticon.com/icons/svg/2913/2913136.svg" width="35" height="35"></div><br></a>
+          <div class="sidebutton js-sample-11" onclick="openPage('todo', this, 'transparent');load();setTimeout(function() { load(); }, 2000);closeNav();bar();move();todo()"><a href="#"><img src="https://image.flaticon.com/icons/svg/847/847476.svg" width="35" height="35"></div><br></a>
+          <div class="sidebutton js-sample-12" onclick="openPage('office', this, 'transparent');load();setTimeout(function() { load(); }, 2000);closeNav();bar();move();todo()"><a href="#"><img src="https://www.flaticon.com/svg/static/icons/svg/876/876210.svg" width="35" height="35"></div><br></a>
+          <div class="sidebutton js-sample-13" style="positon:fixed;top100%;left:0" onclick="openPage('settings', this, 'transparent');load();setTimeout(function() { load(); }, 2000);closeNav();bar();move();settings();"><img src="https://image.flaticon.com/icons/svg/849/849358.svg" width="35" height="35"></div><br>
         </div>
       </div>
       <style>
@@ -1234,66 +1292,63 @@ background-color: var(--primary-color);
       <script>
 
       </script>
-      <div id="settings" class="tabcontent">
-        <div class="text-center">
-          <div class="separator">Homepage</div>
-          <button class="btn btn-secondary waves-effect">Show news</button><br>
-          <br>
-          <button class="btn btn-secondary waves-effect">Show Weather</button>
-          <br><br>
-          <button class="btn btn-secondary waves-effect">Show todo</button><br>
-          <nav>
+      <div id="cs" class="tabcontent">
+        Coming Soon<br>
+                <button onclick="openPage('settings', this, 'transparent')" class="btn btn-danger">Back ></button>
+      </div>
+      <div id="privacy" class="tabcontent">
+        <h1>Privacy</h1>
+        <h5>We, at Homebase try our best to keep your data safe from attackers. <b>Did you know that the data is stored on your device, not on the cloud?</b> This data canbe deleted by clicking "Delete Acccount" or clearing your browser history. (NOT for desktop and phone app, just click delete at the big red button below in the settings). </h5>
+        <button onclick="openPage('settings', this, 'transparent')" class="btn btn-danger">Back ></button>
+      </div>
+      <div class="tabcontent" id="dark">
+       <button class="add-button">Add to home screen</button>
+          <nav style="text-align:center !important;display:block;margin-left:auto;margin-right:auto">
             <div class="theme-switch-wrapper">
               <label class="theme-switch" for="checkbox">
                 <input type="checkbox" id="checkbox" />
-                <div class="slider round"></div>
 
-              <em><a role="button" class="btn btn-info">Enable Dark Mode!</a></em> </label>
+              <a role="button" class="btn btn-info"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="30" height="30">
+  <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+</svg>Enable Dark Mode!</a> </label>
             </div>
           </nav>
           <div id="google_translate_element"></div>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
           <script type="text/javascript">
             function googleTranslateElementInit() {
               new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
             }
           </script>
-          <div class="separator">Kitchen</div><br>
-          <button class="btn btn-secondary waves-effect">Coming soon</button><br>
-          <br>
-          <div class="separator">Bathroom</div>
-          <br>
-          <button class="btn btn-secondary waves-effect">Coming soon</button><br>
-          <br>
-          <div class="separator">Bedroom</div>
-          <br>
-          <button class="btn btn-secondary waves-effect">Coming soon</button><br>
-          <br>
-          <div class="separator">Garage</div>
-          <br>
-          <button class="btn btn-secondary waves-effect">Coming soon</button><br>
-          <br>
-          <div class="separator">Credits</div>
-<ul style="text-align:left !important">
-<li>MDbootstrap</li>
-<li>Bootstrap<li>
-<li>jQuery<li>
-<li>Macloo on Github for Todo list<li>
-<li>W3school's Full page tabs - Performance<li>
-<li>Angular.js team<li>
-<li>Slack Team<li>
-<li>Hotjar for feedback<li>
-<li>Mailchimp for Campaigns<li>
-<li>Trinket.io for code program<li>
-<li>AddThis for social bar<li>
-<li>"Ananya" on CodePen for Dark mode effects<li>
-<li>Github for site hosting<li>
-<li>Crisp for chat plugin and integration<li>
-<li>IF I HAVEN'T PUT YOU IN CREDITS, PLEASE NOTIFY ME AT <a 
+          <button onclick="openPage('settings', this, 'transparent')" class="btn btn-danger">Back ></button>
+ </div>
+      <div id="settings" class="tabcontent">
 
-href="mailto:coolbitmoji@gmail.com">coolbitmoji@gmail.com</a><li>
+          <h1><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="40" height="40" style="display:inline-block">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+</svg> Settings</h1>
+<ul class="list-group">
+<li class="list-group-item waves-effect"  style="border:0 !important" onclick="openPage('dark', this, 'transparent')" >General</li>
+<li class="list-group-item waves-effect"  style="border:0 !important" onclick="openPage('privacy', this, 'transparent')">Privacy</li>
+<li class="list-group-item waves-effect" style="border:0 !important">Home page</li>
+<li class="list-group-item waves-effect"  style="border:0 !important" onclick="openPage('cs', this, 'transparent')">Kitchen</li>
+<li class="list-group-item waves-effect"  style="border:0 !important"  onclick="openPage('cs', this, 'transparent')">Bathroom</li>
+<li class="list-group-item waves-effect"  style="border:0 !important" onclick="openPage('cs', this, 'transparent')">Bedroom</li>
+<li class="list-group-item waves-effect"  style="border:0 !important" onclick="openPage('cs', this, 'transparent')">Garage</li>
+<li class="list-group-item waves-effect"  style="border:0 !important" onclick="openPage('cs', this, 'transparent')">Office supplies</li>
+<li class="list-group-item waves-effect"  style="border:0 !important" onclick="openPage('cs', this, 'transparent')">Todo list</li>
+<li class="list-group-item waves-effect"  style="border:0 !important" onclick="openPage('cs', this, 'transparent')">Garage</li>
+<li class="list-group-item waves-effect"  style="border:0 !important" onclick="openPage('cs', this, 'transparent')">Desktop app</li>
+<a href="http://pramodini.github.com/Homebase/terms.htm"><li class="list-group-item waves-effect">Terms and conditions</li></a>
+<li class="list-group-item waves-effect">Changelog</li>
+<li class="list-group-item waves-effect">Specials</li>
+<li class="list-group-item waves-effect bg-danger js-sample-14" href="#myModal" data-toggle="modal">Delete Account</li>
 </ul>
-          <div class="separator">Extreme Measures</div>
+        <div class="text-center">
+
+
           <style>
             .separator {
               display: flex;
@@ -1314,7 +1369,6 @@ href="mailto:coolbitmoji@gmail.com">coolbitmoji@gmail.com</a><li>
             .sidebutton img {color:white; filter: hue-rotate(180deg);}
           </style>
           <!-- Button HTML (to Trigger Modal) -->
-          <a role="button" href="#myModal" class="trigger-btn btn waves-effect bg-danger" data-toggle="modal">Delete Account</a>
         </div>
         <!-- Modal HTML -->
         <div id="myModal" class="modal fade">
@@ -1500,11 +1554,14 @@ background-color: var(--bg-color) !important;
           <div class="hero-text" style="padding:10px;border-radius:10px;font-family: 'Quicksand', sans-serif;
                                         ">
             <h1 class="ree"><b>Built for all families.</b></h1>
-            <h3 class="ree">Homebase lets you track what you have in your home wherever you are!</h3>
-            <a role="button" id="quoteButton" class="btn btn-danger waves-effect" onclick="openPage('About', this, 'transparent');closeNav();move();side();on();">Launch Homebase</a>
+            <h3 class="ree">From milk to shampoo, we've got you covered!</h3>
+            <a role="button" id="quoteButton" class="btn btn-danger waves-effect" onclick="openPage('About', this, 'transparent');closeNav();move();side();on();notifyMea()">Launch Homebase</a>
           </div>
         </div><br>
+                    <button class="js-sample-2">Interactive Notification</button>
+
 <div class="row" style="text-align:left;margin-left:20px">
+
   <div class="col-sm-8"><h2>Whatever you have, wherever you are</h2><h5>Whether you're a bachelor, or you're living in a family of 6, Homebase lets you keep track of what you have at home</h5></div>
   <div class="col-sm-4"><img src="https://i.ibb.co/6yLRcNC/pale-ordering-food-delivery.png"></div><br><br><br>
 <div class="col-sm-8"><h2><br>Even without an internet connection!</h2><h5>Homebase stores the data on your phone, not on cloud, so you can look at it wherever you are!</h5></div>
@@ -1514,7 +1571,7 @@ background-color: var(--bg-color) !important;
   <div class="col-sm-8"><h2>24/7 help and support</h2><h5>You can email the developer at coolbitmoji@gmail.com</h5></div>
   <div class="col-sm-4"><img src="https://i.ibb.co/zrKYg1H/Screenshot-2020-08-21-at-11-15-19-AM.png"></div>
 </div>
-<button class="btn btn-success" onclick="ona();openPage('About', this, 'transparent');closeNav();move();side();">Try it out now!</button>
+<button class="btn btn-success" onclick="ona();openPage('About', this, 'transparent');closeNav();move();side();notifyMe()">Try it out now!</button>
         <div id="a" style="text-align:left;margin:35px;line-height:30px;">
           Homebase is a home inventory app that lets you keep track of what you have, wherever you are, even without a proper internet connection. You can try out our inventory app even without registering! All you have to do is to click here. Visit out help center here. for more updates, tips, and tricks! To use your inventory, simply click on the room you want to fill out, and then enter your things!
           <br><br>
@@ -1738,7 +1795,7 @@ background-color: var(--bg-color) !important;
               <h5 class="mb-1">Register for free</h5>
             </li>
             <li class="list-inline-item">
- 
+
           <hr>
 
           <!-- Social buttons -->
@@ -3220,14 +3277,17 @@ background-color: var(--bg-color) !important;
           <div id="About" class="tabcontent" style="text-align:center;margin-top:0;">
 <div class="row">
 <div class="col">
-
+<div id="Button2" style="display:block !important"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="30" height="30">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+</svg>
+</div>
             <h2 style="margin-left:35px;" id="lblGreetings"></h2>
             <div id="quoteContainer">
               <p></p>
               <p id="quoteGenius" style="display:inline-block;"></p>
 
             </div><!--end quoteContainer-->
-            <iframe src="https://www.meteoblue.com/en/weather/widget/three?geoloc=detect&nocurrent=0&noforecast=0&noforecast=1&days=4&tempunit=FAHRENHEIT&windunit=MILE_PER_HOUR&layout=bright" width="100%" height="200" frameborder="no" scrolling="no"></iframe>
+         <div id="After">  <iframe src="https://www.meteoblue.com/en/weather/widget/three?geoloc=detect&nocurrent=0&noforecast=0&noforecast=1&days=4&tempunit=FAHRENHEIT&windunit=MILE_PER_HOUR&layout=bright" width="100%" height="200" frameborder="no" scrolling="no"></iframe></div>
 </div>
             <script>
               var myDate = new Date();
@@ -3504,62 +3564,14 @@ background-color: var(--bg-color) !important;
                 </div> <!-- close col -->
               </div> <!-- close row -->
 
-              <form id="newItemForm" class="form-horizontal">
-                <p id="paraToHideForm"><a href="#" id="hideForm">View your To Do list</a></p>
 
-                <fieldset class="well">
-                  <legend>Add a New To Do Item</legend>
-
-                  <div class="form-group">
-                    <label for="itemname" class="col-sm-2 control-label">Item Name</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" placeholder="0" list="browsers" style="text-align:center;"  class="form-control" placeholder="0" list="browsers"  name="itemname" id="itemname" class="form-control" placeholder="0" list="browsers" maxlength="80" required>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="duedate" class="col-sm-2 control-label">Due Date</label>
-                    <div class="col-sm-10">
-                      <input type="date" name="duedate" id="duedate" class="form-control" placeholder="0" list="browsers">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="descrip" class="col-sm-2 control-label">Details</label>
-                    <div class="col-sm-10">
-                      <textarea name="descrip" id="descrip" rows="4" maxlength="300" placeholder="No more than 300 characters long" class="form-control" placeholder="0" list="browsers"></textarea>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="priority" class="col-sm-2 control-label">Priority</label>
-                    <div class="col-sm-10">
-                      <select class="form-control" placeholder="0" list="browsers" name="priority" id="priority">
-                        <option value=1>Highest</option>
-                        <option value=2>High</option>
-                        <option value=3 selected>Middle</option>
-                        <option value=4>Low</option>
-                        <option value=5>Lowest</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <div class="col-sm-4 col-sm-offset-2 col-xs-12">
-                      <input type="submit" class="btn btn-success form-control" value="Add Item">
-                    </div>
-                    <div class="col-sm-4 col-xs-12">
-                      <input type="reset" class="btn btn-default form-control" value="Cancel">
-                    </div>
-                  </div>
-
-                </fieldset>
-              </form>
 
               <!-- this will be hidden at times -->
 <div class="row">
-
-  <div class="col">
+<div class="col" style="min-height:800px">
+  <iframe src="https://padlet-uploads.storage.googleapis.com/466482134/f820859bcf5b8a7039c77da34decacb1/price.htm" width="100%" height="100%" frameborder="no"></iframe>
+</div>
+  <div class="col r">
               <div class="row" id="toDoDataRow">
                 <div class="col-xs-12">
                   <h2>My To Do Items</h2>
@@ -3604,11 +3616,62 @@ background-color: var(--bg-color) !important;
                   <div id="toDoData" class="clearfix"></div>
                   <!-- final button -->
                   <div class='floater'>
-                    <button style="outline:none;" class='btn  waves-effect removeAll'>Remove Checked Items</button>
+                    <button style="outline:none;" class='btn  waves-effect removeAll js-sample-1' onclick="toggleConfetti();setTimeout(function() { toggleConfetti(); }, 2000);">Remove Checked Items</button>
                   </div>
                 </div>
               </div>
               <div class="row">
+                              <form id="newItemForm" class="form-horizontal">
+                <p id="paraToHideForm"><a href="#" id="hideForm">View your To Do list</a></p>
+
+                <fieldset class="well">
+                  <legend>Add a New To Do Item</legend>
+
+                  <div class="form-group">
+                    <label for="itemname" class="col-sm-2 control-label">Item Name</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" placeholder="0" list="browsers" style="text-align:center;"  class="form-control" placeholder="0" list="browsers"  name="itemname" id="itemname" class="form-control" placeholder="0" list="browsers" maxlength="80" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="duedate" class="col-sm-2 control-label">Due Date</label>
+                    <div class="col-sm-10">
+                      <input type="date" name="duedate" id="duedate" class="form-control" placeholder="0" list="browsers">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="descrip" class="col-sm-2 control-label">Details</label>
+                    <div class="col-sm-10">
+                      <textarea name="descrip" id="descrip" rows="4" maxlength="300" placeholder="No more than 300 characters long" class="form-control" placeholder="0" list="browsers"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="priority" class="col-sm-2 control-label">Priority</label>
+                    <div class="col-sm-10">
+                      <select class="form-control" placeholder="0" list="browsers" name="priority" id="priority">
+                        <option value=1>Highest</option>
+                        <option value=2>High</option>
+                        <option value=3 selected>Middle</option>
+                        <option value=4>Low</option>
+                        <option value=5>Lowest</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-2 col-xs-12">
+                      <input type="submit" class="btn btn-success form-control js-sample-3" value="Add Item">
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                      <input type="reset" class="btn btn-default form-control" value="Cancel">
+                    </div>
+                  </div>
+
+                </fieldset>
+              </form>
                 <div class="col-xs-12">
 
 
@@ -4213,4 +4276,596 @@ function filterFunctiona() {
 </style>
 
 </div>
+<script>
+
+let deferredPrompt;
+const addBtn = document.querySelector('.add-button');
+addBtn.style.display = 'none';
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent Chrome 67 and earlier from automatically showing the prompt
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+  // Update UI to notify the user they can add to home screen
+  addBtn.style.display = 'block';
+
+  addBtn.addEventListener('click', (e) => {
+    // hide our user interface that shows our A2HS button
+    addBtn.style.display = 'none';
+    // Show the prompt
+    deferredPrompt.prompt();
+    // Wait for the user to respond to the prompt
+    deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('User accepted the A2HS prompt');
+        } else {
+          console.log('User dismissed the A2HS prompt');
+        }
+        deferredPrompt = null;
+      });
+  });
+});
+
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker
+           .register('/pwa-examples/a2hs/sw.js')
+           .then(function() { console.log('Service Worker Registered'); });
+}
+
+</script>
+<script>
+    function load() {
+  var load = document.getElementById("loading");
+  if (load.style.display === "none") {
+    load.style.display = "block";
+} else {
+    load.style.display = "none";  }
+}
+</script>
+<style>
+canvas { position: fixed;top:0;left:0;z-index:999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;}
+</style>
+<script>
+var maxParticleCount=150;var particleSpeed=10;var startConfetti;var stopConfetti;var toggleConfetti;var removeConfetti;(function(){startConfetti=startConfettiInner;stopConfetti=stopConfettiInner;toggleConfetti=toggleConfettiInner;removeConfetti=removeConfettiInner;var colors=["DodgerBlue","OliveDrab","Gold","Pink","SlateBlue","LightBlue","Violet","PaleGreen","SteelBlue","SandyBrown","Chocolate","Crimson"]
+var streamingConfetti=false;var animationTimer=null;var particles=[];var waveAngle=0;function resetParticle(particle,width,height){particle.color=colors[(Math.random()*colors.length)|0];particle.x=Math.random()*width;particle.y=Math.random()*height-height;particle.diameter=Math.random()*10+5;particle.tilt=Math.random()*10-10;particle.tiltAngleIncrement=Math.random()*0.07+0.05;particle.tiltAngle=0;return particle;}
+function startConfettiInner(){var width=window.innerWidth;var height=window.innerHeight;window.requestAnimFrame=(function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(callback){return window.setTimeout(callback,16.6666667);};})();var canvas=document.getElementById("confetti-canvas");if(canvas===null){canvas=document.createElement("canvas");canvas.setAttribute("id","confetti-canvas");canvas.setAttribute("style","display:block;z-index:999999;pointer-events:none");document.body.appendChild(canvas);canvas.width=width;canvas.height=height;window.addEventListener("resize",function(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;},true);}
+var context=canvas.getContext("2d");while(particles.length<maxParticleCount)
+particles.push(resetParticle({},width,height));streamingConfetti=true;if(animationTimer===null){(function runAnimation(){context.clearRect(0,0,window.innerWidth,window.innerHeight);if(particles.length===0)
+animationTimer=null;else{updateParticles();drawParticles(context);animationTimer=requestAnimFrame(runAnimation);}})();}}
+function stopConfettiInner(){streamingConfetti=false;}
+function removeConfettiInner(){stopConfetti();particles=[];}
+function toggleConfettiInner(){if(streamingConfetti)
+stopConfettiInner();else
+startConfettiInner();}
+function drawParticles(context){var particle;var x;for(var i=0;i<particles.length;i++){particle=particles[i];context.beginPath();context.lineWidth=particle.diameter;context.strokeStyle=particle.color;x=particle.x+particle.tilt;context.moveTo(x+particle.diameter/2,particle.y);context.lineTo(x,particle.y+particle.tilt+particle.diameter/2);context.stroke();}}
+function updateParticles(){var width=window.innerWidth;var height=window.innerHeight;var particle;waveAngle+=0.01;for(var i=0;i<particles.length;i++){particle=particles[i];if(!streamingConfetti&&particle.y<-15)
+particle.y=height+100;else{particle.tiltAngle+=particle.tiltAngleIncrement;particle.x+=Math.sin(waveAngle);particle.y+=(Math.cos(waveAngle)+particle.diameter+particleSpeed)*0.5;particle.tilt=Math.sin(particle.tiltAngle)*15;}
+if(particle.x>width+20||particle.x<-20||particle.y>height){if(streamingConfetti&&particles.length<=maxParticleCount)
+resetParticle(particle,width,height);else{particles.splice(i,1);i--;}}}}})();
+
+</script>
+<script>
+        var modules = {};
+        var module = {};
+        module.exports = function(module){ return module; };
+        var exports = {};
+
+        function require(value){
+            console.log(value);
+        }
+    </script>
+
+    <style>
+        body{
+
+            font-family: 'Arial';
+        }
+        p{
+            padding: 0;
+            margin: 0;
+        }
+@media only screen and (min-width: 600px) {
+  user-notification {
+
+}
+}
+@media only screen and (max-width: 600px) {
+  user-notification {
+width:100% !important;
+bottom:0px !important;
+            min-width: 100%;
+            border-radius:0px !important;
+                        max-width: calc(90vw) !important;
+                        text-align:center;
+
+}
+user-notification button {
+margin:0;
+
+}
+}
+        user-notification{
+            position: fixed;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%) scale(0.87);
+            opacity: 0;
+            transform-origin: center bottom;
+            padding: 0 16px;
+            border-radius: 4px;
+            min-width: 340px;
+            max-width: calc(100vw - 64px);
+            box-shadow: 0 1px 3px rgba(0,0,0, 0.15), 0 2px 6px rgba(0,0,0, 0.15);
+            animation: popNotification 4000ms cubic-bezier(0.0, 0.0, 0.2, 1);
+            background-color: rgb(51, 51, 51);
+            color: rgba(255,255,255, 0.87);
+            font-size: 14px;
+            line-height: 48px;
+            height: 48px;
+            z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+        }
+
+        user-notification.is-infinite{
+            animation: popInNotification 150ms cubic-bezier(0.0, 0.0, 0.2, 1) forwards;
+        }
+
+        user-notification button{
+            display: inline-block;
+            height: 36px;
+            line-height: 34px;
+            margin: 0;
+            padding: 0 16px;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            border-radius: 2px;
+            position: absolute;
+            font-size: 14px;
+            text-transform: uppercase;
+            user-select: none;
+            top: 6px;
+            right: 6px;
+            transition: all 150ms cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        user-notification button:active{
+            transform: none;
+        }
+
+        @keyframes popInNotification{
+            from{
+                transform: translateX(-50%) scale(0.87);
+                opacity: 0;
+            }
+            to{
+                transform: translateX(-50%) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes popNotification{
+            0%{
+                transform: translateX(-50%) scale(0.87);
+                opacity: 0;
+            }
+            3.75%, 96.25%{
+                transform: translateX(-50%) scale(1);
+                opacity: 1;
+            }
+            100%{
+                transform: translateX(-50%) scale(1);
+                animation-timing-function: cubic-bezier(0.4, 0.0, 1, 1);
+                opacity: 0;
+            }
+        }
+
+    </style>
+
+
+<script>
+function qron() {
+  document.getElementById("qr").style.display = "block";
+}
+
+function qroff() {
+  document.getElementById("qr").style.display = "none";
+}
+</script>
+<div id="qr">
+  <div id="qrtext"><img src="https://i.ibb.co/HhVHJWr/Screenshot-2020-09-24-at-10-25-19-AM.png" alt="Screenshot-2020-09-24-at-10-25-19-AM"><br><h8>Scan this QR code on your phone and share it with your friends!</h8>
+  <br><button onclick="qroff()" class="btn btn-danger">Close</button>
+  </div>
+</div>
+<div>
+
+        </div>
+    <script src="https://www.cssscript.com/demo/snackbar-notifyjs/assets/Notify.js" defer="defer"></script>
+    <script defer="defer">
+        const sample1 = document.body.querySelector('.js-sample-1');
+        const sample3 = document.body.querySelector('.js-sample-3');
+        const sample2 = document.body.querySelector('.js-sample-2');
+        const sample4 = document.body.querySelector('.js-sample-4');
+        const sample5 = document.body.querySelector('.js-sample-5');
+        const sample6 = document.body.querySelector('.js-sample-6');
+        const sample7 = document.body.querySelector('.js-sample-7');
+        //const sample8 = document.body.querySelector('.js-sample-8);
+        const sample9 = document.body.querySelector('.js-sample-9');
+        const sample10 = document.body.querySelector('.js-sample-10');
+        const sample11 = document.body.querySelector('.js-sample-11');
+        const sample12 = document.body.querySelector('.js-sample-12');
+        const sample13 = document.body.querySelector('.js-sample-13');
+        const sample14 = document.body.querySelector('.js-sample-14');
+        sample1.addEventListener('click', ()=>{
+            new exports['Notify'].prototype.constructor({
+                message: 'Item(s) removed successfully!'
+            });
+        });
+		sample3.addEventListener('click', ()=>{
+            new exports['Notify'].prototype.constructor({
+                message: 'Item added successfully!'
+            });
+        });
+        sample2.addEventListener('click', ()=>{
+            new exports['Notify'].prototype.constructor({
+                message: 'With Action Button',
+                duration: 3000,
+                action: {
+                    label: 'Close',
+                    callback: ()=>{}
+                }
+            });
+        });
+        sample4.addEventListener('click', ()=>{
+            new exports['Notify'].prototype.constructor({
+                message: 'Kitchen'
+            });
+        });
+
+        sample5.addEventListener('click', ()=>{
+            new exports['Notify'].prototype.constructor({
+                message: 'Bedroom'
+            });
+        });
+
+        sample6.addEventListener('click', ()=>{
+            new exports['Notify'].prototype.constructor({
+                message: 'Garage'
+            });
+        });
+
+        sample7.addEventListener('click', ()=>{
+            new exports['Notify'].prototype.constructor({
+                message: 'Living Room'
+            });
+        });
+/*
+        sample8.addEventListener('click', ()=>{
+            new exports['Notify'].prototype.constructor({
+                message: 'Bathroom'
+            });
+        });
+      */
+        sample9.addEventListener('click', ()=>{
+            new exports['Notify'].prototype.constructor({
+                message: 'Garden'
+            });
+        });
+
+        sample10.addEventListener('click', ()=>{
+            new exports['Notify'].prototype.constructor({
+                message: 'Misc'
+            });
+        });
+
+        sample11.addEventListener('click', ()=>{
+            new exports['Notify'].prototype.constructor({
+                message: 'Todo'
+            });
+        });
+
+        sample12.addEventListener('click', ()=>{
+            new exports['Notify'].prototype.constructor({
+                message: 'Office'
+            });
+        });
+
+        sample13.addEventListener('click', ()=>{
+            new exports['Notify'].prototype.constructor({
+                message: 'Settings'
+            });
+        });
+
+        sample14.addEventListener('click', ()=>{
+            new exports['Notify'].prototype.constructor({
+                message: 'Deleting Account...'
+            });
+        });
+
+    </script>
+<script>
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Notify = (function () {
+    function Notify(options) {
+        var _this = this;
+        this.handleAction = function (e) {
+            e.preventDefault();
+            var button = document.body.querySelector('user-notification button');
+            button.removeEventListener('click', _this.handleAction);
+            _this._callback();
+            if ('remove' in HTMLElement.prototype) {
+                _this._notification.remove();
+            }
+            else {
+                _this._notification.style.display = 'none !important';
+            }
+        };
+        if (!options) {
+            console.error('No options object provided');
+            return;
+        }
+        this.clearExistingNotifications();
+        this.createNotification(options);
+    }
+    Notify.prototype.handleTimeout = function () {
+        var button = document.body.querySelector('user-notification button');
+        if (button) {
+            button.removeEventListener('click', this.handleAction);
+        }
+        if ('remove' in HTMLElement.prototype) {
+            this._notification.remove();
+        }
+        else {
+            this._notification.style.display = 'none !important';
+        }
+    };
+    Notify.prototype.clearExistingNotifications = function () {
+        var existingNotification = Array.from(document.body.querySelectorAll('user-notification'));
+        for (var i = 0; i < existingNotification.length; i++) {
+            if ('remove' in HTMLElement.prototype) {
+                existingNotification[i].remove();
+            }
+            else {
+                existingNotification[i].style.display = 'none !important';
+            }
+        }
+    };
+    Notify.prototype.createNotification = function (options) {
+        var _this = this;
+        var notification = document.createElement('user-notification');
+        var message = document.createElement('p');
+        message.innerText = options.message;
+        notification.append(message);
+        if (options.action) {
+            var action = document.createElement('button');
+            action.innerText = options.action.label;
+            this._callback = options.action.callback;
+            notification.append(action);
+        }
+        if (options.duration) {
+            if (options.duration !== Infinity) {
+                var duration = options.duration;
+                if (duration < 4000) {
+                    duration = 4000;
+                }
+                else if (duration > 10000) {
+                    duration = 10000;
+                }
+                this.timeout = setTimeout(function () { _this.handleTimeout(); }, duration);
+            }
+            else {
+            }
+        }
+        else {
+            this.timeout = setTimeout(function () { _this.handleTimeout(); }, 4000);
+        }
+        notification.classList.add('is-infinite');
+        document.body.append(notification);
+        this._notification = notification;
+        var button = document.body.querySelector('user-notification button');
+        if (button) {
+            button.addEventListener('click', this.handleAction);
+            notification.style.paddingRight = button.scrollWidth + 12 + "px";
+        }
+    };
+    return Notify;
+}());
+exports.Notify = Notify;
+//# sourceMappingURL=Notify.js.map
+</script>
+<script>
+
+  let keysDown = {};
+window.onkeydown = function(e) {
+  keysDown[e.key] = true;
+
+  if (keysDown["Control"] && keysDown["a"]) {
+    //do what you want when control and a is pressed for example
+    event.preventDefault();
+    openPage('News', this, 'transparent');closeNav();move();offa()
+  }
+  else if( keysDown["Control"] && keysDown["k"] ){
+            event.preventDefault();
+        openPage('About1', this, 'transparent');
+closeNav();move();offa()
+  }
+
+  else if( keysDown["Control"] && keysDown["g"] ){
+            event.preventDefault();
+        openPage('Contact', this, 'transparent');
+closeNav();move();offa()
+  }
+    else if( keysDown["Control"] && keysDown["d"] ){
+            event.preventDefault();
+        openPage('About', this, 'transparent');
+closeNav();move();offa()
+  }
+  else if( keysDown["Control"] && keysDown["b"] ){
+            event.preventDefault();
+        openPage('Home', this, 'transparent');
+closeNav();move();offa()
+  }
+  else if( keysDown["Control"] && keysDown["p"] ){
+            event.preventDefault();
+        openPage('settings', this, 'transparent');
+closeNav();move();offa()
+  }
+  else if( keysDown["Control"] && keysDown["t"] ){
+            event.preventDefault();
+        openPage('todo', this, 'transparent');
+closeNav();move();offa()
+  }
+  else if( keysDown["Control"] && keysDown["/"] ){
+            event.preventDefault();
+document.getElementById('id01x').style.display='block'; closeNav();move();offa()
+  }
+  else if( keysDown["Control"] && keysDown["o"] ){
+            event.preventDefault();
+        openPage('office', this, 'transparent');
+closeNav();move();offa()
+  }
+  else if( keysDown["Control"] && keysDown["i"] ){
+            event.preventDefault();
+        openPage('camp', this, 'transparent');
+closeNav();move();offa()
+  }
+  else if( keysDown["Control"] && keysDown["f"] ){
+            event.preventDefault();
+document.getElementById("myInput").focus();
+  }
+  else if( keysDown["/"]){
+            event.preventDefault();
+document.getElementById("myInput").focus();
+  }
+}
+window.onkeyup = function(e) {
+  keysDown[e.key] = false;
+}
+</script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <div id="id01x" class="w3-modal" style="text-align:left;z-index:99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01x').style.display='none'" class="w3-button w3-display-topright waves-effect">&times;</span>
+       <br> <h1 style="text-align:center">Keyboard Shortcuts &amp; Credits</h1>
+        <p><kbd>CTRL K</kbd> Kitchen<br><br><kbd>CTRL T</kbd> Todo list<br><br><kbd>CTRL G</kbd> Garage<br><br><kbd>CTRL D</kbd> Dashboard<br><br><kbd>CTRL G</kbd> Garage<br><br><kbd>CTRL A</kbd> Bathroom<br><br><kbd>CTRL O</kbd> Office Supplies <br><br><kbd>CTRL I</kbd> Camping Supplies</p>
+      All Keyboard shortcuts can be replaced with CTRL or ALT, or both
+      <hr>
+      <h1 style="text-align:center;">Credits</h1>
+            <h5 style="text-align:center;">This project would not have been possible without the help of:</h5>
+
+      <ul style="text-align:left !important">
+<li>MDbootstrap</li>
+<li>Bootstrap</li>
+<li>jQuery</li>
+<li>Macloo on Github for Todo list</li>
+<li>W3school's Full page tabs - Performance</li>
+<li>Angular.js team</li>
+<li>Slack Team</li>
+<li>Hotjar for feedback</li>
+<li>Mailchimp for Campaigns</li>
+<li>Trinket.io for code program</li>
+<li>AddThis for social bar</li>
+<li>"Ananya" on CodePen for Dark mode effects</li>
+<li>Github for site hosting</li>
+<li>Crisp for chat plugin and integration</li>
+<li>IF I HAVEN'T PUT YOU IN CREDITS, PLEASE NOTIFY ME AT <a
+
+href="mailto:coolbitmoji@gmail.com">coolbitmoji@gmail.com</a></li>
+</ul>
+<h6>Homebase Stable 3.0 beta &copy; 2020 Manusvath Gurudath <a href="#">Visit the developer's website</a></h6>
+      </div>
+    </div>
+  </div>
+
+<script>
+const menu = document.querySelector(".menu");
+let menuVisible = false;
+
+const toggleMenu = command => {
+  menu.style.display = command === "show" ? "block" : "none";
+  menuVisible = !menuVisible;
+};
+
+const setPosition = ({ top, left }) => {
+  menu.style.left = `${left}px`;
+  menu.style.top = `${top}px`;
+  toggleMenu("show");
+};
+
+window.addEventListener("click", e => {
+  if(menuVisible)toggleMenu("hide");
+});
+
+window.addEventListener("contextmenu", e => {
+  e.preventDefault();
+  const origin = {
+    left: e.pageX,
+    top: e.pageY
+  };
+  setPosition(origin);
+  return false;
+});
+
+</script>
+
+
+
+
+<script>
+function notifyMe() {
+  // Let's check if the browser supports notifications
+  if (!("Notification" in window)) {
+    alert("This browser does not support desktop notifications. Please use Chrome");
+  }
+
+  // Let's check whether notification permissions have already been granted
+  else if (Notification.permission === "granted") {
+    // If it's okay let's create a notification
+    var notification = new Notification("Welcome to Homebase!");
+    playAudio();
+  }
+
+  // Otherwise, we need to ask the user for permission
+  else if (Notification.permission !== "denied") {
+    Notification.requestPermission().then(function (permission) {
+      // If the user accepts, let's create a notification
+      if (permission === "granted") {
+        var notification = new Notification("Welcome to Homebase!!");
+      }
+    });
+  }
+
+  // At last, if the user has denied notifications, and you
+  // want to be respectful there is no need to bother them any more.
+}
+function notifyMea() {
+  new Notification("Welcome back to Homebase! Update Beta is here!:D");
+  playAudio();
+}
+function notifyMeb() {
+  new Notification("Welcome back to Homebase! Update Beta is here!:D");
+  playAudio();
+}
+</script>
+
+<audio id="myAudio">
+  <source src="https://padlet-uploads.storage.googleapis.com/466482134/48f46df383214ad841b3703f3fd9b4d9/musical_game_elements_04_sound_effect_71792603.mp3">
+  Your browser does not support the audio element.
+</audio>
+
+
+<script>
+var x = document.getElementById("myAudio");
+
+function playAudio() {
+  x.play();
+}
+
+function pauseAudio() {
+  x.pause();
+}
+</script>
           </html>
