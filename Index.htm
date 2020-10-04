@@ -4991,5 +4991,18 @@ function playAudio() {
 function pauseAudio() {
   x.pause();
 }
+
+
+//to play on the key A do this(using Jquery):
+document.addEventListener('keydown', function(e) {
+  document.getElementById('tap').play();
+});
 </script>
+
+
+<!-- Create an audio element and hide it with css: display:none -->
+<audio id="tap" controls style="display:none">
+  <source src="https://padlet-uploads.storage.googleapis.com/466482134/40d822dd8849d08406688dda0863859b/ui_tap_variant_01.wav" type="audio/mp3">
+Your browser does not support the audio element.
+</audio>
           </html>
