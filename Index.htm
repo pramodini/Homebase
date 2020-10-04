@@ -780,7 +780,7 @@ z-index:9999999999999999999999999999999999999999999999999999;
 <div class="progress" style="color:#03f8fc;position:fixed;display:none;top:55px;left:0;margin:0;z-index:999999999999999999999999999999999999999999999999999999999999999999999999999" id="loading">
       <div class="indeterminate" style="color:#03f8fc;"></div>
   </div>
-  <body onload="side();myFunction();move();myfunction();side1();">
+  <body onload="side();myFunction();move();myfunction();side1();loadedtext();">
         <textarea id="url" rows="0" cols="0" style="position:absolute;top:-999999999999999;left:-9999999999;opacity:0;"></textarea>
     <script>
 function Copy() {
@@ -1559,7 +1559,131 @@ background-color: var(--bg-color) !important;
           </div>
         </div><br>
                     <button class="js-sample-2">Interactive Notification</button>
+                    <div class="timeline-item" id="text-loader">
+                            <div class="animated-background">
+                                <div class="background-masker content-first"></div>
+                                <div class="background-masker content-top"></div>
+                                <div class="background-masker content-first-end"></div>
+                                <div class="background-masker content-second-line"></div>
+                                <div class="background-masker content-second-end"></div>
+                                <div class="background-masker content-third-line"></div>
+                                <div class="background-masker content-third-end"></div>
+                            </div>
+                        </div>
+                    <style>
+                    .timeline-item {
+                            background-color: #fff;
+                            border: 0px solid;
+                            border-color: #ddd;
+                            border-radius: 3px;
+                            padding: 12px;
+                            margin: 0 auto;
+                        }
 
+                        @keyframes placeHolderShimmer {
+                            0% {
+                                background-position: 0 0;
+                            }
+
+                            100% {
+                                background-position: 10000px 0;
+                            }
+                        }
+
+                        .animated-background {
+                            animation-duration: 20s;
+                            animation-fill-mode: forwards;
+                            animation-iteration-count: infinite;
+                            animation-timing-function: linear;
+                            animation-name: placeHolderShimmer;
+                            background: #f6f7f8;
+                            background: linear-gradient(to right, #eeeeee 8%, #c0c0c0 18%, #eeeeee 33%);
+                            height: 96px;
+                            position: relative;
+                        }
+
+                        .background-masker {
+                            background: #fff;
+                            position: absolute;
+                        }
+
+                            /* Every thing below this is just positioning */
+
+                            .background-masker.content-top,
+                            .background-masker.content-second-line,
+                            .background-masker.content-third-line,
+                            .background-masker.content-second-end,
+                            .background-masker.content-third-end,
+                            .background-masker.content-first-end {
+                                top: 40px;
+                                left: 0;
+                                right: 0;
+                                height: 6px;
+                            }
+
+                            .background-masker.content-first {
+                                height: 10px;
+                                top: 15px;
+                                left: 0;
+                                right: 0;
+                            }
+
+                            .background-masker.content-top {
+                                height: 20px;
+                            }
+
+                            .background-masker.content-first-end,
+                            .background-masker.content-second-end,
+                            .background-masker.content-third-end {
+                                width: auto;
+                                left: 380px;
+                                right: 0;
+                                top: 60px;
+                                height: 8px;
+                            }
+
+                            .background-masker.content-second-line {
+                                top: 68px;
+                            }
+
+                            .background-masker.content-second-end {
+                                left: 420px;
+                                top: 74px;
+                            }
+
+                            .background-masker.content-third-line {
+                                top: 82px;
+                            }
+
+                            .background-masker.content-third-end {
+                                left: 300px;
+                                top: 88px;
+                            }
+                    </style>
+
+                    <script>
+                    setTimeout(function(){ loadtext() }, 3000);
+                    function loadtext() {
+                      var loadtext = document.getElementById("text-loader");
+                      if (loadtext.style.display === "none") {
+                        loadtext.style.display = "block";
+                      } else {
+                        loadtext.style.display = "none";
+                    loadedtext();
+                      }
+                    }
+                    function loadedtext() {
+                      var loadtexta = document.getElementById("loadedtext");
+                      if (loadtexta.style.display === "none") {
+                        loadtexta.style.display = "block";
+                      } else {
+                        loadtexta.style.display = "none";
+                      }
+                    }
+                    </script>
+                    <div id="loadedtext">
+                      This is my DIV element.
+                    </div>
 <div class="row" style="text-align:left;margin-left:20px">
 
   <div class="col-sm-8"><h2>Whatever you have, wherever you are</h2><h5>Whether you're a bachelor, or you're living in a family of 6, Homebase lets you keep track of what you have at home</h5></div>
@@ -4852,7 +4976,7 @@ function notifyMeb() {
 </script>
 
 <audio id="myAudio">
-  <source src="https://padlet-uploads.storage.googleapis.com/466482134/48f46df383214ad841b3703f3fd9b4d9/musical_game_elements_04_sound_effect_71792603.mp3">
+  <source src="https://padlet-uploads.storage.googleapis.com/466482134/a6ac47ccbbabd25dae1c9814ec17944a/03_principle_informative_02__online_video_cutter_com_.mp3">
   Your browser does not support the audio element.
 </audio>
 
