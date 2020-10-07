@@ -1,16 +1,4 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
+﻿
 <!DOCTYPE html>
 
 <html>
@@ -74,7 +62,7 @@ body,button {
   right: 0;
   bottom: 0;
   background-color: rgba(0,0,0,0.5);
-  z-index: 2;
+  z-index: 9999999999999999999999999999999999999999999;
   font-family: 'Quicksand', sans-serif;
 backdrop-filter:blur(10px);
   cursor: pointer;
@@ -84,7 +72,7 @@ button,.overlay button {
   padding:10px;
   border:0;
   outline:0;
-
+  
 }
 #welcometext{
   position: absolute;
@@ -522,7 +510,7 @@ z-index:9999999999;
   height:50px;
   background-color: whitesmoke !important;
   background-image: url('https://www.flaticon.com/svg/static/icons/svg/622/622669.svg');
-  background-position: 10px 10px !important;
+  background-position: 10px 10px !important; 
   background-repeat: no-repeat;
   padding: 12px 5px 12px 40px !important;
     background-size: 20px 20px;
@@ -567,7 +555,7 @@ display:block;
     left:80px
 }
 .taskbar {
-  display:none;
+  display:none !important;
 }
        .tabcontent  {margin-left:70px !important;padding-left:0px !important;padding-bottom:0px !important;padding-top:80px;}
         .hero-image h1{font-size:50px;}
@@ -997,7 +985,7 @@ margin:0;
                 z-index:999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
                 visibility: visible;
               }
-
+              
 
                   :root {
                   --primary-color: #03fc94;
@@ -1134,9 +1122,9 @@ margin:0;
                   display: block !important;
                 }
                 .progress {
-                  height:5px !important;
+                  height:5px !important; 
                 }
-
+                
                 /* The container */
 .checkboxlabel {
   display: block;
@@ -1151,7 +1139,7 @@ margin:0;
   user-select: none;
 }
 #searchbar {
-
+  
 }
 /* Hide the browser's default checkbox */
 .checkboxlabel input {
@@ -1206,33 +1194,33 @@ margin:0;
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+             
     </style>
   </head>
-<div class="progress" style="color:#03f8fc;position:fixed;display:none;top:55px;left:0;margin:0;z-index:999999999999999999999999999999999999999999999999999999999999999999999999999" id="loading">
+<div class="progress" style="color:#03f8fc;position:fixed;display:none;top:50px;left:0;margin:0;z-index:999999999999999999999999999999999999999999999999999999999999999999999999999" id="loading">
       <div class="indeterminate" style="color:#03f8fc;"></div>
   </div>
-
-<div id="welcome" onclick="welcomeoff()">
+  
+<div id="welcome" class="waves-effect" onclick="welcomeoff()">
   <div id="welcometext">
     <div id="test" style=""><b>A new day, A new beginning!</b><br>Let's get productive!<p style="font-size:20px;">Click to continue</p></div>
 <input type="button" value="Delete Cookie" onclick="deleteCookie()" style="display:none"/>
@@ -1451,7 +1439,7 @@ function Copy() {
     </script>
     <div style="display:none;" id="myDiv" class="animate-bottom">
 <div class="topnav"></div>
-<button class="btn waves-effect r" style="position:absolute;top:0;left:90%;border-radius:0px !important;padding:10px 15px 10px 15px !important;position:fixed;background-color:white !important;margin-top:10px;z-index:999999" onclick="qron();"><i class="fa fa-qrcode" ></i></button>
+<button class="btn waves-effect r" style="position:absolute;top:0;left:90%;border-radius:0px !important;padding:10px 15px 10px 15px !important;position:fixed;background-color:white !important;margin-top:10px;z-index:999999" onclick="qron2();" id="qrcodebtn"><i class="fa fa-qrcode" ></i></button>
 
 <style>
 * {
@@ -1596,7 +1584,7 @@ function filter() {
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
 </svg></div></div>
-
+          
         </div>
 
         <div class="sidebar">
@@ -1745,7 +1733,7 @@ background-color: var(--primary-color);
         .sidebutton:hover {
           cursor:pointer;
         }
-
+        
       </style>
       <br>
       <script>
@@ -2121,7 +2109,7 @@ body,html,tabcontent,div {
     scrollbar-width: none;  /* Firefox */
 overflow-style: none;
 overflow-x:hidden;
-}
+} 
 body {
   overflow-x:hidden !important;
 
@@ -4306,7 +4294,7 @@ body {
                   <div class="form-group">
                     <label for="itemname" class="col-sm-2 control-label">Item Name</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" placeholder="0" list="browsers" style="text-align:center;"  class="form-control" placeholder="0" list="browsers" itemname" id="itemname" class="form-control" placeholder="0" list="browsers" maxlength="80" required>
+                      <input type="text" class="form-control" placeholder="0" list="browsers" style="text-align:center;"  class="form-control" placeholder="0" list="browsers" id="itemname" class="form-control" placeholder="0" list="browsers" maxlength="80" required>
                     </div>
                   </div>
 
@@ -4358,7 +4346,7 @@ body {
 
             <script src="https://macloo.github.io/to-do-list-localstorage/js/jquery.min.js"></script>
             <script src="https://macloo.github.io/to-do-list-localstorage/js/bootstrap.min.js"></script>
-
+            
 <audio id="checkboxsound">
   <source src="https://padlet-uploads.storage.googleapis.com/446844750/939c79566218baaef385beddbf88a3ba/hero_simple_celebration_03.wav" type="audio/mp3">
   Your browser does not support the audio element.
@@ -4367,11 +4355,11 @@ body {
 
 <body onload="checkboxsound()">
 <script>
-var sound = document.getElementById("checkboxsound");
+var sound = document.getElementById("checkboxsound"); 
 
-function checkboxsound() {
-  sound.play();
-}
+function checkboxsound() { 
+  sound.play(); 
+} 
 
 </script>
 <script>
@@ -5121,7 +5109,13 @@ dialog {
 
                 toggleSwitch.addEventListener('change', switchTheme, false);
               </script>
-
+<script>
+	var beamer_config = {
+		product_id : "quFlaXaB26332" //DO NOT CHANGE: This is your product code on Beamer
+	};
+</script>
+<script type="text/javascript" src="https://app.getbeamer.com/js/beamer-embed.js" defer="defer"></script>
+					
               </body>
               <style>
               .help {
@@ -5813,11 +5807,11 @@ Your browser does not support the audio element.
   Your browser does not support audio.
 </audio>
 <script>
-var donetodo = document.getElementById("tododone");
+var donetodo = document.getElementById("tododone"); 
 
-function playAudio() {
-  donetodo.play();
-}
+function playAudio() { 
+  donetodo.play(); 
+} 
 
 </script>
 
@@ -5828,11 +5822,11 @@ function playAudio() {
 
 
 <script>
-var deletex = document.getElementById("deleteaudio");
+var deletex = document.getElementById("deleteaudio"); 
 
-function deleteaudio() {
-  deletex.play();
-}
+function deleteaudio() { 
+  deletex.play(); 
+} 
 
 </script>
 
@@ -5843,14 +5837,14 @@ function deleteaudio() {
 
 
 <script>
-var betsound = document.getElementById("betasound");
+var betsound = document.getElementById("betasound"); 
 
-function betasound() {
-  betsound.play();
-}
+function betasound() { 
+  betsound.play(); 
+} 
 
 </script>
-
+   
 <script>
 // 'Delete' cookie for testing
 function deleteCookie()
@@ -5943,7 +5937,7 @@ function welcomeoff() {
   document.getElementById("welcome").style.display = "none";
 }
 </script>
-
+   
 
 <script>
 function searchbar() {
