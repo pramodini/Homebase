@@ -1,4 +1,6 @@
-﻿
+
+
+
 <!DOCTYPE html>
 
 <html>
@@ -10,12 +12,13 @@
     <link rel="shortcut icon" type="image/png" href="https://img.icons8.com/plasticine/100/000000/warehouse-1.png" />
     <link rel="mask-icon" type="" href="https://img.icons8.com/plasticine/100/000000/warehouse-1.png" color="#111" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <title>Homebase - A home inventory app</title>
-    <!-- Font Awesome -->
+    <title>Canvas</title>
+
+    <!-- Font Awesome
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<script src="//cdnjs.cloudflare.om/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   --> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <!-- Bootstrap core CSS -->
@@ -72,7 +75,7 @@ button,.overlay button {
   padding:10px;
   border:0;
   outline:0;
-  
+
 }
 #welcometext{
   position: absolute;
@@ -491,7 +494,7 @@ display:none !important;
 position:fixed;
   bottom:0px;
   left:0;
-  background-color:whitesmoke;
+  background-color:#EFD780;
   width:100%;
   text-align:center;
 padding:10px;
@@ -508,9 +511,9 @@ z-index:9999999999;
   border-radius: 4px;
   font-size: 16px;
   height:50px;
-  background-color: whitesmoke !important;
+  background-color: #EFD780 !important;
   background-image: url('https://www.flaticon.com/svg/static/icons/svg/622/622669.svg');
-  background-position: 10px 10px !important; 
+  background-position: 10px 10px !important;
   background-repeat: no-repeat;
   padding: 12px 5px 12px 40px !important;
     background-size: 20px 20px;
@@ -985,7 +988,7 @@ margin:0;
                 z-index:999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
                 visibility: visible;
               }
-              
+
 
                   :root {
                   --primary-color: #03fc94;
@@ -993,7 +996,7 @@ margin:0;
                   --font-color: #424242;
                   --bg-color: #fff;
                   --heading-color: #292922;
-                  --aheading-color: whitesmoke;
+                  --aheading-color: #90C2E7;
                   --hover-color: whitesmoke;
                   --hovera-color: #0000;
                 }
@@ -1024,7 +1027,7 @@ margin:0;
                     color: var(--heading-color) !important;
 }
                 .topnav {
-                    background-color: var(--aheading-color);
+                    background-color: var(--aheading-color) !important;
 
                 }
 
@@ -1122,9 +1125,9 @@ margin:0;
                   display: block !important;
                 }
                 .progress {
-                  height:5px !important; 
+                  height:5px !important;
                 }
-                
+
                 /* The container */
 .checkboxlabel {
   display: block;
@@ -1139,7 +1142,7 @@ margin:0;
   user-select: none;
 }
 #searchbar {
-  
+
 }
 /* Hide the browser's default checkbox */
 .checkboxlabel input {
@@ -1194,33 +1197,33 @@ margin:0;
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </style>
   </head>
 <div class="progress" style="color:#03f8fc;position:fixed;display:none;top:50px;left:0;margin:0;z-index:999999999999999999999999999999999999999999999999999999999999999999999999999" id="loading">
       <div class="indeterminate" style="color:#03f8fc;"></div>
   </div>
-  
-<div id="welcome" class="waves-effect" onclick="welcomeoff()">
+
+<div id="welcome" class="waves-effect waves-light" onclick="welcomeoff()">
   <div id="welcometext">
     <div id="test" style=""><b>A new day, A new beginning!</b><br>Let's get productive!<p style="font-size:20px;">Click to continue</p></div>
 <input type="button" value="Delete Cookie" onclick="deleteCookie()" style="display:none"/>
@@ -1273,12 +1276,48 @@ function Copy() {
       }
     </script>
 
-<div class="topnav" id="searchbar">
+<div class="topnav" style="background-color:transparent !important;                        box-shadow: 0px 0px 0px grey ;">
 </div>
 
     <div id="loader">
-      <img src="https://img.icons8.com/plasticine/100/000000/warehouse-1.png" height="100" width="100">
+<svg width="100" height="100" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 12L5 10M5 10L12 3L19 10M5 10V20C5 20.5523 5.44772 21 6 21H9M19 10L21 12M19 10V20C19 20.5523 18.5523 21 18 21H15M9 21C9.55228 21 10 20.5523 10 20V16C10 15.4477 10.4477 15 11 15H13C13.5523 15 14 15.4477 14 16V20C14 20.5523 14.4477 21 15 21M9 21H15" stroke="#4A5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-1"></path>
+</svg>
+<style>
+/***************************************************
+ * Generated by SVG Artista on 10/9/2020, 8:51:47 AM
+ * MIT license (https://opensource.org/licenses/MIT)
+ * W. https://svgartista.net
+ **************************************************/
 
+@-webkit-keyframes animate-svg-stroke-1 {
+  0% {
+    stroke-dashoffset: 78.88198852539062px;
+    stroke-dasharray: 78.88198852539062px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes animate-svg-stroke-1 {
+  0% {
+    stroke-dashoffset: 100px;
+    stroke-dasharray: 100px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.svg-elem-1 {
+  -webkit-animation: animate-svg-stroke-1 4s ease-in-out 0s both;
+          animation: animate-svg-stroke-1 4s ease-in-out 0s both;
+}
+
+</style>
       <div id="myDIV">
 
         <div id="myProgress">
@@ -1437,9 +1476,19 @@ function Copy() {
 
 
     </script>
+    <!--
+    <script>
+  !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
+  arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
+  d.src='//d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
+  insertBefore(d,q)}(window,document,'script','_gs');
+
+  _gs('GSN-939604-B');
+  _gs('set', 'anonymizeIP', false);
+</script>-->
     <div style="display:none;" id="myDiv" class="animate-bottom">
-<div class="topnav"></div>
-<button class="btn waves-effect r" style="position:absolute;top:0;left:90%;border-radius:0px !important;padding:10px 15px 10px 15px !important;position:fixed;background-color:white !important;margin-top:10px;z-index:999999" onclick="qron2();" id="qrcodebtn"><i class="fa fa-qrcode" ></i></button>
+<div class="topnav" id="searchbar" style="background-color:#EFD780 !important; "></div>
+<button class="btn waves-effect r" style="position:absolute;top:0;left:90%;border-radius:0px !important;padding:10px 15px 10px 15px !important;position:fixed;background-color:white !important;margin-top:10px;z-index:999999;background-color:#0B5351 !important; color:white !important;" onclick="qron2();" id="qrcodebtn"><i class="fa fa-bell"></i></button>
 
 <style>
 * {
@@ -1499,7 +1548,7 @@ border:1px solid #c0c0c0
 <div class="wpr">
 <ul id="myUL">
 
-    <li>  <a href="#" class="" style="text-align:center;display:block !important">    ðŸ’¡Search Suggestions</a></li>
+    <li>  <a href="#" class="" style="text-align:center;display:block !important">    ÃƒÂ°Ã…Â¸Ã¢â‚¬â„¢Ã‚Â¡Search Suggestions</a></li>
    <li> <a href="#about" class="" onclick="openPage('About', this, 'transparent');closeNav();move();offa()">Home</a></li>
    <li> <a href="#base" class="" onclick="openPage('Home', this, 'transparent');closeNav();move();offa()">Bedroom <h1 class="badge badge-danger">Coming Soon</h1></a></li>
    <li> <a href="#contact" class="" onclick="openPage('News', this, 'transparent');closeNav();move();offa()">Bathroom <h1 class="badge badge-danger">Coming Soon</h1></a></li>
@@ -1584,7 +1633,7 @@ function filter() {
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
 </svg></div></div>
-          
+
         </div>
 
         <div class="sidebar">
@@ -1714,6 +1763,8 @@ function filter() {
           padding:0px;
           width:100%;
           float:left;
+                                  box-shadow: 1px 1px 5px grey ;
+
           border-radius:0 12 0 12;
           position:fixed;
           z-index:99999999999999999999999999999999999;
@@ -1727,13 +1778,13 @@ background-color: var(--primary-color);
         }
         .sidebutton img{
           filter: brightness(50%) sepia(1);
-          filter: hue-rotate(360deg);
+  filter: hue-rotate(180deg);
 
         }
         .sidebutton:hover {
           cursor:pointer;
         }
-        
+
       </style>
       <br>
       <script>
@@ -1960,8 +2011,7 @@ background-color: var(--bg-color) !important;
           }
 
           .hero-image {
-            background-image: url("https://dhp.dreeshomes.com/cms/images/EYrud-a6KJ-Ayt63GXIVxF?scale=xxl");
-            background-color: #cccccc;
+background-image: url(https://richmondvamls.net/wp-content/uploads/2020/01/pink-houses.gif);backdrop-filter:blur(10px);            background-color: #cccccc;
             height: 500px;
             background-position: center;
             background-repeat: no-repeat;
@@ -1984,7 +2034,7 @@ background-color: var(--bg-color) !important;
             backdrop-filter:blur(5px);
           }
         </style>
-        <nav class="navbar navbar-expand-lg navbar-dark danger-color fixed-top" style="z-index:999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999">
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-color:#EFD780;z-index:999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999">
           <a class="navbar-brand" href="#">Homebase</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                   aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -2013,11 +2063,11 @@ background-color: var(--bg-color) !important;
           <div class="hero-text" style="padding:10px;border-radius:10px;font-family: 'Quicksand', sans-serif;
                                         ">
             <h1 class="ree"><b>Built for all families.</b></h1>
-            <h3 class="ree">From milk to shampoo, we've got you covered!</h3>
-            <a role="button" id="quoteButton" class="btn btn-danger waves-effect" onclick="openPage('About', this, 'transparent');closeNav();move();side();on();notifyMea();welcomeon()">Launch Homebase</a>
+            <h3 class="ree r">From milk to shampoo, we've got you covered!</h3>
+            <a role="button" id="quoteButton" class="btn waves-effect" onclick="openPage('About', this, 'transparent');closeNav();move();side();on();notifyMea();welcomeon()" style="background-color:#D0E3CC;color:black">Launch Homebase</a>
           </div>
         </div><br>
-                    <button class="js-sample-2">Interactive Notification</button>
+                    <button class="js-sample-2" style="opacity:0;">Interactive Notification</button>
                     <div class="timeline-item" id="text-loader">
                             <div class="animated-background">
                                 <div class="background-masker content-first"></div>
@@ -2105,11 +2155,11 @@ background-color: var(--bg-color) !important;
                                 top: 68px;
                             }
 body,html,tabcontent,div {
-  -ms-overflow-style: none;
-    scrollbar-width: none;  /* Firefox */
+Ã‚  -ms-overflow-style: none;
+Ã‚    scrollbar-width: none;  /* Firefox */
 overflow-style: none;
 overflow-x:hidden;
-} 
+}
 body {
   overflow-x:hidden !important;
 
@@ -2164,7 +2214,7 @@ body {
   <div class="col-sm-8"><h2>24/7 help and support</h2><h5>You can email the developer at coolbitmoji@gmail.com</h5></div>
   <div class="col-sm-4"><img src="https://i.ibb.co/zrKYg1H/Screenshot-2020-08-21-at-11-15-19-AM.png"></div>
 </div>
-<button class="btn btn-success" onclick="ona();openPage('About', this, 'transparent');closeNav();move();side();notifyMe()">Try it out now!</button>
+<button class="btn" style="background-color:#D0E3CC;color:black" onclick="ona();openPage('About', this, 'transparent');closeNav();move();side();notifyMe()">Try it out now!</button>
         <div id="a" style="text-align:left;margin:35px;line-height:30px;">
           Homebase is a home inventory app that lets you keep track of what you have, wherever you are, even without a proper internet connection. You can try out our inventory app even without registering! All you have to do is to click here. Visit out help center here. for more updates, tips, and tricks! To use your inventory, simply click on the room you want to fill out, and then enter your things!
           <br><br>
@@ -2178,7 +2228,7 @@ body {
   <h1>  Download the Desktop App</h1>
   <h5>Get the best experience.</h5>
 
-    <a role="button" class="btn btn-success" href="https://padlet-uploads.storage.googleapis.com/446844750/2165837092140fb4d69bfd4eb65b20a6/pramodini_github_com.crx">Download now</a>
+    <a role="button" class="btn" style="background-color:#D0E3CC;color:black" href="https://padlet-uploads.storage.googleapis.com/446844750/2165837092140fb4d69bfd4eb65b20a6/pramodini_github_com.crx">Download now</a>
     <ol>
       <li>Go to Chrome://extensions</li>
       <li>Click Developer mode at the top right</li>
@@ -2188,7 +2238,7 @@ body {
   <div class="col">
  <h1>  Download the Mobile App</h1>
  <h5>Anywhere, Anytime</h5>
- <a role="button" class="btn btn-success" href="https://s3.amazonaws.com/gonativeio/static/5f615bb201ee294dc87559f4/app-release.apk">Download now</a>
+ <a role="button" class="btn" style="background-color:#D0E3CC;color:black" href="https://s3.amazonaws.com/gonativeio/static/5f615bb201ee294dc87559f4/app-release.apk">Download now</a>
     <ol>
       <li>Open file</li>
       <li>Click Install, it will say unsafe, because a liscense costs $250 and We will figure out how to get that huge amount</li>
@@ -2198,7 +2248,7 @@ body {
     <div class="col r">
 <h1>Check it out in your browser</h1>
 <h5>Free, as always</h5>
-      <button class="btn btn-success" onclick="openPage('About', this, 'transparent');closeNav();move();side();on();">Try it out</button>
+      <button class="btn" style="background-color:#D0E3CC;color:black" onclick="openPage('About', this, 'transparent');closeNav();move();side();on();" style="background-color:#D0E3CC;color:black">Try it out</button>
 
   </div>
 </div>
@@ -2340,7 +2390,7 @@ body {
 	<input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="email address" required>
     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1f9857456b9365022246130a7_8e4c9d791b" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" class="btn btn-success" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    <div class="clear"><input type="submit" class="btn" style="background-color:#D0E3CC;color:black" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
     </div>
 </form>
 </div>
@@ -2482,7 +2532,7 @@ body {
           <!-- Social buttons -->
 
           <!-- Copyright -->
-          <div class="footer-copyright text-center py-3">Â© 2020 Copyright:
+          <div class="footer-copyright text-center py-3">Ãƒâ€šÃ‚Â© 2020 Copyright:
             <a href="https://pramodini.github.com/KeepInventory/Index.htm"> Homebase</a>
           </div>
           <!-- Copyright -->
@@ -3434,7 +3484,7 @@ body {
           <!-- Social buttons -->
 
           <!-- Copyright -->
-          <div class="footer-copyright text-center py-3">Â© 2020 Copyright:
+          <div class="footer-copyright text-center py-3">Ãƒâ€šÃ‚Â© 2020 Copyright:
             <a href="https://pramodini.github.com/KeepInventory/Index.htm"> Homebase</a>
           </div>
           <!-- Copyright -->
@@ -4231,11 +4281,10 @@ body {
 
               <!-- this will be hidden at times -->
 <div class="row">
-  <div class="m"><br><hr></div>
-<div class="col" style="min-height:800px;margin:0px;padding:0px;">
-  <iframe src="https://padlet-uploads.storage.googleapis.com/446844750/b34c19758bc702061fad0a3d41b3124b/Budget_meter.html" width="100%" height="100%" frameborder="no"></iframe>
+<div class="col" style="min-height:1000px;margin:0px;padding:0px;">
+  <iframe src="https://padlet-uploads.storage.googleapis.com/446844750/b34c19758bc702061fad0a3d41b3124b/Budget_meter.html" width="100%" height="1000px" frameborder="no"></iframe>
 </div>
-  <div class="col">
+  <div class="col r">
               <div class="row" id="toDoDataRow">
                 <div class="col-xs-12">
                   <h2>My To Do Items</h2>
@@ -4260,8 +4309,10 @@ body {
   color: red ;
 }
                   </style>
-                  <a href="#" id="showForm"class="btn btn-info" role="button">+ New item</a>
-                  <button onclick="document.querySelector('#modal').showModal()" class="btn waves-effect btn-secondary" style="outline:none">Settings</button>
+                  <a href="#" id="showForm"class="btn btn-info" role="button">+</a>
+                  <button onclick="document.querySelector('#modal').showModal()" class="btn waves-effect btn-secondary" style="outline:none"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20px" height="20px">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg></button>
                   <dialog id="modal" onclick="this.parentNode.close()">
 
 
@@ -4346,7 +4397,7 @@ body {
 
             <script src="https://macloo.github.io/to-do-list-localstorage/js/jquery.min.js"></script>
             <script src="https://macloo.github.io/to-do-list-localstorage/js/bootstrap.min.js"></script>
-            
+
 <audio id="checkboxsound">
   <source src="https://padlet-uploads.storage.googleapis.com/446844750/939c79566218baaef385beddbf88a3ba/hero_simple_celebration_03.wav" type="audio/mp3">
   Your browser does not support the audio element.
@@ -4355,11 +4406,11 @@ body {
 
 <body onload="checkboxsound()">
 <script>
-var sound = document.getElementById("checkboxsound"); 
+var sound = document.getElementById("checkboxsound");
 
-function checkboxsound() { 
-  sound.play(); 
-} 
+function checkboxsound() {
+  sound.play();
+}
 
 </script>
 <script>
@@ -4954,7 +5005,7 @@ dialog {
               <style>
                 @import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700|Sansita+One);
                 :root {
-                  --primary-color: #03fc94;
+                  --primary-color: #DBA159;
                   --secondary-color: #536390;
                   --font-color: #424242;
                   --bg-color: #fff;
@@ -5115,7 +5166,7 @@ dialog {
 	};
 </script>
 <script type="text/javascript" src="https://app.getbeamer.com/js/beamer-embed.js" defer="defer"></script>
-					
+
               </body>
               <style>
               .help {
@@ -5807,11 +5858,11 @@ Your browser does not support the audio element.
   Your browser does not support audio.
 </audio>
 <script>
-var donetodo = document.getElementById("tododone"); 
+var donetodo = document.getElementById("tododone");
 
-function playAudio() { 
-  donetodo.play(); 
-} 
+function playAudio() {
+  donetodo.play();
+}
 
 </script>
 
@@ -5822,11 +5873,11 @@ function playAudio() {
 
 
 <script>
-var deletex = document.getElementById("deleteaudio"); 
+var deletex = document.getElementById("deleteaudio");
 
-function deleteaudio() { 
-  deletex.play(); 
-} 
+function deleteaudio() {
+  deletex.play();
+}
 
 </script>
 
@@ -5837,14 +5888,14 @@ function deleteaudio() {
 
 
 <script>
-var betsound = document.getElementById("betasound"); 
+var betsound = document.getElementById("betasound");
 
-function betasound() { 
-  betsound.play(); 
-} 
+function betasound() {
+  betsound.play();
+}
 
 </script>
-   
+
 <script>
 // 'Delete' cookie for testing
 function deleteCookie()
@@ -5937,7 +5988,7 @@ function welcomeoff() {
   document.getElementById("welcome").style.display = "none";
 }
 </script>
-   
+
 
 <script>
 function searchbar() {
