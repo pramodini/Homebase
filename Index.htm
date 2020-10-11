@@ -1,4 +1,5 @@
-﻿
+
+
 
 
 <!DOCTYPE html>
@@ -13,13 +14,15 @@
     <link rel="mask-icon" type="" href="https://img.icons8.com/plasticine/100/000000/warehouse-1.png" color="#111" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <title>Canvas</title>
-
+<script>var continuallySettings = { appID: "ev3yv2g94ypn" };</script><script src="https://cdn-app.continual.ly/js/embed/continually-embed.latest.min.js"></script>
     <!-- Font Awesome
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.om/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   --> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"> -->
     <!-- Google Fonts -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <!-- Bootstrap core CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
@@ -51,6 +54,44 @@
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 <style>
+@media only screen and (min-width: 600px) {
+  user-notification {
+
+}
+.continually {
+  bottom:0;
+right:0;
+}
+}
+@media only screen and (max-width: 600px) {
+  user-notification {
+width:100% !important;
+bottom:0px !important;
+            min-width: 100%;
+            border-radius:0px !important;
+                        max-width: calc(90vw) !important;
+                        text-align:center;
+
+}
+.continually {
+  bottom:50px;
+right:0;
+
+overflow:hidden;
+padding-bottom:40px;
+padding-left:25px;
+padding-right:40px;
+text-align:left;
+}
+.continually p {
+  display:none !important;
+}
+user-notification button {
+margin:0;
+
+}
+
+}
 body,button {
   font-family: 'Quicksand', sans-serif;
 
@@ -291,7 +332,7 @@ display:none;
         transform: scale(1,1);
     }
 }
-#overlay1,#overlay,dialog {
+#overlay1,#overlay,dialog,.continually {
 	animation: zoominoutsinglefeatured 0.5s  ;
 }
 .label:hover {
@@ -331,6 +372,9 @@ nav,#myInput {
   opacity:0;
     animation-delay: 1.2s;
     animation-fill-mode: forwards;
+}
+.continually p {
+  display:inline-block;
 }
 .col-sm-4{
       animation: 0.2s ease-in 0s 1 slideInFromright;
@@ -1232,7 +1276,27 @@ margin:0;
 <input type="button" value="Delete Cookie" onclick="deleteCookie()" style="display:none"/>
     </div>
 </div>
+<a class="continually"> <i class="fa fa-comment-alt"></i> <p>Need Help?</p></a>
 
+<style>
+.continually {
+position:fixed;
+
+background-color:#6e7f99;
+              font-family: 'Quicksand' !important;
+cursor:pointer;
+text-align:center;
+margin:10px;
+color:white !important;
+z-index:9999999999999999999999999999999999999999999999999999999999;
+padding:20px;
+border-radius:20px 0 20px 0px;
+}
+.continually:hover {
+  background-color:#5d6d87;
+
+}
+</style>
   <body onload="greeting();side();myFunction();move();myfunction();side1();loadedtext();">
         <textarea id="url" rows="0" cols="0" style="position:absolute;top:-999999999999999;left:-9999999999;opacity:0;"></textarea>
     <script>
@@ -1257,8 +1321,8 @@ function Copy() {
 
   </ul>
 </div>
-<script type="text/javascript">!function(t,e){t.artibotApi={l:[],t:[],on:function(){this.l.push(arguments)},trigger:function(){this.t.push(arguments)}};var a=!1,i=e.createElement("script");i.async=!0,i.type="text/javascript",i.src="https://app.artibot.ai/loader.js",e.getElementsByTagName("head").item(0).appendChild(i),i.onreadystatechange=i.onload=function(){if(!(a||this.readyState&&"loaded"!=this.readyState&&"complete"!=this.readyState)){new window.ArtiBot({i:"7ca40190-1071-4323-b686-a3f9c5870a63"});a=!0}}}(window,document);</script>
-
+<!--<script type="text/javascript">!function(t,e){t.artibotApi={l:[],t:[],on:function(){this.l.push(arguments)},trigger:function(){this.t.push(arguments)}};var a=!1,i=e.createElement("script");i.async=!0,i.type="text/javascript",i.src="https://app.artibot.ai/loader.js",e.getElementsByTagName("head").item(0).appendChild(i),i.onreadystatechange=i.onload=function(){if(!(a||this.readyState&&"loaded"!=this.readyState&&"complete"!=this.readyState)){new window.ArtiBot({i:"7ca40190-1071-4323-b686-a3f9c5870a63"});a=!0}}}(window,document);</script>
+-->
     <script type="text/javascript">//window.$crisp=[];window.CRISP_WEBSITE_ID="430f205a-f429-4f1e-b81f-abcb912d6ad2";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
     <div id="Before" href="#"  onmousein="betasound()">
       <div id="overlay" style="text-align:left;">
@@ -1479,7 +1543,7 @@ function Copy() {
 
 
     </script>
-    <!--
+    <!--GOSQUARED
     <script>
   !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
   arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
@@ -1491,7 +1555,7 @@ function Copy() {
 </script>-->
     <div style="display:none;" id="myDiv" class="animate-bottom">
 <div class="topnav" id="searchbar" style="background-color:#EFD780 !important; "></div>
-<button class="btn waves-effect" style="position:absolute;top:0;left:90%;border-radius:0px !important;padding:10px 15px 10px 15px !important;position:fixed;background-color:white !important;margin-top:10px;z-index:999999;background-color:#0B5351 !importan; color:white !important;" onclick="qron2();" id="qrcodebtn"><i class="fa fa-bell"></i></button>
+<button class="btn waves-effect" style="position:absolute;top:0;right:0;border-radius:0px !important;padding:17px 15px 17px 15px !important;position:fixed;background-color:white !important;margin-top:00px;z-index:999999;background-color:#0B5351 !important; color:white !important;" onclick="qron2();" id="qrcodebtn"><i class="fa fa-bell"></i></button>
 
 <style>
 * {
@@ -1608,7 +1672,7 @@ function filter() {
         <a class="waves-effect" onclick="openPage('launch', this, 'transparent');closeNav();move();" style="display:none;" id="defaultOpen">Dashboard</a>
 
         <a class="waves-effect" onclick="openPage('About', this, 'transparent');closeNav();move();">Dashboard</a>
-        <a class="waves-effect" onclick="openPage('About1', this, 'transparent');closeNav();move();">Kitchen <p class="badge badge-success" type="button" href="#">Beta</p><p class="badge badge-success" type="button" href="#" style="margin-right:10px;">Under testing</p></a>
+        <a class="waves-effect" onclick="openPage('About1', this, 'transparent');closeNav();move();">Kitchen <p class="badge badge-success" type="button" href="#">Beta</p></a>
 
         <a class="waves-effect" onclick="openPage('Home', this, 'transparent');closeNav();move();">Bedroom <p class="badge badge-danger" type="button" href="#">Coming Soon</p></a>
         <a class="waves-effect" onclick="openPage('News', this, 'transparent');closeNav();move();">Bathroom <p class="badge badge-danger" type="button" href="#">Coming Soon</p></a>
@@ -1795,7 +1859,7 @@ background-color: var(--primary-color);
       </script>
       <script>
         function openNav() {
-          document.getElementById("mySidenav").style.width = "100%";
+          document.getElementById("mySidenav").style.width = "70%";
         }
 
         function closeNav() {
@@ -4679,7 +4743,7 @@ $(document).ready(function() {
                 z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
                 top: 0;
                 left: 0;
-                background-color: rgba(255,255,255,0.37);
+                background-color: rgba(255,255,255,1.37);
                 backdrop-filter:blur(10px);
                 overflow-x: hidden;
                 transition: 0.5s;
@@ -4694,6 +4758,7 @@ $(document).ready(function() {
                 color: #818181;
                 display: block;
                 transition: 0.3s;
+                text-align:left;
 
               }
 
@@ -5337,28 +5402,7 @@ resetParticle(particle,width,height);else{particles.splice(i,1);i--;}}}}})();
             padding: 0;
             margin: 0;
         }
-@media only screen and (min-width: 600px) {
-  user-notification {
 
-}
-
-}
-@media only screen and (max-width: 600px) {
-  user-notification {
-width:100% !important;
-bottom:0px !important;
-            min-width: 100%;
-            border-radius:0px !important;
-                        max-width: calc(90vw) !important;
-                        text-align:center;
-
-}
-user-notification button {
-margin:0;
-
-}
-
-}
         user-notification{
             position: fixed;
             bottom: 32px;
